@@ -116,9 +116,24 @@ rather than deleted.
 
 ## Contributing
 
+**This project wants contributions that make it better — including ones that
+prove parts of it wrong.**
+
 See [`CONTRIBUTING.md`](CONTRIBUTING.md). The short version: **bring a
 measurement, not an opinion.** A pull request that adds a strategy needs the
-number it scored, the null it beat, and the years it survived.
+number it scored, the null it beat, the years it survived, and what fraction of
+its trades never resolved.
+
+```
+fork  →  branch  →  PR against main  →  CI (tests · secrets · file size)  →  merge
+```
+
+The most valuable pull request is one that **kills** something. If you show a
+strategy here does not work, that is a contribution, not an attack — several
+findings in these reports were retracted by exactly that process and are kept
+alongside the successes.
+
+Maintainer notes are in [`MAINTAINING.md`](MAINTAINING.md).
 
 ## Licence
 
