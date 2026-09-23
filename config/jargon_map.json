@@ -1,0 +1,127 @@
+{
+  "_readme": {
+    "purpose": "Auto-caption mistranscriptions of trading jargon, and their corrections. YouTube's ASR was not trained on ICT/SMC vocabulary, so it substitutes common English words that sound similar -- 'choch' becomes 'chalk', 'order block' becomes 'order lock'. Left uncorrected, a RAG query for 'CHoCH' misses every auto-captioned video that discussed it.",
+    "applied_to": "cleaned_text ONLY. raw_text is never modified, so every substitution stays auditable and a wrong rule here can be found and undone without re-scraping.",
+    "matching": "case-insensitive, whole-word (\\b...\\b). Longest keys are replaced first, so 'fair value gap' is corrected before any rule touching 'gap' alone can interfere.",
+    "caution": "Only add a mapping whose WRONG side is unambiguous in a trading transcript. 'gold' -> 'GOLD' would be safe; 'range' -> anything would not, because 'range' is also ordinary English. A bad rule here silently corrupts every future embedding."
+  },
+
+  "structure_concepts": {
+    "chalk": "CHoCH",
+    "choc": "CHoCH",
+    "chalk of character": "change of character",
+    "change of character": "CHoCH",
+    "bo s": "BOS",
+    "b o s": "BOS",
+    "break of structure": "BOS",
+    "market structure shift": "MSS",
+    "m s s": "MSS"
+  },
+
+  "imbalance_concepts": {
+    "fair value gap": "FVG",
+    "fair value gaps": "FVGs",
+    "fair valued gap": "FVG",
+    "affair value gap": "FVG",
+    "f v g": "FVG",
+    "fvj": "FVG",
+    "consequent encroachment": "CE",
+    "inverse fair value gap": "IFVG",
+    "balanced price range": "BPR"
+  },
+
+  "order_flow_concepts": {
+    "order lock": "order block",
+    "order blocks": "order blocks",
+    "orderblock": "order block",
+    "o b": "OB",
+    "breaker block": "breaker block",
+    "mitigation block": "mitigation block",
+    "buy side liquidity": "BSL",
+    "buyside liquidity": "BSL",
+    "by side liquidity": "BSL",
+    "sell side liquidity": "SSL",
+    "sellside liquidity": "SSL",
+    "cell side liquidity": "SSL",
+    "liquidity grab": "liquidity sweep",
+    "liquidity rate": "liquidity raid",
+    "stop hunt": "stop hunt",
+    "draw on liquidity": "DOL"
+  },
+
+  "session_concepts": {
+    "kill zone": "killzone",
+    "killzones": "killzones",
+    "chill zone": "killzone",
+    "silver bullet": "silver bullet",
+    "judas swing": "Judas swing",
+    "judah swing": "Judas swing",
+    "power of three": "power of three",
+    "a m d": "AMD",
+    "london open": "London open",
+    "new york open": "New York open",
+    "asian session": "Asian session"
+  },
+
+  "sentiment_and_direction": {
+    "boolish": "bullish",
+    "bull ish": "bullish",
+    "bearish": "bearish",
+    "bear ish": "bearish",
+    "long position": "long position",
+    "short position": "short position"
+  },
+
+  "risk_concepts": {
+    "risk reward": "risk-reward",
+    "risk to reward": "risk-reward",
+    "r multiple": "R-multiple",
+    "position sizing": "position sizing",
+    "draw down": "drawdown",
+    "stop loss": "stop-loss",
+    "take profit": "take-profit",
+    "break even": "breakeven"
+  },
+
+  "instruments_and_tickers": {
+    "zow usd": "XAUUSD",
+    "x a u u s d": "XAUUSD",
+    "xau usd": "XAUUSD",
+    "gold usd": "XAUUSD",
+    "x a g u s d": "XAGUSD",
+    "xag usd": "XAGUSD",
+    "euro dollar": "EURUSD",
+    "euro usd": "EURUSD",
+    "cable": "GBPUSD",
+    "pound dollar": "GBPUSD",
+    "dollar yen": "USDJPY",
+    "us dollar index": "DXY",
+    "d x y": "DXY",
+    "nasdaq": "NASDAQ",
+    "s and p": "S&P",
+    "s&p five hundred": "S&P 500",
+    "bitcoin": "BTC",
+    "b t c": "BTC",
+    "ethereum": "ETH",
+    "e t h": "ETH"
+  },
+
+  "indicator_names": {
+    "r s i": "RSI",
+    "relative strength index": "RSI",
+    "mac d": "MACD",
+    "m a c d": "MACD",
+    "a t r": "ATR",
+    "average true range": "ATR",
+    "e m a": "EMA",
+    "s m a": "SMA",
+    "v w a p": "VWAP",
+    "bollinger band": "Bollinger Band",
+    "bulling your bands": "Bollinger Bands",
+    "a d x": "ADX",
+    "fibonacci": "Fibonacci",
+    "fib retracement": "Fibonacci retracement",
+    "optimal trade entry": "OTE",
+    "o t e": "OTE"
+  }
+}

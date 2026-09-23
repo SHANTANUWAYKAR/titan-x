@@ -1,0 +1,156 @@
+=== supporting_evidence (89) ===
+But here the magic is that claude can calculate the win rate, the riskto-reward and expectancy and you don't need to be able to code at all.
+---
+uh you can simulate it on let's say a $10,000 account and let's say that you based base it on a sample size of 100 so 100 trades uh so we have a good sample size
+---
+Short is when you bet against the direction of the market on this break because so many times historically the price got reacted right there.
+---
+And here what matters is both how often you win, but what also matters and this this is what most beginners just focus on win rate.
+---
+So to calculate the expected value, you first need to enter the win rate.
+---
+So let's use the example where we actually have, you know, a win rate under 50%.
+---
+For example, you can see here the break even win rate.
+---
+And you can see even at 35% win rate, we still have a positive expected value.
+---
+And as you can see if we have a 30% win win win rate we expect to lose.
+---
+But if our win rate is uh let me once again choose 45%.
+---
+So, here, you might have a trading strategy, let's make a super simple simple example, a trading strategy with a 60% win rate.
+---
+However, if your psychology is not in shape, this might lead to you to not follow your plan, and as a result, this win rate can shrink far below 50%.
+---
+So let's as an example say that a trader has been back tech back testing and knows that his trading strategy has a 60% win rate.
+---
+And what we can notice if we just look at this a little bit, you know, weird way of events, you know, winning six times in a row and then losing four times in a row is, you know, pretty uncommon if you have a 60% win rate strategy.
+---
+And if we, you know, look at this trader right here, we can also see that this is indeed exact exactly the 60% win rate the trader expected.
+---
+If you are following your trading plan, let's say you have a tested strategy that you know has a 60% win rate with a 1:1 risk-reward ratio, then you know that no matter what, I should follow this plan.
+---
+Uh but of course, it might be the case if you have a very large sample size and it's proven that your strategy don't work anymore, then you of course have to of course have to change.
+---
+The percent you should risk is simply your win rate minus your loss rate divided by your risk reward.
+---
+So to simplify, your percent to risk is equal to your percent win rate minus your percent of losing divided by your risk to reward.
+---
+In order for this formula to, you know, work, even to work in theory, you need to have very good numbers of both your win rate and your risk reward.
+---
+So you actually have, you know, correct data on your win rate and lose rate and so on and so on.
+---
+Let's say that you have back tested, maybe you have a back tested at least 100 trades and you have according to your test, you have a you know win rate of 60% which of course means that you have a loose rate of 40% and let's say that in this case you had a risk reward of to keep it simple one to one.
+---
+But in real markets, remember even if you have done a good back test and according to your back test your win rate is 60%.
+---
+If your If your a win rate is just a little bit off, the full Kelly can lead to, you know, devastating results and it can basically blow up your account.
+---
+As I said, if you have miscalculated your win rate with just a few percent, it can lead to devastating losses.
+---
+So we had a win rate of uh you know uh 50%.
+---
+but what also matters and this this is what most beginners just focus on win rate.
+---
+the market simply values or this is my opinion the market simply values Tesla more because of Elon Musk and his track record.
+---
+After that, it's time to move on to some important practical concepts such as win rate, risk reward, and the very important expectancy formula.
+---
+And that is win rate, risk reward, and very importantly, expectancy.
+---
+And the first thing you really need to to know is that win rate a low alone is actually meaningless because, you know, a 30% win rate can actually be profitable, and an 80% win rate can lose money.
+---
+Because let's say you have an 80% win rate, but when you win, you win, let's say, $100.
+---
+And of course, if you have an 80% win rate, you have 20% to lose, but when you lose, you maybe lose $1,000.
+---
+You can hopefully, just by looking at these numbers, see that even though we have an 80% win rate, we will lose money.
+---
+But, now the next concept you need to understand is something known as a break even win rate.
+---
+And the break even win rate, if you take a look at this image right here, is basically the minimum win rate where you stop losing money.
+---
+So, if you have a certain risk reward, the break even win rate tell you, you know, how often do I need to win to make money.
+---
+And the expected value is simply when you take your win rate and how [snorts] much you win on average minus your lose rate times how much you lose your average.
+---
+So first of all first of all, to you need to enter your win rate of your trade.
+---
+But to keep it very simple, let's start here with a win rate of 50% and an average win of $100 and an average loss of $100.
+---
+But if we instead change the win rate here.
+---
+So let's change the win rate to 66%.
+---
+Let's say we have a 66% win rate with a two to one uh risk-reward ratio.
+---
+In order for this formula to, you know, work, even to work in theory, you needed to have very good numbers of both your win rate and your risk to reward.
+---
+So in order to use this formula, you need to have performed, you know, good back tests, so you actually have, you know, correct data on your win rate and lose rate and so on and so on.
+---
+Remember from earlier in the course we talked about that a conservative amount is maybe to bet 1% or 2% but according to this formula you should bet 20% and the very important thing to notice about the Kelly formula is that this is the formula that grows your account in theory as fast as possible but in real markets remember even if you have done a good back test and according to your back test your win rate is 60% if you know something happens which always happens in markets you know your your statistics are never perfect you know anything can happen in markets if your if your win rate is just a little bit off the full Kelly can lead to you know devastating results and it can basically blow up your account and this is what I tried to demonstrate with this image right here.
+---
+A 30% win rate can make you money.
+---
+An 80% win rate can destroy your trading account.
+---
+And that is win rate, risk to reward, and very importantly, expectancy.
+---
+And an 80% win rate can lose money.
+---
+But now, the next concept you need to understand is something known as a break even win rate.
+---
+So, if you have a certain risk to reward, the break even win rate tell you uh you know, how often do I need to win to make money.
+---
+And the expected value is simply when you take your win rate and how much you win on average minus your lose rate times how much you lose your average.
+---
+So, first of all first of all to you need to enter your win rate of your trade.
+---
+So, let's change the win rate to 66%.
+---
+Let's say we have a 66% win rate with a two to one risk reward ratio.
+---
+So, we had a win rate of uh you know uh 50%.
+---
+But here the magic is that Claude can calculate the win rate, the risk-to-reward and expectancy and you don't need to be able to code at all.
+---
+And what we can notice if we just look at this uh a little bit, you know, weird way of events, you know, winning six times in a row and then losing four times in a row is, you know, uh pretty uncommon if you have a 60% uh win rate strategy.
+---
+You can with a very good trading strategy you might have a win rate with you know 60%.
+---
+But you can never you know have a trading strategy with 100% win rate.
+---
+If you have a very good trading strategy with 70% win rate but you risk you know all your money then eventually you will blow up your account and lose everything.
+---
+So the confirmation can basically improve the win rate of your trading strategy.
+---
+So as a simple example, let's say that without uh the confirmation, maybe your trading strategy has uh you know a 55% uh win rate, but when using the confirmation signal, maybe you know it it might not be that significant, but maybe your trading strategy goes from 55 to 62% win rate.
+---
+And as I said, this might sound small, but over a large sample sample size, let's say, you know, uh 100 trades or 1,000 trades, this will actually make a massive difference in your account and how much money you make over time.
+---
+So this means that even if we have a let's say 50% win rate, we will still make money over time with this strategy.
+---
+And crypto can also be a great investment, especially I personally know most about Bitcoin and historically Bitcoin has been a very good investment.
+---
+=== failure_conditions (13) ===
+But here, as you can see, on its own, the VWAP gives many false signals.
+---
+In these kind of markets, you will actually get many false signals from the VWAP.
+---
+So basically, just have these two in mind that a VWAP to touch doesn't automatically mean that you should buy and a flat VWAP produces more false signals.
+---
+And this right here is actually a filter that filters out some of the false signals because remember from earlier in the course when we talked about candlestick patterns in order to find you know significant for example in order to find a valid hammer pattern you want to have a downtrend before the pattern appears because the goal of the pattern is to reverse the price to the upside.
+---
+And what this uh what this setting can do is that it can help reduce some of the false signals because if we uh click on no detection right here, you can see that we will have many more signals appearing on the chart and it's more noisy.
+---
+Well one of the reason it works is that failed breakouts will trap traders on the wrong side.
+---
+So the dangers here, the dangers here of these kind of shopping markets are that you will see many false signals.
+---
+You have many false signals.
+---
+Well, one of the reason it works is that failed breakouts will trap traders on the wrong side.
+---
+And we will talk about you know the difference here the very important difference between a real and a failed breakout.
+---

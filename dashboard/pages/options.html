@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | Options Chain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>Indian Options Chain</h1>
+                <span class="sub">NIFTY50 / BANKNIFTY via Zerodha Kite Connect — Engine #13</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">REQUIRES KITE CREDENTIALS</span></div>
+        </header>
+        <main class="content">
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-inputs" style="margin-bottom:0;">
+                    <div>
+                        <label class="field-label">Index</label>
+                        <select id="oc-symbol">
+                            <option value="NIFTY50" selected>NIFTY50</option>
+                            <option value="BANKNIFTY">BANKNIFTY</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="field-label">Expiry (optional, YYYY-MM-DD)</label>
+                        <input id="oc-expiry" placeholder="nearest live expiry if blank">
+                    </div>
+                    <div style="align-self:end;">
+                        <button onclick="loadOptionChain()">Load Chain</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="oc-result"><div class="skel-block"></div></div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('options');
+
+function moneynessTag(m) {
+    if (!m) return '<span class="tag neutral">—</span>';
+    const cls = m === 'ATM' ? 'blue' : (m === 'ITM' ? 'green' : 'neutral');
+    return `<span class="tag ${cls}">${escapeHtml(m)}</span>`;
+}
+
+function greeksSummary(g) {
+    if (!g) return '—';
+    return Object.entries(g).map(([k, v]) => `${k}: ${typeof v === 'number' ? fmtNum(v, 3) : v}`).join(', ');
+}
+
+function renderChainTable(d) {
+    const rows = d.rows.map(r => {
+        const isAtm = r.strike === d.atm_strike;
+        return `
+        <tr${isAtm ? ' style="background:var(--primary-soft);"' : ''}>
+            <td class="num">${fmtNum(r.ce.oi, 0)}</td>
+            <td class="num">${pnlValue(r.ce.oi_change, '', 0)}</td>
+            <td class="num">${fmtNum(r.ce.volume, 0)}</td>
+            <td class="num">${r.ce.iv !== null ? fmtNum(r.ce.iv * 100, 1) + '%' : '—'}</td>
+            <td class="num">${fmtNum(r.ce.ltp, 2)}</td>
+            <td>${moneynessTag(r.ce.moneyness)}</td>
+            <td class="num" style="font-weight:700;">${fmtNum(r.strike, 0)}</td>
+            <td>${moneynessTag(r.pe.moneyness)}</td>
+            <td class="num">${fmtNum(r.pe.ltp, 2)}</td>
+            <td class="num">${r.pe.iv !== null ? fmtNum(r.pe.iv * 100, 1) + '%' : '—'}</td>
+            <td class="num">${fmtNum(r.pe.volume, 0)}</td>
+            <td class="num">${pnlValue(r.pe.oi_change, '', 0)}</td>
+            <td class="num">${fmtNum(r.pe.oi, 0)}</td>
+        </tr>`;
+    }).join('');
+    return `<div class="table-wrap"><table>
+        <thead><tr>
+            <th colspan="6" style="text-align:center;">CALLS</th><th>Strike</th><th colspan="6" style="text-align:center;">PUTS</th>
+        </tr><tr>
+            <th class="num">OI</th><th class="num">OI Chg</th><th class="num">Vol</th><th class="num">IV</th><th class="num">LTP</th><th>Moneyness</th>
+            <th></th>
+            <th>Moneyness</th><th class="num">LTP</th><th class="num">IV</th><th class="num">Vol</th><th class="num">OI Chg</th><th class="num">OI</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+async function loadOptionChain() {
+    const symbol = document.getElementById('oc-symbol').value;
+    const expiry = document.getElementById('oc-expiry').value.trim();
+    const el = document.getElementById('oc-result');
+    el.innerHTML = '<div class="skel-block"></div><div class="skel-block"></div>';
+    try {
+        let url = `/api/v1/derivatives/india-option-chain?symbol=${encodeURIComponent(symbol)}`;
+        if (expiry) url += `&expiry=${encodeURIComponent(expiry)}`;
+        const d = await getJson(url);
+        if (!d.available) {
+            el.innerHTML = `<div class="placeholder-note">Option chain unavailable: ${escapeHtml(d.message || 'Kite Connect credentials not configured')}. This is an honest gap, not fabricated data — configure kite_api_key/kite_access_token to enable this.</div>`;
+            return;
+        }
+        el.innerHTML = `
+            <div class="kpi-row" style="margin-bottom:14px;">
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Spot Price</span></div><div class="kpi-value">${fmtNum(d.spot_price, 2)}</div><div class="kpi-sub">Expiry ${escapeHtml(d.expiry)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">ATM Strike</span></div><div class="kpi-value">${fmtNum(d.atm_strike, 0)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">PCR (OI / Volume)</span></div><div class="kpi-value" style="font-size:18px;">${fmtNum(d.pcr_oi, 2)} / ${fmtNum(d.pcr_volume, 2)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Max Pain</span></div><div class="kpi-value">${fmtNum(d.max_pain, 0)}</div></div>
+            </div>
+            <div class="card">${renderChainTable(d)}
+                <div class="helper-note">OI Chg = change since the last time this exact symbol+expiry was read — blank on the first-ever read for a symbol+expiry, never a fabricated zero.</div>
+            </div>
+            ${d.notes && d.notes.length ? `<div class="card" style="margin-top:14px;"><div class="panel-head"><h3>Notes</h3></div>${d.notes.map(n => `<div class="helper-note">• ${escapeHtml(n)}</div>`).join('')}</div>` : ''}
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load option chain: ${escapeHtml(e.message)}</div>`;
+        toast('Option chain load failed: ' + e.message, true);
+    }
+}
+
+loadOptionChain();
+</script>
+</body>
+</html>

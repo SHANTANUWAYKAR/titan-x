@@ -1,0 +1,61 @@
+# YouTube Knowledge Import Pipeline -- requirements.txt
+# Generated 2026-08-03. Two groups:
+#   1. New packages this pipeline needs that project_titan_x didn't already
+#      depend on (YouTube access, NLP extraction, CLI ergonomics).
+#   2. project_titan_x's OWN dependencies, reused verbatim (same pins) so
+#      this pipeline can import project_titan_x.engines.e01_knowledge and
+#      write directly into the SAME Chroma/FAISS document store and
+#      Postgres/Qdrant instances the rest of the platform already uses --
+#      not a second, disconnected copy of the knowledge base.
+
+# --- New: YouTube access ---
+yt-dlp>=2024.8.6
+youtube-transcript-api>=0.6.2
+google-api-python-client>=2.140.0
+
+# --- New: extraction / parsing ---
+beautifulsoup4>=4.12.3
+lxml>=5.2.2
+spacy>=3.7.5
+
+# --- New: CLI ergonomics ---
+tqdm>=4.66.4
+rich>=13.7.1
+python-dotenv>=1.0.1
+
+# --- Reused from project_titan_x/requirements.txt (same pins -- see that
+# file's own comments for why pandas/numpy are upper-bounded) ---
+sqlalchemy>=2.0.25
+psycopg2-binary>=2.9.9
+redis>=5.0.1
+qdrant-client>=1.7.0
+pandas>=2.1.4,<3.0
+polars>=0.20.3
+numpy>=1.26.3,<2.0
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
+httpx>=0.26.0
+requests>=2.31.0
+tenacity>=8.2.3
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+chromadb>=0.5.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+networkx>=3.2
+rank-bm25>=0.2.2
+
+# --- Added 2026-08-20: e01_knowledge's document-ingestion pipeline
+# (titanx_integrator.py's Phase 5 -> IngestionPipeline) imports its format
+# loaders eagerly at module load time, so ALL of these are needed even
+# though this pipeline only ever hands it YouTube transcript text -- a real
+# gap in the "reused verbatim" list above, found live when Phase 5 crashed
+# with "No module named 'docx'" on a real run. Same pins as
+# project_titan_x/requirements.txt.
+pymupdf>=1.24.0
+pdfplumber>=0.11.0
+python-docx>=1.1.0
+ebooklib>=0.18
+trafilatura>=1.8.0
+unstructured>=0.15.0
+lxml_html_clean>=0.4.0

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | Market Structure &amp; ICT/SMC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>Market Structure &amp; ICT/SMC Signals</h1>
+                <span class="sub">Order blocks · FVGs · liquidity sweeps · Wyckoff · harmonics · RSI divergence — Engine #07</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">RESEARCH ONLY</span></div>
+        </header>
+        <main class="content">
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-group" style="margin-bottom:0;">
+                    <div class="filter-inputs">
+                        <div>
+                            <label class="field-label">Symbol</label>
+                            <input id="ms-symbol" value="GOLD" placeholder="e.g. GOLD, BTCUSD, NIFTY50">
+                        </div>
+                        <div>
+                            <label class="field-label">Timeframe</label>
+                            <select id="ms-timeframe">
+                                <option value="1h">1h</option>
+                                <option value="4h">4h</option>
+                                <option value="1d" selected>1d</option>
+                            </select>
+                        </div>
+                        <div style="align-self:end;">
+                            <button onclick="loadMarketStructure()">Analyze</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ms-result">
+                <div class="placeholder-note">Enter a symbol and click Analyze — this reads Engine #07's already-computed structure events, it does not run a new backtest.</div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('market-structure');
+
+function scoreTag(score) {
+    if (score > 20) return dirBadge('bullish', 'Bullish ' + score.toFixed(0));
+    if (score < -20) return dirBadge('bearish', 'Bearish ' + score.toFixed(0));
+    return dirBadge('neutral', 'Neutral ' + score.toFixed(0));
+}
+
+function renderKillzones(zones) {
+    if (!zones || !zones.length) return '<span class="tag neutral">None active right now</span>';
+    return zones.map(z => `<span class="tag blue">${escapeHtml(z.replace('_', ' '))}</span>`).join(' ');
+}
+
+function renderOrderBlocks(blocks) {
+    if (!blocks.length) return '<div class="placeholder-note">No order blocks detected in the available window.</div>';
+    const rows = blocks.slice(-15).reverse().map(b => `
+        <tr>
+            <td class="num">${b.index}</td>
+            <td>${dirBadge(b.direction)}</td>
+            <td class="num">${fmtNum(b.high, 4)}</td>
+            <td class="num">${fmtNum(b.low, 4)}</td>
+            <td>${b.breaker ? '<span class="tag warn">Breaker</span>' : '<span class="tag neutral">Standard</span>'}</td>
+            <td>${b.mitigated_index !== null ? '<span class="tag neutral">Mitigated @' + b.mitigated_index + '</span>' : '<span class="tag green">Untested</span>'}</td>
+        </tr>`).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Bar</th><th>Direction</th><th class="num">High</th><th class="num">Low</th><th>Type</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderFvgs(gaps) {
+    if (!gaps.length) return '<div class="placeholder-note">No fair value gaps detected.</div>';
+    const open = gaps.filter(g => !g.filled);
+    const rows = open.slice(-15).reverse().map(g => `
+        <tr>
+            <td class="num">${g.index}</td>
+            <td>${dirBadge(g.direction)}</td>
+            <td class="num">${fmtNum(g.gap_top, 4)}</td>
+            <td class="num">${fmtNum(g.gap_bottom, 4)}</td>
+            <td><span class="tag green">Open</span></td>
+        </tr>`).join('') || '<tr><td colspan="5" class="placeholder-note">All detected gaps have since been filled.</td></tr>';
+    return `<div class="helper-note">${gaps.length} total, ${open.length} still open (most recent 15 shown)</div><div class="table-wrap"><table><thead><tr><th>Bar</th><th>Direction</th><th class="num">Top</th><th class="num">Bottom</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderSweeps(sweeps) {
+    if (!sweeps.length) return '<div class="placeholder-note">No liquidity sweeps detected.</div>';
+    const rows = sweeps.slice(-10).reverse().map(s => `
+        <tr><td class="num">${s.index}</td><td>${dirBadge(s.direction)}</td><td class="num">${fmtNum(s.swept_level, 4)}</td><td class="num">${fmtNum(s.wick_price, 4)}</td></tr>`).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Bar</th><th>Reversal Direction</th><th class="num">Swept Level</th><th class="num">Wick Price</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderDivergences(divs) {
+    if (!divs.length) return '<div class="placeholder-note">No RSI divergences detected.</div>';
+    const rows = divs.slice(-10).reverse().map(d => {
+        const bullish = d.kind.includes('bullish');
+        return `<tr><td>${dirBadge(bullish ? 'bullish' : 'bearish', d.kind.replace(/_/g, ' '))}</td><td class="num">${d.first_index} → ${d.second_index}</td><td class="num">${fmtNum(d.rsi_first, 1)} → ${fmtNum(d.rsi_second, 1)}</td></tr>`;
+    }).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Kind</th><th class="num">Bars</th><th class="num">RSI</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderHarmonics(patterns) {
+    if (!patterns.length) return '<div class="placeholder-note">No harmonic patterns (Gartley/Bat/Butterfly/Crab) matched.</div>';
+    const rows = patterns.map(p => `<tr><td>${escapeHtml(p.name)}</td><td>${dirBadge(p.direction)}</td><td class="num">${fmtNum(p.d_price, 4)}</td></tr>`).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Pattern</th><th>Direction</th><th class="num">D Price</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+async function loadMarketStructure() {
+    const symbol = document.getElementById('ms-symbol').value.trim();
+    const timeframe = document.getElementById('ms-timeframe').value;
+    const el = document.getElementById('ms-result');
+    if (!symbol) { toast('Enter a symbol first', true); return; }
+    el.innerHTML = '<div class="skel-block"></div><div class="skel-block"></div>';
+    try {
+        const d = await getJson(`/api/v1/technical/analyze?symbol=${encodeURIComponent(symbol)}&timeframe=${encodeURIComponent(timeframe)}`);
+        const vp = d.volume_profile;
+        el.innerHTML = `
+            <div class="kpi-row" style="margin-bottom:14px;">
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Composite Score</span></div><div class="kpi-value">${scoreTag(d.score)}</div><div class="kpi-sub">Trend: ${escapeHtml(d.trend)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Wyckoff Phase</span></div><div class="kpi-value" style="font-size:16px;">${escapeHtml(d.wyckoff_phase)}</div><div class="kpi-sub">${d.wyckoff_range ? `Range ${fmtNum(d.wyckoff_range.support,2)}–${fmtNum(d.wyckoff_range.resistance,2)}` : 'No active range'}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Active Killzones</span></div><div class="kpi-value" style="font-size:14px;">${renderKillzones(d.active_killzones)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Volume POC</span></div><div class="kpi-value">${vp ? fmtNum(vp.poc_price, 2) : '—'}</div><div class="kpi-sub">${vp ? `Value area ${fmtNum(vp.value_area_low,2)}–${fmtNum(vp.value_area_high,2)}` : 'No volume profile available'}</div></div>
+            </div>
+
+            <div class="section-heading">Order Blocks (${d.order_blocks.length})</div>
+            <div class="card">${renderOrderBlocks(d.order_blocks)}</div>
+
+            <div class="section-heading">Fair Value Gaps (${d.fair_value_gaps.length})</div>
+            <div class="card">${renderFvgs(d.fair_value_gaps)}</div>
+
+            <div class="grid-2" style="margin-top:26px;">
+                <div>
+                    <div class="section-heading">Liquidity Sweeps (${d.liquidity_sweeps.length})</div>
+                    <div class="card">${renderSweeps(d.liquidity_sweeps)}</div>
+                </div>
+                <div>
+                    <div class="section-heading">RSI Divergence (${d.rsi_divergences.length})</div>
+                    <div class="card">${renderDivergences(d.rsi_divergences)}</div>
+                </div>
+            </div>
+
+            <div class="section-heading">Harmonic Patterns (${d.harmonic_patterns.length})</div>
+            <div class="card">${renderHarmonics(d.harmonic_patterns)}</div>
+
+            <div class="section-heading">Support / Resistance &amp; Signals</div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="panel-head"><h3>Levels</h3></div>
+                    <div class="helper-note">Support: ${d.support_levels.map(v => fmtNum(v,4)).join(', ') || '—'}</div>
+                    <div class="helper-note">Resistance: ${d.resistance_levels.map(v => fmtNum(v,4)).join(', ') || '—'}</div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Evidence</h3></div>
+                    ${d.signals.length ? d.signals.map(s => `<div class="helper-note">• ${escapeHtml(s)}</div>`).join('') : '<div class="placeholder-note">No evidence strings for this scan.</div>'}
+                </div>
+            </div>
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load market structure: ${escapeHtml(e.message)}</div>`;
+        toast('Market structure load failed: ' + e.message, true);
+    }
+}
+
+loadMarketStructure();
+</script>
+</body>
+</html>

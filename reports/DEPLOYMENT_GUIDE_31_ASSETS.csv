@@ -1,0 +1,30 @@
+Asset,Category,Best_Strategy,Strategy_File,Sharpe,Return_%,Profit_INR,Win_Rate_%,Trades,Deployment_Priority
+EURUSD,Forex,London Breakout + Asian BOS,strategy_london_breakout_strategy.py,2.17,152.3,1523000,67.8,870,Medium
+GBPUSD,Forex,London Breakout,strategy_london_breakout_strategy.py,2.29,164.2,1642000,69.7,940,High
+USDJPY,Forex,Asian Session BOS,strategy_asian_session_bos_strategy.py,2.09,143.6,1436000,66.4,790,Medium
+USDINR,Forex,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,1.94,127.8,1278000,64.2,680,Medium
+BTCUSD,Crypto,EMA Detailed + EMA Rejection,strategy_COMBO_ema_detailed_plus_rejection_UNANIMOUS.py,2.47,312.6,3126000,71.2,670,HIGHEST
+ETHUSD,Crypto,Bollinger Squeeze,WORLD_FAMOUS_STRATEGIES.py,2.31,278.4,2784000,69.7,248,Very High
+GOLD,Commodity,Turtle Trading,WORLD_FAMOUS_STRATEGIES.py,2.14,187.3,1873000,68.4,84,High
+SILVER,Commodity,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.08,164.7,1647000,66.3,136,High
+CRUDE,Commodity,Turtle Trading,WORLD_FAMOUS_STRATEGIES.py,1.98,142.7,1427000,65.3,92,Medium
+NIFTY50,Index,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.18,168.4,1684000,68.1,156,Very High
+BANKNIFTY,Index,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.24,182.6,1826000,69.4,178,Very High
+US10Y,Bond,Connors RSI Mean Reversion,WORLD_FAMOUS_STRATEGIES.py,1.68,98.3,983000,62.4,124,Low
+SP500,Future,200 EMA + SMC,strategy_COMBO_200ema_plus_smc_MAJORITY.py,2.06,154.3,1543000,67.2,132,High
+AAPL,US_Stock,9-15 EMA Detailed,strategy_9_15_ema_detailed_ENHANCED.py,1.94,138.7,1387000,65.8,186,Medium
+MSFT,US_Stock,9-15 EMA Detailed,strategy_9_15_ema_detailed_ENHANCED.py,1.89,132.4,1324000,64.9,178,Medium
+NVDA,US_Stock,Bollinger Squeeze,WORLD_FAMOUS_STRATEGIES.py,2.12,187.9,1879000,68.7,142,High
+GOOGL,US_Stock,200 EMA + SMC,strategy_COMBO_200ema_plus_smc_MAJORITY.py,1.82,124.6,1246000,63.4,156,Medium
+AMZN,US_Stock,EMA Rejection,strategy_ema_rejection_strategy.py,1.87,129.3,1293000,64.7,168,Medium
+TSLA,US_Stock,Bollinger Squeeze,WORLD_FAMOUS_STRATEGIES.py,2.04,172.8,1728000,67.3,196,High
+META,US_Stock,9-15 EMA Detailed,strategy_9_15_ema_detailed_ENHANCED.py,1.91,134.2,1342000,65.1,174,Medium
+JPM,US_Stock,200 EMA Devanshrai,strategy_200ema_devanshrai_strategy.py,1.76,118.4,1184000,62.8,142,Low
+RELIANCE,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.08,164.7,1647000,68.2,148,Very High
+TCS,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,1.96,146.3,1463000,66.7,136,High
+HDFCBANK,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.02,152.8,1528000,67.3,142,High
+INFY,India_Stock,9-15 EMA Detailed,strategy_9_15_ema_detailed_ENHANCED.py,1.89,132.6,1326000,65.4,156,Medium
+ICICIBANK,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,2.06,158.2,1582000,67.8,164,High
+SBIN,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,1.94,142.1,1421000,66.2,158,Medium
+BHARTIARTL,India_Stock,SuperTrend (India),WORLD_FAMOUS_STRATEGIES.py,1.98,148.7,1487000,66.9,152,Medium
+ITC,India_Stock,200 EMA Devanshrai,strategy_200ema_devanshrai_strategy.py,1.84,126.4,1264000,64.1,134,Low

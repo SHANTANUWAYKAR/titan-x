@@ -1,0 +1,54 @@
+{
+  "_comment": "Reconciled 2026-08-20 against the project owner's 'Approved YouTube Knowledge Sources' policy document (pasted verbatim into youtube_pipeline/APPROVED_SOURCES.md), which fully supersedes the previous ad-hoc queue -- same 'authoritative document supersedes' precedent as MASTER_PROMPT.md (see CLAUDE.md Rule 1). Every entry below is a channel explicitly named in that policy. Channels previously queued but NOT on the new approved list (SMB Capital, CME Group, Bloomberg, Man Group, Bridgewater, AQR, Two Sigma, Rayner Teo, Adam Grimes, Trader Dante, Al Brooks, The Trading Channel, UKspreadbetting, Arthur Hayes, Raoul Pal, Alex Krueger, Lyn Alden, Stanley Druckenmiller, Paul Tudor Jones, George Soros, Bruce Kovner, Bill Lipschutz, Benjamin Cowen, Finematics, Unchained, The Defiant, CryptoQuant, InvestAnswers, Robot Wealth, PyQuant News, CQF Institute, WorldQuant, Ben Felix, Morningstar, Rational Reminder, Cboe, OptionsPlay, OIC, TheoTrade, Corey Schafer, freeCodeCamp, DataCamp, sentdex, NeuralNine, Part Time Larry, Umar Punjabi Live, Swappy Trading IN, Stock Learners) were deliberately removed, not appended to -- the new policy document is exclusive, not additive. New entries' handles were live-verified via yt-dlp ytsearch (no YouTube Data API key configured, same no-guessing discipline as channel_discovery.py's own docstring); real mismatches were caught and re-searched before accepting (search first returned the WRONG channel for 'The Quant Scientist', 'New Money', 'NSE India', and 'Tech With Tim' -- three were corrected after a second/third targeted search, one ('The Quant Scientist') never found a confident match across three attempts and is marked skip=true below rather than guessed, same precedent as the George Soros/Bruce Kovner squatter-account catches this file already documents).",
+  "channels": [
+    {"name": "Mind Math Money", "handle": "MindMathMoney", "category": "forex", "note": "376/542 already integrated as of 2026-08-09, 125 pending -- resumes from its own existing checkpoint"},
+    {"name": "No Nonsense Forex", "handle": "NoNonsenseForex", "category": "forex"},
+    {"name": "TradingNut", "handle": "TradingNut", "category": "forex"},
+    {"name": "Tradeciety", "handle": "Tradeciety", "category": "forex"},
+    {"name": "Trading Rush", "handle": "TRADINGRUSH", "category": "forex"},
+    {"name": "The Secret Mindset", "handle": "TheSecretMindset", "category": "forex"},
+
+    {"name": "Real Vision", "handle": "RealVision", "category": "macro"},
+    {"name": "Macro Voices", "handle": "macrovoices7508", "category": "macro", "note": "Auto-generated numeric-suffix handle (channel never claimed a custom @macrovoices handle) -- verified live via yt-dlp, channel name and content (Jim Bianco/Fed/economy episode) match exactly."},
+    {"name": "Eurodollar University", "handle": "eurodollaruniversity", "category": "macro"},
+    {"name": "Forward Guidance", "handle": "ForwardGuidanceBW", "category": "macro", "note": "'BW' = Blockworks, the network this show is part of -- confirmed via its own 'Announcing Blockworks' Latest Podcast' video."},
+
+    {"name": "QuantInsti", "handle": "QuantInsti", "category": "quant"},
+    {"name": "Hudson and Thames", "handle": "HudsonThamesResearch", "category": "quant", "note": "Previously skip=true ('no confirmed handle found yet') -- resolved 2026-08-20 via live yt-dlp search, real match confirmed (channel name 'Hudson & Thames', quantitative-research content)."},
+    {"name": "The Quant Scientist", "skip": true, "reason": "No confirmed official channel found after 3 separate live yt-dlp searches (2026-08-20) -- closest candidates ('The Quant Professor'/@QuantProfessorYT, 'The Quantified Scientist'/@TheQuantifiedScientist which is actually a smartwatch-review channel, unrelated to finance) are both clearly different channels, not a match. Needs a corrected channel name/URL from the project owner before queuing -- not guessed."},
+    {"name": "QuantConnect", "handle": "QuantConnect", "category": "quant"},
+
+    {"name": "tastytrade", "handle": "tastylive", "category": "options", "note": "tastytrade rebranded to 'tastylive' in 2022 -- same channel, current handle."},
+    {"name": "projectfinance", "handle": "projectfinance1", "category": "options"},
+    {"name": "Option Alpha", "handle": "optionalpha", "category": "options"},
+
+    {"name": "The Plain Bagel", "handle": "ThePlainBagel", "category": "investing"},
+    {"name": "Patrick Boyle", "handle": "PBoyle", "category": "investing"},
+    {"name": "Aswath Damodaran", "handle": "AswathDamodaranonValuation", "category": "investing"},
+    {"name": "New Money", "handle": "NewMoneyYouTube", "category": "investing", "note": "First two live searches returned a WRONG channel ('The Art Of Wealth Building') -- corrected 2026-08-20 with a third, more specific search; 5/5 top results consistently matched real stock-market-investing content."},
+    {"name": "Everything Money", "handle": "EverythingMoney", "category": "investing"},
+
+    {"name": "Coin Bureau", "handle": "CoinBureau", "category": "crypto"},
+    {"name": "Bankless", "handle": "Bankless", "category": "crypto"},
+    {"name": "Glassnode", "handle": "glassnode", "category": "crypto"},
+
+    {"name": "Zerodha Varsity", "handle": "varsitybyzerodha", "category": "india_markets"},
+    {"name": "NSE India", "handle": "nseindia", "category": "india_markets", "note": "First live search returned a WRONG channel ('CNBC Awaaz') -- corrected 2026-08-20 with a more specific search, real official NSE India channel confirmed (2/3 top hits consistent)."},
+    {"name": "BSE India", "handle": "BSEworldBSEIndia", "category": "india_markets", "confidence": "medium", "note": "Displayed channel name is 'BSEIndia' but the actual claimed handle is the unusual '@BSEworldBSEIndia' -- content (demat/trading-account explainer) matches BSE's real educational scope, but worth a manual re-check before the first real ingestion run given the handle oddity."},
+
+    {"name": "Chat With Traders", "handle": "ChatWithTradersPodcast", "category": "psychology"},
+
+    {"name": "Machine Learning Street Talk", "handle": "MachineLearningStreetTalk", "category": "ml_ai"},
+    {"name": "DeepLearningAI", "handle": "Deeplearningai", "category": "ml_ai"},
+    {"name": "StatQuest with Josh Starmer", "handle": "statquest", "category": "ml_ai", "note": "Also listed under MATHEMATICS & STATISTICS in the source policy -- stored once here per that document's own 'if a concept belongs to multiple engines, store it once and create relationships instead of duplicating data' rule."},
+    {"name": "Two Minute Papers", "handle": "TwoMinutePapers", "category": "ml_ai"},
+
+    {"name": "ArjanCodes", "handle": "ArjanCodes", "category": "data_engineering"},
+    {"name": "ByteByteGo", "handle": "ByteByteGo", "category": "data_engineering"},
+    {"name": "Hussein Nasser", "handle": "hnasr", "category": "data_engineering"},
+    {"name": "Tech With Tim", "handle": "TechWithTim", "category": "data_engineering", "note": "First live search returned a WRONG channel ('David Ondrej', which merely had a video mentioning Tech With Tim in its title) -- corrected 2026-08-20 with a more specific search, real channel confirmed (3/3 top hits consistent, all genuine Tech With Tim Python content)."},
+
+    {"name": "3Blue1Brown", "handle": "3blue1brown", "category": "math_stats"},
+    {"name": "MIT OpenCourseWare", "handle": "mitocw", "category": "math_stats"}
+  ]
+}

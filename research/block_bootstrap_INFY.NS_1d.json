@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-12T15:08:29.829200+00:00",
+  "symbol": "INFY.NS",
+  "timeframe": "1d",
+  "strategy": "donchian_breakout",
+  "params": {
+    "entry_n": 15,
+    "exit_n": 15
+  },
+  "n_bars": 2474,
+  "n_blocks": 6,
+  "n_bootstrap": 1000,
+  "error": null,
+  "block_sharpes": [
+    0.6357,
+    -0.4777,
+    1.7513,
+    1.1488,
+    1.4004,
+    0.5952
+  ],
+  "mean_sharpe": 0.8355,
+  "median_sharpe": 0.8525,
+  "std_sharpe": 0.3131,
+  "pct_draws_positive": 99.2,
+  "p05_sharpe": 0.3018,
+  "p95_sharpe": 1.3154,
+  "caveats": [
+    "No fitting step exists in this design (strategy_fn is a fixed, already-selected rule) -- classical CPCV's purge/embargo, which protect a FIT from leaking across a train/test boundary, do not apply and are not used. See this module's own docstring for why literal CPCV was tried and abandoned in favor of this block-bootstrap approach.",
+    "Each block is backtested independently and restarts flat (position=0); a position still open at a block's last bar is marked-to-market there, never given a fabricated closing trade.",
+    "Blocks are drawn WITH REPLACEMENT per bootstrap sample, so a single unusually good or bad historical period can dominate several draws -- this measures sensitivity to WHICH periods you sample, not genuine new out-of-sample evidence beyond what the underlying blocks contain.",
+    "Adjacent real-market blocks are not statistically independent (real serial correlation) -- the same caveat this project's own DSR diagnostic already states for IS Sharpe."
+  ]
+}

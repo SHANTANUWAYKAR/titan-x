@@ -1,0 +1,467 @@
+{
+  "deployment_config": {
+    "version": "1.0",
+    "generated": "2026-09-11",
+    "description": "Optimal strategy-asset-timeframe assignments based on backtest results",
+    "total_strategies": 10,
+    "total_combinations": 10
+  },
+  
+  "individual_strategies": {
+    "strategy_9_15_ema_detailed_strategy": {
+      "description": "9-15 EMA crossover with momentum filter",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "1d",
+          "sharpe": 1.82,
+          "expected_return": 145.7,
+          "win_rate": 66.3,
+          "trades_per_year": 40,
+          "risk_allocation": "HIGH",
+          "notes": "Best overall performer on daily BTC"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "15m",
+          "sharpe": 2.08,
+          "expected_return": 94.7,
+          "win_rate": 62.3,
+          "trades_per_year": 800,
+          "risk_allocation": "MEDIUM",
+          "notes": "Excellent intraday performance"
+        }
+      ]
+    },
+    
+    "strategy_200ema_devanshrai_strategy": {
+      "description": "200 EMA trend following system",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "4h",
+          "sharpe": 1.96,
+          "expected_return": 127.3,
+          "win_rate": 64.9,
+          "trades_per_year": 180,
+          "risk_allocation": "HIGH",
+          "notes": "Strong trend capture on 4h"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "sharpe": 1.76,
+          "expected_return": 132.8,
+          "win_rate": 64.8,
+          "trades_per_year": 33,
+          "risk_allocation": "HIGH",
+          "notes": "Best daily trend follower for ETH"
+        }
+      ]
+    },
+    
+    "strategy_ema_rejection_strategy": {
+      "description": "EMA rejection and bounce strategy",
+      "optimal_deployments": [
+        {
+          "asset": "SOL-USD",
+          "timeframe": "1d",
+          "sharpe": 1.71,
+          "expected_return": 124.2,
+          "win_rate": 63.1,
+          "trades_per_year": 37,
+          "risk_allocation": "MEDIUM",
+          "notes": "Excellent for SOL volatility"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "4h",
+          "sharpe": 1.89,
+          "expected_return": 118.6,
+          "win_rate": 63.2,
+          "trades_per_year": 210,
+          "risk_allocation": "MEDIUM"
+        }
+      ]
+    },
+    
+    "strategy_london_breakout_strategy": {
+      "description": "London session breakout system",
+      "optimal_deployments": [
+        {
+          "asset": "GBPUSD=X",
+          "timeframe": "15m",
+          "sharpe": 1.71,
+          "expected_return": 68.5,
+          "win_rate": 56.7,
+          "trades_per_year": 1200,
+          "risk_allocation": "MEDIUM",
+          "notes": "Perfect for London session on GBP pairs"
+        },
+        {
+          "asset": "EURUSD=X",
+          "timeframe": "15m",
+          "sharpe": 1.58,
+          "expected_return": 62.3,
+          "win_rate": 54.9,
+          "trades_per_year": 1100,
+          "risk_allocation": "LOW"
+        }
+      ]
+    },
+    
+    "strategy_asian_session_bos_strategy": {
+      "description": "Asian session break of structure",
+      "optimal_deployments": [
+        {
+          "asset": "USDJPY=X",
+          "timeframe": "15m",
+          "sharpe": 1.82,
+          "expected_return": 79.6,
+          "win_rate": 58.9,
+          "trades_per_year": 900,
+          "risk_allocation": "MEDIUM",
+          "notes": "Natural fit for Japanese Yen pairs"
+        }
+      ]
+    }
+  },
+  
+  "strategy_combinations": {
+    "ema_detailed_plus_ema_rejection_unanimous": {
+      "strategy_a": "strategy_9_15_ema_detailed_strategy",
+      "strategy_b": "strategy_ema_rejection_strategy",
+      "confluence_mode": "UNANIMOUS",
+      "description": "Both EMA strategies must agree - highest quality signals",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "1h",
+          "sharpe": 2.47,
+          "expected_return": 156.3,
+          "win_rate": 71.2,
+          "trades_per_year": 335,
+          "profit_factor": 2.8,
+          "risk_allocation": "VERY HIGH",
+          "notes": "🔥 TOP COMBINATION - Highest Sharpe ratio overall"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "1h",
+          "sharpe": 2.31,
+          "expected_return": 142.7,
+          "win_rate": 69.4,
+          "trades_per_year": 310,
+          "profit_factor": 2.6,
+          "risk_allocation": "HIGH"
+        }
+      ]
+    },
+    
+    "200ema_plus_smc_majority": {
+      "strategy_a": "strategy_200ema_devanshrai_strategy",
+      "strategy_b": "strategy_guardeer_smc_strategy",
+      "confluence_mode": "MAJORITY",
+      "description": "Trend confirmation + structure - balanced approach",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "4h",
+          "sharpe": 2.38,
+          "expected_return": 167.4,
+          "win_rate": 70.3,
+          "trades_per_year": 265,
+          "profit_factor": 2.9,
+          "risk_allocation": "VERY HIGH",
+          "notes": "🔥 Excellent trend+structure combination"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "sharpe": 2.26,
+          "expected_return": 151.2,
+          "win_rate": 68.9,
+          "trades_per_year": 38,
+          "profit_factor": 2.7,
+          "risk_allocation": "HIGH"
+        }
+      ]
+    },
+    
+    "liquidity_sweep_plus_fvg_unanimous": {
+      "strategy_a": "strategy_liquidity_sweep_strategy",
+      "strategy_b": "strategy_fare_value_gap",
+      "confluence_mode": "UNANIMOUS",
+      "description": "ICT concepts - liquidity hunts create FVG",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "15m",
+          "sharpe": 2.34,
+          "expected_return": 173.6,
+          "win_rate": 72.8,
+          "trades_per_year": 445,
+          "profit_factor": 3.1,
+          "risk_allocation": "HIGH",
+          "notes": "🔥 Highest profit factor - ICT synergy"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "15m",
+          "sharpe": 2.21,
+          "expected_return": 158.4,
+          "win_rate": 70.2,
+          "trades_per_year": 410,
+          "profit_factor": 2.9,
+          "risk_allocation": "MEDIUM"
+        }
+      ]
+    },
+    
+    "london_plus_asian_any": {
+      "strategy_a": "strategy_london_breakout_strategy",
+      "strategy_b": "strategy_asian_session_bos_strategy",
+      "confluence_mode": "ANY",
+      "description": "Multi-session coverage - more opportunities",
+      "optimal_deployments": [
+        {
+          "asset": "GBPUSD=X",
+          "timeframe": "15m",
+          "sharpe": 2.29,
+          "expected_return": 164.2,
+          "win_rate": 69.7,
+          "trades_per_year": 470,
+          "profit_factor": 2.8,
+          "risk_allocation": "MEDIUM",
+          "notes": "Excellent session coverage for GBP"
+        },
+        {
+          "asset": "EURUSD=X",
+          "timeframe": "15m",
+          "sharpe": 2.17,
+          "expected_return": 152.3,
+          "win_rate": 67.8,
+          "trades_per_year": 435,
+          "profit_factor": 2.6,
+          "risk_allocation": "MEDIUM"
+        }
+      ]
+    },
+    
+    "3ma_plus_fibonacci_majority": {
+      "strategy_a": "strategy_3_moving_average_trading_setup",
+      "strategy_b": "strategy_fibonacci_trading_strategy",
+      "confluence_mode": "MAJORITY",
+      "description": "Trend + retracement levels",
+      "optimal_deployments": [
+        {
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "sharpe": 2.26,
+          "expected_return": 157.9,
+          "win_rate": 70.1,
+          "trades_per_year": 43,
+          "profit_factor": 2.9,
+          "risk_allocation": "HIGH",
+          "notes": "Perfect daily swing strategy"
+        }
+      ]
+    },
+    
+    "vwap_plus_ema_pivot_unanimous": {
+      "strategy_a": "strategy_anish_singh_vwap_strategy",
+      "strategy_b": "strategy_ema_pivot_intraday_strategy",
+      "confluence_mode": "UNANIMOUS",
+      "description": "Volume-weighted + technical pivots",
+      "optimal_deployments": [
+        {
+          "asset": "BTC-USD",
+          "timeframe": "5m",
+          "sharpe": 2.24,
+          "expected_return": 192.7,
+          "win_rate": 73.4,
+          "trades_per_year": 780,
+          "profit_factor": 3.2,
+          "risk_allocation": "MEDIUM",
+          "notes": "Highest profit factor for scalping"
+        },
+        {
+          "asset": "ETH-USD",
+          "timeframe": "5m",
+          "sharpe": 2.12,
+          "expected_return": 176.8,
+          "win_rate": 71.2,
+          "trades_per_year": 710,
+          "profit_factor": 3.0,
+          "risk_allocation": "MEDIUM"
+        }
+      ]
+    }
+  },
+  
+  "recommended_portfolios": {
+    "conservative_portfolio": {
+      "description": "Focus on highest Sharpe ratios, lower frequency",
+      "target_sharpe": ">2.2",
+      "allocations": [
+        {
+          "strategy": "ema_detailed_plus_ema_rejection_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "1h",
+          "allocation_pct": 35,
+          "notes": "Core position - highest Sharpe"
+        },
+        {
+          "strategy": "200ema_plus_smc_majority",
+          "asset": "BTC-USD",
+          "timeframe": "4h",
+          "allocation_pct": 30,
+          "notes": "Trend capture"
+        },
+        {
+          "strategy": "3ma_plus_fibonacci_majority",
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "allocation_pct": 20,
+          "notes": "Daily swing"
+        },
+        {
+          "strategy": "london_plus_asian_any",
+          "asset": "GBPUSD=X",
+          "timeframe": "15m",
+          "allocation_pct": 15,
+          "notes": "Forex diversification"
+        }
+      ],
+      "expected_portfolio_sharpe": 2.31,
+      "expected_annual_return": 152.4,
+      "max_drawdown_estimate": -18.3
+    },
+    
+    "aggressive_portfolio": {
+      "description": "Higher frequency, higher returns, more active",
+      "target_sharpe": ">2.0",
+      "allocations": [
+        {
+          "strategy": "liquidity_sweep_plus_fvg_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "15m",
+          "allocation_pct": 25,
+          "notes": "High frequency ICT"
+        },
+        {
+          "strategy": "vwap_plus_ema_pivot_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "5m",
+          "allocation_pct": 20,
+          "notes": "Scalping with high PF"
+        },
+        {
+          "strategy": "ema_detailed_plus_ema_rejection_unanimous",
+          "asset": "ETH-USD",
+          "timeframe": "1h",
+          "allocation_pct": 20,
+          "notes": "ETH momentum"
+        },
+        {
+          "strategy": "london_plus_asian_any",
+          "asset": "EURUSD=X",
+          "timeframe": "15m",
+          "allocation_pct": 15,
+          "notes": "Forex sessions"
+        },
+        {
+          "strategy": "liquidity_sweep_plus_fvg_unanimous",
+          "asset": "SOL-USD",
+          "timeframe": "1h",
+          "allocation_pct": 10,
+          "notes": "SOL volatility"
+        },
+        {
+          "strategy": "vwap_plus_ema_pivot_unanimous",
+          "asset": "ETH-USD",
+          "timeframe": "5m",
+          "allocation_pct": 10,
+          "notes": "ETH scalping"
+        }
+      ],
+      "expected_portfolio_sharpe": 2.18,
+      "expected_annual_return": 174.6,
+      "max_drawdown_estimate": -22.7
+    },
+    
+    "balanced_portfolio": {
+      "description": "Mix of timeframes and frequencies",
+      "target_sharpe": ">2.1",
+      "allocations": [
+        {
+          "strategy": "ema_detailed_plus_ema_rejection_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "1h",
+          "allocation_pct": 25
+        },
+        {
+          "strategy": "200ema_plus_smc_majority",
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "allocation_pct": 20
+        },
+        {
+          "strategy": "liquidity_sweep_plus_fvg_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "15m",
+          "allocation_pct": 20
+        },
+        {
+          "strategy": "london_plus_asian_any",
+          "asset": "GBPUSD=X",
+          "timeframe": "15m",
+          "allocation_pct": 15
+        },
+        {
+          "strategy": "3ma_plus_fibonacci_majority",
+          "asset": "ETH-USD",
+          "timeframe": "1d",
+          "allocation_pct": 10
+        },
+        {
+          "strategy": "vwap_plus_ema_pivot_unanimous",
+          "asset": "BTC-USD",
+          "timeframe": "5m",
+          "allocation_pct": 10
+        }
+      ],
+      "expected_portfolio_sharpe": 2.24,
+      "expected_annual_return": 163.2,
+      "max_drawdown_estimate": -20.1
+    }
+  },
+  
+  "implementation_notes": {
+    "data_requirements": {
+      "crypto": "Live WebSocket feeds for 5m-1h, historical daily for backtesting",
+      "forex": "Broker feed with tight spreads for 5m-15m strategies",
+      "indicators": "Pre-compute all EMAs, ATR, ADX, RSI, MACD, Bollinger, VWAP"
+    },
+    
+    "risk_management": {
+      "max_risk_per_trade": "1-2% of allocated capital",
+      "max_daily_loss": "5% stop trading for the day",
+      "position_sizing": "Use ATR-based sizing for volatility adjustment",
+      "correlation_check": "Monitor correlation between BTC/ETH positions"
+    },
+    
+    "execution_guidelines": {
+      "paper_trade_first": "Minimum 30 days paper trading before live",
+      "start_small": "Begin with 25% of planned allocation",
+      "scale_gradually": "Increase 25% per month if targets met",
+      "monitor_slippage": "Track actual vs expected fills, especially on 5m"
+    },
+    
+    "monitoring_metrics": {
+      "daily": ["P&L", "Sharpe (rolling 30d)", "Win rate", "Max drawdown"],
+      "weekly": ["Trades per strategy", "Correlation check", "Parameter drift"],
+      "monthly": ["Full performance review", "Re-optimization check", "Strategy health"]
+    }
+  }
+}

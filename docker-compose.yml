@@ -1,0 +1,110 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: titanx-postgres
+    environment:
+      POSTGRES_USER: titanx
+      POSTGRES_PASSWORD: titanx_secret
+      POSTGRES_DB: titanx
+    ports:
+      # Host port 5433, not 5432 -- this machine already runs a separate
+      # project's own Postgres container (a different TITAN-X codebase
+      # under MARKET SOFTWARE) bound to 5432. Container-internal port is
+      # still the standard 5432; only the host-side mapping changed.
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deployment/docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U titanx -d titanx"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: titanx-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  qdrant:
+    # v1.7.4 predates the Query API (query_points) that qdrant-client 1.18.0
+    # (pinned in requirements) actually calls -- bumped to stay within the
+    # client library's supported server-version window.
+    #
+    # Bumped again 2026-08-21: requirements.txt's qdrant-client>=1.7.0 is an
+    # open-ended lower bound with no upper cap, so pip installed 1.19.0 by
+    # the time this was checked -- drifted past v1.15.4 (real warning
+    # surfaced live: "Qdrant client version 1.19.0 is incompatible with
+    # server version 1.15.4. Major versions should match and minor version
+    # difference must not exceed 1"). Bumped to v1.19.0 to match exactly;
+    # requirements.txt intentionally left open-ended still (same real
+    # tradeoff every unbounded >= pin in this file already accepts) --
+    # whichever qdrant-client version actually gets installed next, re-check
+    # this pin against it rather than assuming it stays in sync silently.
+    image: qdrant/qdrant:v1.19.0
+    container_name: titanx-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      # v1.12.4's image dropped wget/curl -- bash's /dev/tcp is available and
+      # needs no external tool, just confirms the port is accepting connections.
+      test: ["CMD-SHELL", "bash -c 'echo > /dev/tcp/127.0.0.1/6333'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
+    container_name: titanx-api
+    ports:
+      # Published to the HOST LOOPBACK only (changed 2026-09-08). "8000:8000"
+      # binds every host interface, which put all 78 unauthenticated routes on
+      # whatever network the machine was attached to. The container still
+      # listens on 0.0.0.0 internally -- that is required for Docker bridge
+      # traffic and is not the exposure. Change this to 0.0.0.0:8000 only
+      # together with API_KEY, never on its own.
+      - "127.0.0.1:8000:8000"
+    environment:
+      POSTGRES_HOST: postgres
+      # Container-internal Docker network port -- Postgres's own native
+      # 5432, NOT the 5433 host-side remap above (that remap only exists
+      # to avoid colliding with another project's Postgres on the HOST's
+      # 5432; inside the compose network there's no such collision).
+      # core.config.settings now defaults postgres_port to 5433 for the
+      # local (non-Docker) launch path, so this must be set explicitly
+      # here or the containerized api would inherit that wrong default.
+      POSTGRES_PORT: 5432
+      REDIS_HOST: redis
+      QDRANT_HOST: qdrant
+      APP_ENV: development
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./project_titan_x:/app/project_titan_x
+    command: uvicorn project_titan_x.api.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  postgres_data:
+  redis_data:
+  qdrant_data:

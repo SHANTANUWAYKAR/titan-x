@@ -1,0 +1,40 @@
+=== gZ8sTIbDRRI ===
+failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=gZ8sTIbDRRI! This is most likely caused by:
+
+The video is unplayable for the following reason: This video is available to this channel's members on level: Mind Math Diamond 💎 (or any higher priced level).
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+
+=== 7W6ZPfmhu7c ===
+failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7W6ZPfmhu7c! This is most likely caused by:
+
+The video is unplayable for the following reason: This video is available to this channel's members on level: Mind Math Gold 🥇 (or any higher priced level).
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+
+=== C6Lc9KlkoK0 ===
+failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=C6Lc9KlkoK0! This is most likely caused by:
+
+The video is unplayable for the following reason: This video is available to this channel's members on level: Mind Math Gold 🥇 (or any higher priced level).
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+
+=== XbLO3Kt3hfM ===
+failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=XbLO3Kt3hfM! This is most likely caused by:
+
+The video is unplayable for the following reason: This video is available to this channel's members on level: Mind Math Gold 🥇 (or any higher priced level).
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+
+=== gt79Igww7lU ===
+failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=gt79Igww7lU! This is most likely caused by:
+
+The video is unplayable for the following reason: This video is available to this channel's members on level: Mind Math Gold 🥇 (or any higher priced level).
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+

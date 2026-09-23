@@ -1,0 +1,19 @@
+total: 542
+with real publish_date: 0
+likely_educational: 530   flagged excluded: 12
+
+--- excluded samples (reason) ---
+OUT NOW: My New TradingView Indicator For Channel Members 🔓💎 -- promotional/product announcement
+OUT NOW: 2 New Trading Courses For Channel Members 🔓💎 -- promotional/product announcement
+OUT NOW: 2 New Trading Guides For Channel Members 🔓💎 -- promotional/product announcement
+OUT NOW: Trader Toolkit V2.0 For Channel Members 🛠️💎 -- promotional/product announcement
+OUT NOW: 2 New Guides for Channel Members 💎 -- promotional/product announcement
+MASTER Swing Trading in 56 Minutes (Complete FREE Course) -- promotional/product announcement
+How to Enable TradingView Dark Mode in 29 Seconds (2026) -- short-form video (<=60s)
+OUT NOW: The "Momentum Translator" Guide For Members 🔓💎 -- promotional/product announcement
+OUT NOW: New Advanced Trading Guide for Channel Members 🔓💎 -- promotional/product announcement
+MASTER Liquidity Concepts Trading in 55 Minutes (Free Course) -- promotional/product announcement
+OUT NOW: Advanced Trading Guides For Channel Members 🔓💎 -- promotional/product announcement
+MASTER Day Trading in 98 Minutes (FREE COURSE) -- promotional/product announcement
+
+--- date range ---

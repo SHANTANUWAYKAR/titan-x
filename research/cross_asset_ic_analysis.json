@@ -1,0 +1,339 @@
+{
+  "DXY vs Gold": {
+    "n_checkpoints": 1282,
+    "regime_counts": {
+      "intact": 1115,
+      "breaking_down": 146,
+      "inverted": 21
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1115,
+          "mean_return_pct": 1.0884
+        },
+        "not_intact": {
+          "n": 167,
+          "mean_return_pct": 0.6355
+        },
+        "edge_intact_minus_not_intact": 0.4529,
+        "mann_whitney_p_value": 0.5275
+      },
+      "63": {
+        "intact": {
+          "n": 1115,
+          "mean_return_pct": 3.2347
+        },
+        "not_intact": {
+          "n": 167,
+          "mean_return_pct": 1.7236
+        },
+        "edge_intact_minus_not_intact": 1.5111,
+        "mann_whitney_p_value": 0.0914
+      }
+    }
+  },
+  "Bonds vs Stocks": {
+    "n_checkpoints": 1190,
+    "regime_counts": {
+      "breaking_down": 307,
+      "intact": 741,
+      "inverted": 142
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 741,
+          "mean_return_pct": 0.7534
+        },
+        "not_intact": {
+          "n": 449,
+          "mean_return_pct": 1.1513
+        },
+        "edge_intact_minus_not_intact": -0.3979,
+        "mann_whitney_p_value": 0.0936
+      },
+      "63": {
+        "intact": {
+          "n": 741,
+          "mean_return_pct": 1.6858
+        },
+        "not_intact": {
+          "n": 449,
+          "mean_return_pct": 4.0158
+        },
+        "edge_intact_minus_not_intact": -2.33,
+        "mann_whitney_p_value": 0.0
+      }
+    }
+  },
+  "Oil vs CAD": {
+    "n_checkpoints": 1128,
+    "regime_counts": {
+      "intact": 970,
+      "breaking_down": 119,
+      "inverted": 39
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 970,
+          "mean_return_pct": 0.0662
+        },
+        "not_intact": {
+          "n": 158,
+          "mean_return_pct": 0.0598
+        },
+        "edge_intact_minus_not_intact": 0.0064,
+        "mann_whitney_p_value": 0.4809
+      },
+      "63": {
+        "intact": {
+          "n": 970,
+          "mean_return_pct": 0.3839
+        },
+        "not_intact": {
+          "n": 158,
+          "mean_return_pct": -1.1749
+        },
+        "edge_intact_minus_not_intact": 1.5588,
+        "mann_whitney_p_value": 0.0
+      }
+    }
+  },
+  "Yields vs USD": {
+    "n_checkpoints": 2763,
+    "regime_counts": {
+      "intact": 1834,
+      "inverted": 441,
+      "breaking_down": 488
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1834,
+          "mean_return_pct": -0.0563
+        },
+        "not_intact": {
+          "n": 929,
+          "mean_return_pct": 0.0735
+        },
+        "edge_intact_minus_not_intact": -0.1298,
+        "mann_whitney_p_value": 0.2008
+      },
+      "63": {
+        "intact": {
+          "n": 1834,
+          "mean_return_pct": -0.0083
+        },
+        "not_intact": {
+          "n": 929,
+          "mean_return_pct": 0.0079
+        },
+        "edge_intact_minus_not_intact": -0.0162,
+        "mann_whitney_p_value": 0.5003
+      }
+    }
+  },
+  "VIX vs Risk Assets": {
+    "n_checkpoints": 1824,
+    "regime_counts": {
+      "intact": 1773,
+      "breaking_down": 51
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1773,
+          "mean_return_pct": 0.8298
+        },
+        "not_intact": {
+          "n": 51,
+          "mean_return_pct": 0.048
+        },
+        "edge_intact_minus_not_intact": 0.7818,
+        "mann_whitney_p_value": 0.0771
+      },
+      "63": {
+        "intact": {
+          "n": 1773,
+          "mean_return_pct": 2.513
+        },
+        "not_intact": {
+          "n": 51,
+          "mean_return_pct": -0.0287
+        },
+        "edge_intact_minus_not_intact": 2.5417,
+        "mann_whitney_p_value": 0.0536
+      }
+    }
+  },
+  "Copper vs Global Growth": {
+    "n_checkpoints": 904,
+    "regime_counts": {
+      "breaking_down": 98,
+      "intact": 806
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 806,
+          "mean_return_pct": 0.9761
+        },
+        "not_intact": {
+          "n": 98,
+          "mean_return_pct": -0.202
+        },
+        "edge_intact_minus_not_intact": 1.1781,
+        "mann_whitney_p_value": 0.0154
+      },
+      "63": {
+        "intact": {
+          "n": 806,
+          "mean_return_pct": 3.1064
+        },
+        "not_intact": {
+          "n": 98,
+          "mean_return_pct": -1.5891
+        },
+        "edge_intact_minus_not_intact": 4.6955,
+        "mann_whitney_p_value": 0.0002
+      }
+    }
+  },
+  "EUR/USD vs GBP/USD": {
+    "n_checkpoints": 1157,
+    "regime_counts": {
+      "breaking_down": 96,
+      "intact": 1061
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1061,
+          "mean_return_pct": -0.0779
+        },
+        "not_intact": {
+          "n": 96,
+          "mean_return_pct": -0.2916
+        },
+        "edge_intact_minus_not_intact": 0.2137,
+        "mann_whitney_p_value": 0.4344
+      },
+      "63": {
+        "intact": {
+          "n": 1061,
+          "mean_return_pct": -0.2375
+        },
+        "not_intact": {
+          "n": 96,
+          "mean_return_pct": 0.0957
+        },
+        "edge_intact_minus_not_intact": -0.3332,
+        "mann_whitney_p_value": 0.3848
+      }
+    }
+  },
+  "USD/JPY vs Yields": {
+    "n_checkpoints": 1467,
+    "regime_counts": {
+      "inverted": 109,
+      "intact": 1151,
+      "breaking_down": 207
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1151,
+          "mean_return_pct": 0.5545
+        },
+        "not_intact": {
+          "n": 316,
+          "mean_return_pct": -0.3854
+        },
+        "edge_intact_minus_not_intact": 0.9399,
+        "mann_whitney_p_value": 0.1097
+      },
+      "63": {
+        "intact": {
+          "n": 1151,
+          "mean_return_pct": 1.9549
+        },
+        "not_intact": {
+          "n": 316,
+          "mean_return_pct": -1.601
+        },
+        "edge_intact_minus_not_intact": 3.5559,
+        "mann_whitney_p_value": 0.0006
+      }
+    }
+  },
+  "USD/JPY vs VIX": {
+    "n_checkpoints": 1470,
+    "regime_counts": {
+      "inverted": 86,
+      "intact": 1248,
+      "breaking_down": 136
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 1248,
+          "mean_return_pct": 2.6273
+        },
+        "not_intact": {
+          "n": 222,
+          "mean_return_pct": 3.1033
+        },
+        "edge_intact_minus_not_intact": -0.476,
+        "mann_whitney_p_value": 0.8985
+      },
+      "63": {
+        "intact": {
+          "n": 1248,
+          "mean_return_pct": 4.6298
+        },
+        "not_intact": {
+          "n": 222,
+          "mean_return_pct": 8.6003
+        },
+        "edge_intact_minus_not_intact": -3.9705,
+        "mann_whitney_p_value": 0.6275
+      }
+    }
+  },
+  "AUD/USD vs Copper": {
+    "n_checkpoints": 996,
+    "regime_counts": {
+      "intact": 761,
+      "breaking_down": 191,
+      "inverted": 44
+    },
+    "per_horizon": {
+      "21": {
+        "intact": {
+          "n": 761,
+          "mean_return_pct": 0.5389
+        },
+        "not_intact": {
+          "n": 235,
+          "mean_return_pct": 0.2872
+        },
+        "edge_intact_minus_not_intact": 0.2517,
+        "mann_whitney_p_value": 0.6852
+      },
+      "63": {
+        "intact": {
+          "n": 761,
+          "mean_return_pct": 0.8573
+        },
+        "not_intact": {
+          "n": 235,
+          "mean_return_pct": 4.2243
+        },
+        "edge_intact_minus_not_intact": -3.367,
+        "mann_whitney_p_value": 0.0002
+      }
+    }
+  }
+}

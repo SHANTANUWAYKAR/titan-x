@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-09-11T05:00:57.695775+00:00",
+  "symbol": "INFY.NS",
+  "timeframe": "1d",
+  "n_candidates": 167,
+  "n_passed_e26_bar": 9,
+  "pbo_n_configs_used": 167,
+  "pbo_n_configs_dropped": 0,
+  "pbo_n_splits": 16,
+  "pbo_n_combos": 12870,
+  "pbo": 0.3728826728826729,
+  "slope": -0.8413997048742066,
+  "caveats": [
+    "PBO measures whether THIS grid's in-sample-best configuration tends to rank below the out-of-sample median across resampled splits of the SAME real data it was searched on -- it is not a test against a no-edge null (that is Stage 0's synthetic-null role) and does not correct for serial dependence in the per-bar returns."
+  ]
+}

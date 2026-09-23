@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | Portfolio &amp; Positions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>Portfolio &amp; Positions</h1>
+                <span class="sub">Construction (Engine #31) · Opportunity Ranking (Engine #33) · logged intents</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">NO EXECUTION ENGINE — RULE 5</span></div>
+        </header>
+        <main class="content">
+            <div class="section-heading">Portfolio Construction</div>
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-inputs" style="margin-bottom:12px;">
+                    <div>
+                        <label class="field-label">Symbols (comma-separated, min 2)</label>
+                        <input id="pc-symbols" value="GOLD,SILVER,BTCUSD,ETHUSD">
+                    </div>
+                    <div>
+                        <label class="field-label">Timeframe</label>
+                        <select id="pc-timeframe"><option value="1d" selected>1d</option><option value="4h">4h</option></select>
+                    </div>
+                    <div>
+                        <label class="field-label">Years</label>
+                        <input id="pc-years" type="number" value="2" min="1" max="10">
+                    </div>
+                </div>
+                <div class="pill-row" style="margin-bottom:12px;">
+                    <div class="pill selected" data-method="min-variance" onclick="setPcMethod('min-variance')">Min Variance</div>
+                    <div class="pill" data-method="max-sharpe" onclick="setPcMethod('max-sharpe')">Max Sharpe</div>
+                    <div class="pill" data-method="risk-parity" onclick="setPcMethod('risk-parity')">Risk Parity</div>
+                    <div class="pill" data-method="efficient-frontier" onclick="setPcMethod('efficient-frontier')">Efficient Frontier</div>
+                </div>
+                <div class="btn-row"><button onclick="computePortfolio()">Compute</button></div>
+            </div>
+            <div id="pc-result"><div class="placeholder-note">Choose symbols and a method, then Compute.</div></div>
+
+            <div class="section-heading">Black-Litterman (Single Relative View)</div>
+            <div class="grid-2" style="margin-bottom:14px;">
+                <div class="card">
+                    <div class="panel-head"><h3>View</h3></div>
+                    <div class="helper-note" style="margin-bottom:10px;">Scoped to ONE relative view ("Asset A will outperform Asset B by X%") — the simplest, most common Black-Litterman view type. The full API (POST /api/v1/portfolio/black-litterman) supports arbitrary P/Q matrices for multiple views; not exposed here to keep this form honest about what it collects. Market weights default to EQUAL across the symbols above (this platform has no clean "market cap" convention across forex/crypto/commodities/indices) — an explicit, labeled assumption, not fabricated data.</div>
+                    <div class="filter-inputs" style="margin-bottom:12px;">
+                        <div>
+                            <label class="field-label">Asset A (outperforms)</label>
+                            <select id="bl-asset-a"></select>
+                        </div>
+                        <div>
+                            <label class="field-label">Asset B (underperforms)</label>
+                            <select id="bl-asset-b"></select>
+                        </div>
+                        <div>
+                            <label class="field-label">By how much (%, annualized)</label>
+                            <input id="bl-view-pct" type="number" step="any" value="5">
+                        </div>
+                    </div>
+                    <div class="filter-inputs" style="margin-bottom:12px;">
+                        <div><label class="field-label">Risk Aversion</label><input id="bl-risk-aversion" type="number" step="any" value="2.5"></div>
+                        <div><label class="field-label">Tau</label><input id="bl-tau" type="number" step="any" value="0.05"></div>
+                    </div>
+                    <div class="btn-row"><button onclick="computeBlackLitterman()">Compute Posterior Returns</button></div>
+                    <div class="helper-note">Uses the same symbols/timeframe/years as Portfolio Construction above for the real historical covariance.</div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Posterior Expected Returns</h3></div>
+                    <div id="bl-result"><div class="placeholder-note">Set a view and compute.</div></div>
+                </div>
+            </div>
+
+            <div class="section-heading">Volatility Targeting</div>
+            <div class="grid-2" style="margin-bottom:14px;">
+                <div class="card">
+                    <div class="panel-head"><h3>Scale a Weight Vector to a Target Volatility</h3></div>
+                    <div class="filter-group">
+                        <label class="field-label">Weights (comma-separated, matching the symbols above, one per symbol)</label>
+                        <input id="vt-weights" placeholder="e.g. 0.25,0.25,0.25,0.25">
+                    </div>
+                    <div class="filter-inputs" style="margin-bottom:12px;">
+                        <div><label class="field-label">Target Volatility (annualized, %)</label><input id="vt-target-vol" type="number" step="any" value="15"></div>
+                        <div><label class="field-label">Max Leverage</label><input id="vt-max-leverage" type="number" step="any" value="3.0"></div>
+                    </div>
+                    <div class="btn-row"><button onclick="computeVolatilityTarget()">Scale Weights</button></div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Scaled Weights</h3></div>
+                    <div id="vt-result"><div class="placeholder-note">Enter weights and a target volatility, then Scale.</div></div>
+                </div>
+            </div>
+
+            <div class="section-heading">Opportunity Ranking (all supported assets)</div>
+            <div class="card" style="margin-bottom:14px;">
+                <div class="btn-row"><button class="secondary" onclick="loadOpportunities()">Refresh Ranking</button></div>
+            </div>
+            <div id="opp-result"><div class="skel-block"></div></div>
+
+            <div class="section-heading">Positions (Logged Trade Intents)</div>
+            <div class="grid-2" style="margin-bottom:14px;">
+                <div class="card">
+                    <div class="panel-head"><h3>Log a New Intent</h3></div>
+                    <div class="filter-inputs" style="margin-bottom:12px;">
+                        <div><label class="field-label">Symbol</label><input id="ti-symbol" placeholder="e.g. GOLD"></div>
+                        <div>
+                            <label class="field-label">Direction</label>
+                            <div class="pill-row">
+                                <div class="pill selected" id="ti-dir-long" onclick="setTiDirection('long')">Long</div>
+                                <div class="pill" id="ti-dir-short" onclick="setTiDirection('short')">Short</div>
+                            </div>
+                        </div>
+                        <div><label class="field-label">Intended Entry (optional)</label><input id="ti-entry" type="number" step="any"></div>
+                    </div>
+                    <div class="btn-row"><button onclick="logTradeIntent()">Log Intent</button></div>
+                    <div class="helper-note">A manual "I acted on this" acknowledgment, not an order — this platform has no execution engine.</div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Filter</h3></div>
+                    <div class="filter-group">
+                        <label class="field-label">Symbol (optional)</label>
+                        <input id="ti-filter-symbol" placeholder="leave blank for all">
+                    </div>
+                    <div class="btn-row"><button class="secondary" onclick="loadTradeIntents()">Load Positions</button></div>
+                </div>
+            </div>
+            <div id="ti-result"><div class="skel-block"></div></div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('portfolio');
+
+let pcMethod = 'min-variance';
+let tiDirection = 'long';
+
+function setPcMethod(m) {
+    pcMethod = m;
+    document.querySelectorAll('[data-method]').forEach(el => el.classList.toggle('selected', el.dataset.method === m));
+}
+function setTiDirection(d) {
+    tiDirection = d;
+    document.getElementById('ti-dir-long').classList.toggle('selected', d === 'long');
+    document.getElementById('ti-dir-short').classList.toggle('selected', d === 'short');
+}
+
+function currentSymbolList() {
+    return document.getElementById('pc-symbols').value.split(',').map(s => s.trim()).filter(Boolean);
+}
+
+function populateBlAssetSelects() {
+    const symbols = currentSymbolList();
+    const opts = symbols.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+    const aSel = document.getElementById('bl-asset-a');
+    const bSel = document.getElementById('bl-asset-b');
+    if (aSel) { aSel.innerHTML = opts; }
+    if (bSel) { bSel.innerHTML = opts; if (symbols.length > 1) bSel.selectedIndex = 1; }
+}
+
+async function computeBlackLitterman() {
+    const symbols = currentSymbolList();
+    const el = document.getElementById('bl-result');
+    if (symbols.length < 2) { toast('Need at least 2 symbols in Portfolio Construction above', true); return; }
+    const assetA = document.getElementById('bl-asset-a').value;
+    const assetB = document.getElementById('bl-asset-b').value;
+    if (!assetA || !assetB || assetA === assetB) { toast('Choose two different assets', true); return; }
+    const viewPct = parseFloat(document.getElementById('bl-view-pct').value);
+    if (Number.isNaN(viewPct)) { toast('Enter a view magnitude', true); return; }
+
+    const n = symbols.length;
+    const marketWeights = new Array(n).fill(1 / n);  // equal-weight default -- explicit, labeled assumption
+    const P = [new Array(n).fill(0)];
+    P[0][symbols.indexOf(assetA)] = 1;
+    P[0][symbols.indexOf(assetB)] = -1;
+    const Q = [viewPct / 100];
+
+    const body = {
+        symbols, market_weights: marketWeights, P, Q,
+        timeframe: document.getElementById('pc-timeframe').value,
+        years: parseInt(document.getElementById('pc-years').value, 10) || 2,
+        risk_aversion: parseFloat(document.getElementById('bl-risk-aversion').value) || 2.5,
+        tau: parseFloat(document.getElementById('bl-tau').value) || 0.05,
+    };
+    el.innerHTML = '<div class="skel-block"></div>';
+    try {
+        const d = await postJson('/api/v1/portfolio/black-litterman', body);
+        const rows = d.symbols.map((s, i) => `<tr><td>${escapeHtml(s)}</td><td class="num">${pnlValue(d.prior_equilibrium_returns[i] * 100, '%', 3)}</td><td class="num">${pnlValue(d.posterior_returns[i] * 100, '%', 3)}</td></tr>`).join('');
+        el.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Symbol</th><th class="num">Prior (Equilibrium)</th><th class="num">Posterior</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not compute: ${escapeHtml(e.message)}</div>`;
+        toast('Black-Litterman failed: ' + e.message, true);
+    }
+}
+
+async function computeVolatilityTarget() {
+    const symbols = currentSymbolList();
+    const el = document.getElementById('vt-result');
+    if (symbols.length < 2) { toast('Need at least 2 symbols in Portfolio Construction above', true); return; }
+    const weightsRaw = document.getElementById('vt-weights').value.split(',').map(s => parseFloat(s.trim()));
+    if (weightsRaw.length !== symbols.length || weightsRaw.some(Number.isNaN)) {
+        toast(`Enter exactly ${symbols.length} comma-separated weights, one per symbol`, true);
+        return;
+    }
+    const body = {
+        symbols, weights: weightsRaw,
+        target_vol: (parseFloat(document.getElementById('vt-target-vol').value) || 15) / 100,
+        timeframe: document.getElementById('pc-timeframe').value,
+        years: parseInt(document.getElementById('pc-years').value, 10) || 2,
+        max_leverage: parseFloat(document.getElementById('vt-max-leverage').value) || 3.0,
+    };
+    el.innerHTML = '<div class="skel-block"></div>';
+    try {
+        const d = await postJson('/api/v1/portfolio/volatility-target', body);
+        el.innerHTML = `
+            ${weightsTable(d.symbols, d.scaled_weights)}
+            <div class="helper-note">Leverage applied: ${fmtNum(d.leverage, 3)}x — original volatility ${fmtNum(d.original_volatility * 100, 2)}%, target ${fmtNum(d.target_volatility * 100, 2)}%</div>
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not compute: ${escapeHtml(e.message)}</div>`;
+        toast('Volatility targeting failed: ' + e.message, true);
+    }
+}
+
+function weightsTable(symbols, weights) {
+    const rows = symbols.map((s, i) => `<tr><td>${escapeHtml(s)}</td><td class="num">${fmtNum(weights[i] * 100, 2)}%</td></tr>`).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Symbol</th><th class="num">Weight</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+async function computePortfolio() {
+    const el = document.getElementById('pc-result');
+    const symbols = document.getElementById('pc-symbols').value.trim();
+    const timeframe = document.getElementById('pc-timeframe').value;
+    const years = document.getElementById('pc-years').value || 2;
+    if (symbols.split(',').filter(s => s.trim()).length < 2) { toast('Provide at least 2 symbols', true); return; }
+    el.innerHTML = '<div class="skel-block"></div>';
+    const qs = `symbols=${encodeURIComponent(symbols)}&timeframe=${encodeURIComponent(timeframe)}&years=${years}`;
+    try {
+        if (pcMethod === 'efficient-frontier') {
+            const d = await getJson(`/api/v1/portfolio/efficient-frontier?${qs}&n_points=15`);
+            const rows = d.frontier.map(pt => `<tr><td class="num">${fmtNum(pt.target_return * 100, 3)}%</td><td class="num">${fmtNum(pt.volatility * 100, 3)}%</td><td>${d.symbols.map((s, i) => `${escapeHtml(s)}: ${fmtNum(pt.weights[i] * 100, 1)}%`).join(' · ')}</td></tr>`).join('');
+            el.innerHTML = `<div class="card"><div class="table-wrap"><table><thead><tr><th class="num">Target Return</th><th class="num">Volatility</th><th>Weights</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+        } else {
+            const path = pcMethod === 'min-variance' ? 'min-variance' : (pcMethod === 'max-sharpe' ? 'max-sharpe' : 'risk-parity');
+            const d = await getJson(`/api/v1/portfolio/${path}?${qs}`);
+            let extra = '';
+            if (d.portfolio_return !== undefined && d.portfolio_return !== null) extra += `<div class="helper-note">Expected return: ${fmtNum(d.portfolio_return * 100, 3)}%</div>`;
+            if (d.portfolio_volatility !== undefined && d.portfolio_volatility !== null) extra += `<div class="helper-note">Volatility: ${fmtNum(d.portfolio_volatility * 100, 3)}%</div>`;
+            if (d.risk_contributions) extra += `<div class="helper-note">Risk contributions: ${d.symbols.map((s, i) => `${escapeHtml(s)}: ${fmtNum(d.risk_contributions[i], 4)}`).join(' · ')}</div>`;
+            el.innerHTML = `<div class="card">${weightsTable(d.symbols, d.weights)}${extra}</div>`;
+        }
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not compute portfolio: ${escapeHtml(e.message)}</div>`;
+        toast('Portfolio computation failed: ' + e.message, true);
+    }
+}
+
+async function loadOpportunities() {
+    const el = document.getElementById('opp-result');
+    el.innerHTML = '<div class="skel-block"></div><div class="skel-block"></div>';
+    try {
+        const d = await getJson('/api/v1/opportunities/rank');
+        const rows = d.opportunities.map(o => `
+            <tr>
+                <td class="num">${o.rank}</td>
+                <td>${escapeHtml(o.symbol)}</td>
+                <td>${dirBadge(o.direction)}</td>
+                <td class="num">${o.confidence}</td>
+                <td>${o.tradeable ? '<span class="tag green">Tradeable</span>' : '<span class="tag neutral">Not tradeable</span>'}</td>
+                <td>${escapeHtml(o.regime || '—')}</td>
+                <td>${escapeHtml(o.reason || '')}</td>
+            </tr>`).join('');
+        el.innerHTML = `<div class="card"><div class="table-wrap"><table><thead><tr><th class="num">#</th><th>Symbol</th><th>Direction</th><th class="num">Confidence</th><th>Status</th><th>Regime</th><th>Reason</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load opportunity ranking: ${escapeHtml(e.message)}</div>`;
+        toast('Opportunity ranking failed: ' + e.message, true);
+    }
+}
+
+async function logTradeIntent() {
+    const symbol = document.getElementById('ti-symbol').value.trim();
+    const entryRaw = document.getElementById('ti-entry').value;
+    if (!symbol) { toast('Enter a symbol', true); return; }
+    const body = { symbol, direction: tiDirection };
+    if (entryRaw) body.intended_entry_price = parseFloat(entryRaw);
+    try {
+        const r = await postJson('/api/v1/performance/trade-intents', body);
+        toast('Intent logged (id ' + r.intent_id + ')');
+        document.getElementById('ti-symbol').value = '';
+        document.getElementById('ti-entry').value = '';
+        await loadTradeIntents();
+    } catch (e) {
+        toast('Could not log intent: ' + e.message, true);
+    }
+}
+
+function closedTag(closed) {
+    if (closed === true) return '<span class="tag neutral">Closed</span>';
+    if (closed === false) return '<span class="tag green">Open</span>';
+    return '<span class="tag warn">Unknown (no linked signal)</span>';
+}
+
+async function loadTradeIntents() {
+    const el = document.getElementById('ti-result');
+    const symbol = document.getElementById('ti-filter-symbol').value.trim();
+    el.innerHTML = '<div class="skel-block"></div>';
+    try {
+        const url = symbol ? `/api/v1/performance/trade-intents?symbol=${encodeURIComponent(symbol)}` : '/api/v1/performance/trade-intents';
+        const d = await getJson(url);
+        if (!d.intents.length) {
+            el.innerHTML = '<div class="placeholder-note">No trade intents logged yet.</div>';
+            return;
+        }
+        const rows = d.intents.map(i => `
+            <tr>
+                <td>${escapeHtml(i.symbol)}</td>
+                <td>${dirBadge(i.direction)}</td>
+                <td class="num">${i.intended_entry_price !== null ? fmtNum(i.intended_entry_price, 4) : '—'}</td>
+                <td>${fmtDate(i.marked_at)}</td>
+                <td>${closedTag(i.closed)}</td>
+            </tr>`).join('');
+        el.innerHTML = `<div class="card"><div class="table-wrap"><table><thead><tr><th>Symbol</th><th>Direction</th><th class="num">Intended Entry</th><th>Marked At</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load positions: ${escapeHtml(e.message)}</div>`;
+        toast('Loading positions failed: ' + e.message, true);
+    }
+}
+
+document.getElementById('pc-symbols').addEventListener('change', populateBlAssetSelects);
+populateBlAssetSelects();
+loadOpportunities();
+loadTradeIntents();
+</script>
+</body>
+</html>

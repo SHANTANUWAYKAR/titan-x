@@ -1,0 +1,116 @@
+# YouTube channels for the RAG knowledge base.
+#
+# Ordinary "#" lines are comments and ignored. The two EXCEPTIONS are the
+# section markers below -- every channel inherits the corpus and tier of
+# the section it sits under, so neither is repeated per line:
+#
+#   # CORPUS: <name>   physical folder under ./transcripts/<name>/
+#   # TIER: <1|2|3>    selectable with --tier, so tiers run one at a time
+#
+# Corpus separation is deliberate: a query about order blocks must never
+# retrieve a calculus lecture, so trading and technical content are kept
+# physically apart from the first run rather than untangled later.
+
+# TIER: 1
+# CORPUS: trading
+
+# --- Forex / price action ---
+https://youtube.com/@RaynerTeo
+https://youtube.com/@AdamHGrimes
+https://youtube.com/@AlBrooksPriceAction
+https://youtube.com/@TheTradingChannel
+https://youtube.com/@UKspreadbetting
+https://youtube.com/@smbcapital
+https://youtube.com/@chatwithtraders
+
+# --- Quant / algo ---
+https://youtube.com/@quantinsti
+https://youtube.com/@QuantConnect
+https://youtube.com/@hudsonthames
+https://youtube.com/@RobotWealth
+https://youtube.com/@PyQuantNews
+https://youtube.com/@parttimelarry
+https://youtube.com/@sentdex
+
+# --- Options / derivatives ---
+https://youtube.com/@tastyliveshow
+https://youtube.com/@ProjectFinance
+https://youtube.com/@OptionAlpha
+https://youtube.com/@Cboe
+https://youtube.com/@CMEGroup
+
+# --- Fundamental / thinking ---
+https://youtube.com/@AswathDamodaranonValuation
+https://youtube.com/@BenFelixCSI
+https://youtube.com/@PatrickBoyleOnFinance
+https://youtube.com/@ThePlainBagel
+
+# --- Macro / crypto ---
+https://youtube.com/@RealVisionFinance
+https://youtube.com/@intothecryptoverse
+https://youtube.com/@LynAldenInvestment
+
+
+# TIER: 2
+# CORPUS: trading
+
+# --- Crypto ---
+https://youtube.com/@CoinBureau
+https://youtube.com/@Bankless
+https://youtube.com/@Finematics
+https://youtube.com/@glassnode
+https://youtube.com/@cryptoquant
+https://youtube.com/@InvestAnswers
+https://youtube.com/@UnchainedPodcast
+https://youtube.com/@TheDefiant
+
+# --- Macro ---
+https://youtube.com/@RaoulPal
+https://youtube.com/@AlexKruger
+
+# --- Quant / institutional ---
+https://youtube.com/@CQFInstitute
+https://youtube.com/@WorldQuant
+https://youtube.com/@ManGroupPlc
+https://youtube.com/@twosigma
+https://youtube.com/@AQRCapital
+https://youtube.com/@algotrading101
+https://youtube.com/@CodingJesus
+
+# --- Options ---
+https://youtube.com/@TheoTrade
+https://youtube.com/@OptionsPlay
+https://youtube.com/@OptionsIndustryCouncil
+
+# --- Fundamental ---
+https://youtube.com/@Morningstarinc
+https://youtube.com/@RationalReminder
+
+# --- Price action ---
+https://youtube.com/@TraderDante
+
+
+# TIER: 3
+# CORPUS: technical
+
+# --- Python / data engineering ---
+https://youtube.com/@coreyms
+https://youtube.com/@freecodecamp
+https://youtube.com/@dataschool
+https://youtube.com/@NeuralNine
+
+# --- AI / ML / agents ---
+https://youtube.com/@Deeplearningai
+https://youtube.com/@AndrejKarpathy
+https://youtube.com/@HuggingFace
+https://youtube.com/@LangChain
+https://youtube.com/@LlamaIndex
+https://youtube.com/@OpenAI
+https://youtube.com/@GoogleDevelopers
+
+# --- Math / statistics ---
+https://youtube.com/@3blue1brown
+https://youtube.com/@statquest
+https://youtube.com/@mitocw
+https://youtube.com/@stanfordonline
+https://youtube.com/@khanacademy

@@ -1,0 +1,1743 @@
+{
+  "n_bars": 400,
+  "structure_events": [
+    {
+      "index": 218,
+      "kind": "choch_bearish",
+      "broken_level": 87.527357
+    },
+    {
+      "index": 254,
+      "kind": "choch_bullish",
+      "broken_level": 86.775095
+    },
+    {
+      "index": 302,
+      "kind": "bos_bullish",
+      "broken_level": 95.343659
+    },
+    {
+      "index": 358,
+      "kind": "bos_bullish",
+      "broken_level": 104.442922
+    },
+    {
+      "index": 378,
+      "kind": "choch_bearish",
+      "broken_level": 103.167686
+    }
+  ],
+  "order_blocks": [
+    {
+      "index": 217,
+      "direction": "bearish",
+      "open": 87.750348,
+      "high": 87.814723,
+      "low": 87.548082,
+      "close": 87.761483,
+      "breaker": true,
+      "mitigated_index": 256
+    },
+    {
+      "index": 252,
+      "direction": "bullish",
+      "open": 86.10692,
+      "high": 86.466552,
+      "low": 85.918951,
+      "close": 85.972116,
+      "breaker": false,
+      "mitigated_index": null
+    },
+    {
+      "index": 298,
+      "direction": "bullish",
+      "open": 93.684618,
+      "high": 93.853097,
+      "low": 93.548572,
+      "close": 93.663215,
+      "breaker": false,
+      "mitigated_index": null
+    },
+    {
+      "index": 354,
+      "direction": "bullish",
+      "open": 103.793601,
+      "high": 103.948279,
+      "low": 103.590092,
+      "close": 103.704459,
+      "breaker": true,
+      "mitigated_index": 376
+    }
+  ],
+  "fair_value_gaps": [
+    {
+      "index": 1,
+      "direction": "bearish",
+      "gap_top": 99.004769,
+      "gap_bottom": 98.34651,
+      "filled": true
+    },
+    {
+      "index": 2,
+      "direction": "bearish",
+      "gap_top": 98.19008,
+      "gap_bottom": 97.531181,
+      "filled": true
+    },
+    {
+      "index": 3,
+      "direction": "bearish",
+      "gap_top": 97.429841,
+      "gap_bottom": 96.600155,
+      "filled": true
+    },
+    {
+      "index": 4,
+      "direction": "bearish",
+      "gap_top": 96.538462,
+      "gap_bottom": 95.784011,
+      "filled": true
+    },
+    {
+      "index": 5,
+      "direction": "bearish",
+      "gap_top": 95.623525,
+      "gap_bottom": 95.169855,
+      "filled": true
+    },
+    {
+      "index": 6,
+      "direction": "bearish",
+      "gap_top": 95.036444,
+      "gap_bottom": 94.610229,
+      "filled": true
+    },
+    {
+      "index": 7,
+      "direction": "bearish",
+      "gap_top": 94.466816,
+      "gap_bottom": 93.869905,
+      "filled": true
+    },
+    {
+      "index": 8,
+      "direction": "bearish",
+      "gap_top": 93.721956,
+      "gap_bottom": 93.34064,
+      "filled": true
+    },
+    {
+      "index": 9,
+      "direction": "bearish",
+      "gap_top": 93.244269,
+      "gap_bottom": 92.917561,
+      "filled": true
+    },
+    {
+      "index": 10,
+      "direction": "bearish",
+      "gap_top": 92.477307,
+      "gap_bottom": 91.869421,
+      "filled": true
+    },
+    {
+      "index": 11,
+      "direction": "bearish",
+      "gap_top": 91.657069,
+      "gap_bottom": 91.170893,
+      "filled": true
+    },
+    {
+      "index": 12,
+      "direction": "bearish",
+      "gap_top": 90.854369,
+      "gap_bottom": 90.118813,
+      "filled": true
+    },
+    {
+      "index": 13,
+      "direction": "bearish",
+      "gap_top": 90.033555,
+      "gap_bottom": 89.665248,
+      "filled": true
+    },
+    {
+      "index": 14,
+      "direction": "bearish",
+      "gap_top": 89.324034,
+      "gap_bottom": 88.772565,
+      "filled": true
+    },
+    {
+      "index": 15,
+      "direction": "bearish",
+      "gap_top": 88.633666,
+      "gap_bottom": 87.700095,
+      "filled": true
+    },
+    {
+      "index": 16,
+      "direction": "bearish",
+      "gap_top": 87.59102,
+      "gap_bottom": 86.891928,
+      "filled": true
+    },
+    {
+      "index": 17,
+      "direction": "bearish",
+      "gap_top": 86.499512,
+      "gap_bottom": 86.144578,
+      "filled": true
+    },
+    {
+      "index": 18,
+      "direction": "bearish",
+      "gap_top": 86.036478,
+      "gap_bottom": 85.212906,
+      "filled": true
+    },
+    {
+      "index": 19,
+      "direction": "bearish",
+      "gap_top": 85.06893,
+      "gap_bottom": 84.308622,
+      "filled": true
+    },
+    {
+      "index": 20,
+      "direction": "bearish",
+      "gap_top": 84.18061,
+      "gap_bottom": 83.964557,
+      "filled": true
+    },
+    {
+      "index": 21,
+      "direction": "bearish",
+      "gap_top": 83.805491,
+      "gap_bottom": 83.244712,
+      "filled": true
+    },
+    {
+      "index": 22,
+      "direction": "bearish",
+      "gap_top": 83.089938,
+      "gap_bottom": 82.606776,
+      "filled": true
+    },
+    {
+      "index": 23,
+      "direction": "bearish",
+      "gap_top": 82.312116,
+      "gap_bottom": 82.188466,
+      "filled": true
+    },
+    {
+      "index": 24,
+      "direction": "bearish",
+      "gap_top": 82.055693,
+      "gap_bottom": 81.808312,
+      "filled": true
+    },
+    {
+      "index": 26,
+      "direction": "bearish",
+      "gap_top": 81.497254,
+      "gap_bottom": 81.273774,
+      "filled": true
+    },
+    {
+      "index": 27,
+      "direction": "bearish",
+      "gap_top": 81.02453,
+      "gap_bottom": 80.927365,
+      "filled": true
+    },
+    {
+      "index": 28,
+      "direction": "bearish",
+      "gap_top": 80.711794,
+      "gap_bottom": 80.536112,
+      "filled": true
+    },
+    {
+      "index": 29,
+      "direction": "bearish",
+      "gap_top": 80.452109,
+      "gap_bottom": 80.191975,
+      "filled": true
+    },
+    {
+      "index": 30,
+      "direction": "bearish",
+      "gap_top": 80.10136,
+      "gap_bottom": 80.062431,
+      "filled": true
+    },
+    {
+      "index": 31,
+      "direction": "bearish",
+      "gap_top": 79.922086,
+      "gap_bottom": 79.912684,
+      "filled": true
+    },
+    {
+      "index": 32,
+      "direction": "bearish",
+      "gap_top": 79.79327,
+      "gap_bottom": 79.638019,
+      "filled": true
+    },
+    {
+      "index": 33,
+      "direction": "bearish",
+      "gap_top": 79.429795,
+      "gap_bottom": 79.228369,
+      "filled": true
+    },
+    {
+      "index": 34,
+      "direction": "bearish",
+      "gap_top": 79.038026,
+      "gap_bottom": 78.758994,
+      "filled": true
+    },
+    {
+      "index": 35,
+      "direction": "bearish",
+      "gap_top": 78.601741,
+      "gap_bottom": 78.149889,
+      "filled": true
+    },
+    {
+      "index": 37,
+      "direction": "bearish",
+      "gap_top": 77.665919,
+      "gap_bottom": 77.464193,
+      "filled": true
+    },
+    {
+      "index": 38,
+      "direction": "bearish",
+      "gap_top": 77.334642,
+      "gap_bottom": 76.91591,
+      "filled": true
+    },
+    {
+      "index": 39,
+      "direction": "bearish",
+      "gap_top": 76.867234,
+      "gap_bottom": 76.678128,
+      "filled": true
+    },
+    {
+      "index": 41,
+      "direction": "bearish",
+      "gap_top": 76.287733,
+      "gap_bottom": 76.076369,
+      "filled": true
+    },
+    {
+      "index": 42,
+      "direction": "bearish",
+      "gap_top": 75.978217,
+      "gap_bottom": 75.601823,
+      "filled": true
+    },
+    {
+      "index": 43,
+      "direction": "bearish",
+      "gap_top": 75.435118,
+      "gap_bottom": 75.087949,
+      "filled": true
+    },
+    {
+      "index": 44,
+      "direction": "bearish",
+      "gap_top": 75.032466,
+      "gap_bottom": 74.700847,
+      "filled": true
+    },
+    {
+      "index": 48,
+      "direction": "bullish",
+      "gap_top": 75.049323,
+      "gap_bottom": 75.045885,
+      "filled": false
+    },
+    {
+      "index": 49,
+      "direction": "bullish",
+      "gap_top": 75.662799,
+      "gap_bottom": 75.11711,
+      "filled": false
+    },
+    {
+      "index": 50,
+      "direction": "bullish",
+      "gap_top": 76.151312,
+      "gap_bottom": 75.832708,
+      "filled": false
+    },
+    {
+      "index": 54,
+      "direction": "bullish",
+      "gap_top": 76.900374,
+      "gap_bottom": 76.539724,
+      "filled": false
+    },
+    {
+      "index": 55,
+      "direction": "bullish",
+      "gap_top": 77.217322,
+      "gap_bottom": 77.055698,
+      "filled": false
+    },
+    {
+      "index": 56,
+      "direction": "bullish",
+      "gap_top": 77.810409,
+      "gap_bottom": 77.277873,
+      "filled": false
+    },
+    {
+      "index": 57,
+      "direction": "bullish",
+      "gap_top": 78.328951,
+      "gap_bottom": 78.063756,
+      "filled": false
+    },
+    {
+      "index": 58,
+      "direction": "bullish",
+      "gap_top": 78.904072,
+      "gap_bottom": 78.444611,
+      "filled": false
+    },
+    {
+      "index": 59,
+      "direction": "bullish",
+      "gap_top": 79.341233,
+      "gap_bottom": 78.98263,
+      "filled": false
+    },
+    {
+      "index": 60,
+      "direction": "bullish",
+      "gap_top": 79.721924,
+      "gap_bottom": 79.485413,
+      "filled": false
+    },
+    {
+      "index": 61,
+      "direction": "bullish",
+      "gap_top": 80.189378,
+      "gap_bottom": 80.12278,
+      "filled": false
+    },
+    {
+      "index": 62,
+      "direction": "bullish",
+      "gap_top": 80.702739,
+      "gap_bottom": 80.498487,
+      "filled": false
+    },
+    {
+      "index": 63,
+      "direction": "bullish",
+      "gap_top": 80.971823,
+      "gap_bottom": 80.868294,
+      "filled": false
+    },
+    {
+      "index": 64,
+      "direction": "bullish",
+      "gap_top": 81.526545,
+      "gap_bottom": 81.153723,
+      "filled": false
+    },
+    {
+      "index": 65,
+      "direction": "bullish",
+      "gap_top": 81.935608,
+      "gap_bottom": 81.741854,
+      "filled": false
+    },
+    {
+      "index": 66,
+      "direction": "bullish",
+      "gap_top": 82.211344,
+      "gap_bottom": 82.083865,
+      "filled": false
+    },
+    {
+      "index": 67,
+      "direction": "bullish",
+      "gap_top": 82.654228,
+      "gap_bottom": 82.279447,
+      "filled": false
+    },
+    {
+      "index": 68,
+      "direction": "bullish",
+      "gap_top": 83.004002,
+      "gap_bottom": 82.850103,
+      "filled": false
+    },
+    {
+      "index": 72,
+      "direction": "bullish",
+      "gap_top": 83.722074,
+      "gap_bottom": 83.31667,
+      "filled": false
+    },
+    {
+      "index": 74,
+      "direction": "bullish",
+      "gap_top": 84.142568,
+      "gap_bottom": 84.008046,
+      "filled": false
+    },
+    {
+      "index": 75,
+      "direction": "bullish",
+      "gap_top": 84.880055,
+      "gap_bottom": 84.38534,
+      "filled": false
+    },
+    {
+      "index": 78,
+      "direction": "bullish",
+      "gap_top": 85.457323,
+      "gap_bottom": 85.247073,
+      "filled": false
+    },
+    {
+      "index": 79,
+      "direction": "bullish",
+      "gap_top": 85.828029,
+      "gap_bottom": 85.614298,
+      "filled": true
+    },
+    {
+      "index": 80,
+      "direction": "bullish",
+      "gap_top": 85.99232,
+      "gap_bottom": 85.991133,
+      "filled": true
+    },
+    {
+      "index": 83,
+      "direction": "bullish",
+      "gap_top": 86.260296,
+      "gap_bottom": 86.109729,
+      "filled": true
+    },
+    {
+      "index": 86,
+      "direction": "bullish",
+      "gap_top": 86.802768,
+      "gap_bottom": 86.561931,
+      "filled": true
+    },
+    {
+      "index": 87,
+      "direction": "bullish",
+      "gap_top": 86.859486,
+      "gap_bottom": 86.852576,
+      "filled": true
+    },
+    {
+      "index": 88,
+      "direction": "bullish",
+      "gap_top": 87.174289,
+      "gap_bottom": 86.87006,
+      "filled": true
+    },
+    {
+      "index": 89,
+      "direction": "bullish",
+      "gap_top": 87.430712,
+      "gap_bottom": 87.418707,
+      "filled": true
+    },
+    {
+      "index": 90,
+      "direction": "bullish",
+      "gap_top": 87.76307,
+      "gap_bottom": 87.587236,
+      "filled": true
+    },
+    {
+      "index": 91,
+      "direction": "bullish",
+      "gap_top": 88.036232,
+      "gap_bottom": 87.948986,
+      "filled": true
+    },
+    {
+      "index": 92,
+      "direction": "bullish",
+      "gap_top": 88.426426,
+      "gap_bottom": 88.256471,
+      "filled": true
+    },
+    {
+      "index": 93,
+      "direction": "bullish",
+      "gap_top": 88.819716,
+      "gap_bottom": 88.610487,
+      "filled": true
+    },
+    {
+      "index": 94,
+      "direction": "bullish",
+      "gap_top": 89.381888,
+      "gap_bottom": 89.125033,
+      "filled": true
+    },
+    {
+      "index": 95,
+      "direction": "bullish",
+      "gap_top": 89.936098,
+      "gap_bottom": 89.477662,
+      "filled": true
+    },
+    {
+      "index": 97,
+      "direction": "bullish",
+      "gap_top": 90.425742,
+      "gap_bottom": 90.258359,
+      "filled": true
+    },
+    {
+      "index": 98,
+      "direction": "bullish",
+      "gap_top": 91.119457,
+      "gap_bottom": 90.683409,
+      "filled": true
+    },
+    {
+      "index": 99,
+      "direction": "bullish",
+      "gap_top": 91.896758,
+      "gap_bottom": 91.471423,
+      "filled": true
+    },
+    {
+      "index": 101,
+      "direction": "bullish",
+      "gap_top": 93.17926,
+      "gap_bottom": 92.575621,
+      "filled": true
+    },
+    {
+      "index": 102,
+      "direction": "bullish",
+      "gap_top": 93.625773,
+      "gap_bottom": 93.284904,
+      "filled": true
+    },
+    {
+      "index": 103,
+      "direction": "bullish",
+      "gap_top": 94.052088,
+      "gap_bottom": 93.993883,
+      "filled": true
+    },
+    {
+      "index": 104,
+      "direction": "bullish",
+      "gap_top": 94.547153,
+      "gap_bottom": 94.347507,
+      "filled": true
+    },
+    {
+      "index": 105,
+      "direction": "bullish",
+      "gap_top": 94.960187,
+      "gap_bottom": 94.952552,
+      "filled": true
+    },
+    {
+      "index": 106,
+      "direction": "bullish",
+      "gap_top": 95.939202,
+      "gap_bottom": 95.136773,
+      "filled": true
+    },
+    {
+      "index": 107,
+      "direction": "bullish",
+      "gap_top": 96.251252,
+      "gap_bottom": 96.147418,
+      "filled": true
+    },
+    {
+      "index": 108,
+      "direction": "bullish",
+      "gap_top": 96.58269,
+      "gap_bottom": 96.483388,
+      "filled": true
+    },
+    {
+      "index": 109,
+      "direction": "bullish",
+      "gap_top": 96.936987,
+      "gap_bottom": 96.698071,
+      "filled": true
+    },
+    {
+      "index": 110,
+      "direction": "bullish",
+      "gap_top": 97.558029,
+      "gap_bottom": 97.114031,
+      "filled": true
+    },
+    {
+      "index": 111,
+      "direction": "bullish",
+      "gap_top": 97.96098,
+      "gap_bottom": 97.785456,
+      "filled": true
+    },
+    {
+      "index": 112,
+      "direction": "bullish",
+      "gap_top": 98.603766,
+      "gap_bottom": 98.169401,
+      "filled": true
+    },
+    {
+      "index": 113,
+      "direction": "bullish",
+      "gap_top": 99.031008,
+      "gap_bottom": 98.670155,
+      "filled": true
+    },
+    {
+      "index": 114,
+      "direction": "bullish",
+      "gap_top": 99.481075,
+      "gap_bottom": 99.301763,
+      "filled": true
+    },
+    {
+      "index": 115,
+      "direction": "bullish",
+      "gap_top": 99.76545,
+      "gap_bottom": 99.604847,
+      "filled": true
+    },
+    {
+      "index": 116,
+      "direction": "bullish",
+      "gap_top": 100.319168,
+      "gap_bottom": 100.220027,
+      "filled": true
+    },
+    {
+      "index": 118,
+      "direction": "bullish",
+      "gap_top": 100.689345,
+      "gap_bottom": 100.60326,
+      "filled": true
+    },
+    {
+      "index": 120,
+      "direction": "bullish",
+      "gap_top": 101.175312,
+      "gap_bottom": 100.979541,
+      "filled": true
+    },
+    {
+      "index": 122,
+      "direction": "bullish",
+      "gap_top": 101.560048,
+      "gap_bottom": 101.418076,
+      "filled": true
+    },
+    {
+      "index": 123,
+      "direction": "bullish",
+      "gap_top": 102.101701,
+      "gap_bottom": 101.740913,
+      "filled": true
+    },
+    {
+      "index": 126,
+      "direction": "bullish",
+      "gap_top": 102.636245,
+      "gap_bottom": 102.324488,
+      "filled": true
+    },
+    {
+      "index": 127,
+      "direction": "bullish",
+      "gap_top": 103.296008,
+      "gap_bottom": 102.654909,
+      "filled": true
+    },
+    {
+      "index": 128,
+      "direction": "bullish",
+      "gap_top": 103.673312,
+      "gap_bottom": 103.500908,
+      "filled": true
+    },
+    {
+      "index": 129,
+      "direction": "bullish",
+      "gap_top": 103.921437,
+      "gap_bottom": 103.839797,
+      "filled": true
+    },
+    {
+      "index": 130,
+      "direction": "bullish",
+      "gap_top": 104.2831,
+      "gap_bottom": 104.267493,
+      "filled": true
+    },
+    {
+      "index": 131,
+      "direction": "bullish",
+      "gap_top": 104.656308,
+      "gap_bottom": 104.431635,
+      "filled": true
+    },
+    {
+      "index": 132,
+      "direction": "bullish",
+      "gap_top": 105.194606,
+      "gap_bottom": 104.784163,
+      "filled": true
+    },
+    {
+      "index": 133,
+      "direction": "bullish",
+      "gap_top": 105.302232,
+      "gap_bottom": 105.299853,
+      "filled": true
+    },
+    {
+      "index": 134,
+      "direction": "bullish",
+      "gap_top": 105.797647,
+      "gap_bottom": 105.600635,
+      "filled": true
+    },
+    {
+      "index": 135,
+      "direction": "bullish",
+      "gap_top": 106.05097,
+      "gap_bottom": 105.864065,
+      "filled": true
+    },
+    {
+      "index": 136,
+      "direction": "bullish",
+      "gap_top": 106.41699,
+      "gap_bottom": 106.268907,
+      "filled": true
+    },
+    {
+      "index": 139,
+      "direction": "bearish",
+      "gap_top": 106.624656,
+      "gap_bottom": 106.277324,
+      "filled": false
+    },
+    {
+      "index": 140,
+      "direction": "bearish",
+      "gap_top": 106.145968,
+      "gap_bottom": 106.051459,
+      "filled": false
+    },
+    {
+      "index": 141,
+      "direction": "bearish",
+      "gap_top": 105.768395,
+      "gap_bottom": 105.375721,
+      "filled": true
+    },
+    {
+      "index": 142,
+      "direction": "bearish",
+      "gap_top": 105.195415,
+      "gap_bottom": 104.882195,
+      "filled": true
+    },
+    {
+      "index": 143,
+      "direction": "bearish",
+      "gap_top": 104.526926,
+      "gap_bottom": 104.018348,
+      "filled": true
+    },
+    {
+      "index": 144,
+      "direction": "bearish",
+      "gap_top": 103.854303,
+      "gap_bottom": 103.496044,
+      "filled": true
+    },
+    {
+      "index": 145,
+      "direction": "bearish",
+      "gap_top": 103.327529,
+      "gap_bottom": 102.834371,
+      "filled": true
+    },
+    {
+      "index": 146,
+      "direction": "bearish",
+      "gap_top": 102.72756,
+      "gap_bottom": 102.456326,
+      "filled": true
+    },
+    {
+      "index": 147,
+      "direction": "bearish",
+      "gap_top": 102.161268,
+      "gap_bottom": 101.36658,
+      "filled": true
+    },
+    {
+      "index": 149,
+      "direction": "bearish",
+      "gap_top": 100.886115,
+      "gap_bottom": 100.411718,
+      "filled": true
+    },
+    {
+      "index": 150,
+      "direction": "bearish",
+      "gap_top": 100.000858,
+      "gap_bottom": 99.623151,
+      "filled": true
+    },
+    {
+      "index": 151,
+      "direction": "bearish",
+      "gap_top": 99.365504,
+      "gap_bottom": 98.932209,
+      "filled": true
+    },
+    {
+      "index": 152,
+      "direction": "bearish",
+      "gap_top": 98.700375,
+      "gap_bottom": 98.131669,
+      "filled": true
+    },
+    {
+      "index": 153,
+      "direction": "bearish",
+      "gap_top": 98.045515,
+      "gap_bottom": 97.857625,
+      "filled": true
+    },
+    {
+      "index": 154,
+      "direction": "bearish",
+      "gap_top": 97.602693,
+      "gap_bottom": 97.294237,
+      "filled": true
+    },
+    {
+      "index": 155,
+      "direction": "bearish",
+      "gap_top": 97.208626,
+      "gap_bottom": 96.386011,
+      "filled": true
+    },
+    {
+      "index": 156,
+      "direction": "bearish",
+      "gap_top": 96.29124,
+      "gap_bottom": 95.741917,
+      "filled": true
+    },
+    {
+      "index": 157,
+      "direction": "bearish",
+      "gap_top": 95.579173,
+      "gap_bottom": 95.039946,
+      "filled": true
+    },
+    {
+      "index": 158,
+      "direction": "bearish",
+      "gap_top": 94.760345,
+      "gap_bottom": 94.433125,
+      "filled": true
+    },
+    {
+      "index": 159,
+      "direction": "bearish",
+      "gap_top": 94.172385,
+      "gap_bottom": 93.929652,
+      "filled": true
+    },
+    {
+      "index": 160,
+      "direction": "bearish",
+      "gap_top": 93.71914,
+      "gap_bottom": 93.378691,
+      "filled": true
+    },
+    {
+      "index": 162,
+      "direction": "bearish",
+      "gap_top": 93.013762,
+      "gap_bottom": 92.603532,
+      "filled": true
+    },
+    {
+      "index": 163,
+      "direction": "bearish",
+      "gap_top": 92.428345,
+      "gap_bottom": 92.303743,
+      "filled": true
+    },
+    {
+      "index": 167,
+      "direction": "bearish",
+      "gap_top": 92.000836,
+      "gap_bottom": 91.880936,
+      "filled": true
+    },
+    {
+      "index": 168,
+      "direction": "bearish",
+      "gap_top": 91.78278,
+      "gap_bottom": 91.61758,
+      "filled": true
+    },
+    {
+      "index": 169,
+      "direction": "bearish",
+      "gap_top": 91.546098,
+      "gap_bottom": 91.370224,
+      "filled": true
+    },
+    {
+      "index": 171,
+      "direction": "bearish",
+      "gap_top": 91.114283,
+      "gap_bottom": 90.870889,
+      "filled": true
+    },
+    {
+      "index": 172,
+      "direction": "bearish",
+      "gap_top": 90.800918,
+      "gap_bottom": 90.310893,
+      "filled": true
+    },
+    {
+      "index": 174,
+      "direction": "bearish",
+      "gap_top": 90.149422,
+      "gap_bottom": 89.933126,
+      "filled": true
+    },
+    {
+      "index": 176,
+      "direction": "bearish",
+      "gap_top": 89.807547,
+      "gap_bottom": 89.786601,
+      "filled": true
+    },
+    {
+      "index": 177,
+      "direction": "bearish",
+      "gap_top": 89.585998,
+      "gap_bottom": 89.479665,
+      "filled": true
+    },
+    {
+      "index": 178,
+      "direction": "bearish",
+      "gap_top": 89.326765,
+      "gap_bottom": 89.268802,
+      "filled": true
+    },
+    {
+      "index": 180,
+      "direction": "bearish",
+      "gap_top": 88.846631,
+      "gap_bottom": 88.84526,
+      "filled": true
+    },
+    {
+      "index": 181,
+      "direction": "bearish",
+      "gap_top": 88.65925,
+      "gap_bottom": 88.386478,
+      "filled": true
+    },
+    {
+      "index": 182,
+      "direction": "bearish",
+      "gap_top": 88.347547,
+      "gap_bottom": 87.705612,
+      "filled": true
+    },
+    {
+      "index": 183,
+      "direction": "bearish",
+      "gap_top": 87.524997,
+      "gap_bottom": 87.155125,
+      "filled": true
+    },
+    {
+      "index": 188,
+      "direction": "bullish",
+      "gap_top": 87.279073,
+      "gap_bottom": 87.192608,
+      "filled": true
+    },
+    {
+      "index": 190,
+      "direction": "bullish",
+      "gap_top": 87.59466,
+      "gap_bottom": 87.572481,
+      "filled": true
+    },
+    {
+      "index": 195,
+      "direction": "bullish",
+      "gap_top": 87.798327,
+      "gap_bottom": 87.660507,
+      "filled": true
+    },
+    {
+      "index": 198,
+      "direction": "bullish",
+      "gap_top": 87.985202,
+      "gap_bottom": 87.956847,
+      "filled": true
+    },
+    {
+      "index": 215,
+      "direction": "bearish",
+      "gap_top": 87.93893,
+      "gap_bottom": 87.911973,
+      "filled": true
+    },
+    {
+      "index": 216,
+      "direction": "bearish",
+      "gap_top": 87.856583,
+      "gap_bottom": 87.814723,
+      "filled": true
+    },
+    {
+      "index": 220,
+      "direction": "bearish",
+      "gap_top": 87.338439,
+      "gap_bottom": 87.283014,
+      "filled": true
+    },
+    {
+      "index": 224,
+      "direction": "bearish",
+      "gap_top": 86.979925,
+      "gap_bottom": 86.800314,
+      "filled": true
+    },
+    {
+      "index": 225,
+      "direction": "bearish",
+      "gap_top": 86.699157,
+      "gap_bottom": 86.64866,
+      "filled": true
+    },
+    {
+      "index": 232,
+      "direction": "bearish",
+      "gap_top": 86.315807,
+      "gap_bottom": 86.170106,
+      "filled": true
+    },
+    {
+      "index": 233,
+      "direction": "bearish",
+      "gap_top": 86.136207,
+      "gap_bottom": 86.078387,
+      "filled": true
+    },
+    {
+      "index": 239,
+      "direction": "bullish",
+      "gap_top": 86.352285,
+      "gap_bottom": 86.032332,
+      "filled": true
+    },
+    {
+      "index": 243,
+      "direction": "bearish",
+      "gap_top": 86.369383,
+      "gap_bottom": 86.360148,
+      "filled": true
+    },
+    {
+      "index": 247,
+      "direction": "bearish",
+      "gap_top": 86.055918,
+      "gap_bottom": 85.936435,
+      "filled": true
+    },
+    {
+      "index": 254,
+      "direction": "bullish",
+      "gap_top": 86.731209,
+      "gap_bottom": 86.673642,
+      "filled": false
+    },
+    {
+      "index": 255,
+      "direction": "bullish",
+      "gap_top": 87.250329,
+      "gap_bottom": 87.179328,
+      "filled": false
+    },
+    {
+      "index": 257,
+      "direction": "bullish",
+      "gap_top": 88.133252,
+      "gap_bottom": 87.869278,
+      "filled": false
+    },
+    {
+      "index": 259,
+      "direction": "bullish",
+      "gap_top": 88.56728,
+      "gap_bottom": 88.383605,
+      "filled": false
+    },
+    {
+      "index": 260,
+      "direction": "bullish",
+      "gap_top": 88.918289,
+      "gap_bottom": 88.816437,
+      "filled": false
+    },
+    {
+      "index": 261,
+      "direction": "bullish",
+      "gap_top": 89.321854,
+      "gap_bottom": 89.13169,
+      "filled": false
+    },
+    {
+      "index": 262,
+      "direction": "bullish",
+      "gap_top": 89.760823,
+      "gap_bottom": 89.420405,
+      "filled": false
+    },
+    {
+      "index": 263,
+      "direction": "bullish",
+      "gap_top": 90.364251,
+      "gap_bottom": 90.156375,
+      "filled": false
+    },
+    {
+      "index": 264,
+      "direction": "bullish",
+      "gap_top": 90.817551,
+      "gap_bottom": 90.57349,
+      "filled": false
+    },
+    {
+      "index": 265,
+      "direction": "bullish",
+      "gap_top": 91.06879,
+      "gap_bottom": 90.969575,
+      "filled": false
+    },
+    {
+      "index": 266,
+      "direction": "bullish",
+      "gap_top": 91.535159,
+      "gap_bottom": 91.476689,
+      "filled": false
+    },
+    {
+      "index": 267,
+      "direction": "bullish",
+      "gap_top": 91.782661,
+      "gap_bottom": 91.660068,
+      "filled": false
+    },
+    {
+      "index": 268,
+      "direction": "bullish",
+      "gap_top": 92.373336,
+      "gap_bottom": 91.906098,
+      "filled": false
+    },
+    {
+      "index": 269,
+      "direction": "bullish",
+      "gap_top": 93.088102,
+      "gap_bottom": 92.407401,
+      "filled": false
+    },
+    {
+      "index": 270,
+      "direction": "bullish",
+      "gap_top": 93.335765,
+      "gap_bottom": 93.118642,
+      "filled": false
+    },
+    {
+      "index": 271,
+      "direction": "bullish",
+      "gap_top": 93.910721,
+      "gap_bottom": 93.552118,
+      "filled": true
+    },
+    {
+      "index": 272,
+      "direction": "bullish",
+      "gap_top": 94.215157,
+      "gap_bottom": 94.006302,
+      "filled": true
+    },
+    {
+      "index": 273,
+      "direction": "bullish",
+      "gap_top": 94.410216,
+      "gap_bottom": 94.346084,
+      "filled": true
+    },
+    {
+      "index": 274,
+      "direction": "bullish",
+      "gap_top": 94.861526,
+      "gap_bottom": 94.488738,
+      "filled": true
+    },
+    {
+      "index": 280,
+      "direction": "bearish",
+      "gap_top": 94.883185,
+      "gap_bottom": 94.673762,
+      "filled": true
+    },
+    {
+      "index": 281,
+      "direction": "bearish",
+      "gap_top": 94.510738,
+      "gap_bottom": 94.473655,
+      "filled": true
+    },
+    {
+      "index": 294,
+      "direction": "bearish",
+      "gap_top": 94.571627,
+      "gap_bottom": 94.446453,
+      "filled": true
+    },
+    {
+      "index": 295,
+      "direction": "bearish",
+      "gap_top": 94.219637,
+      "gap_bottom": 93.816601,
+      "filled": true
+    },
+    {
+      "index": 299,
+      "direction": "bullish",
+      "gap_top": 93.956677,
+      "gap_bottom": 93.853097,
+      "filled": false
+    },
+    {
+      "index": 300,
+      "direction": "bullish",
+      "gap_top": 94.497504,
+      "gap_bottom": 94.298945,
+      "filled": false
+    },
+    {
+      "index": 301,
+      "direction": "bullish",
+      "gap_top": 95.061095,
+      "gap_bottom": 94.737598,
+      "filled": false
+    },
+    {
+      "index": 302,
+      "direction": "bullish",
+      "gap_top": 95.438527,
+      "gap_bottom": 95.083986,
+      "filled": false
+    },
+    {
+      "index": 303,
+      "direction": "bullish",
+      "gap_top": 95.698101,
+      "gap_bottom": 95.620826,
+      "filled": false
+    },
+    {
+      "index": 305,
+      "direction": "bullish",
+      "gap_top": 96.299903,
+      "gap_bottom": 96.091915,
+      "filled": false
+    },
+    {
+      "index": 306,
+      "direction": "bullish",
+      "gap_top": 96.921722,
+      "gap_bottom": 96.442208,
+      "filled": false
+    },
+    {
+      "index": 307,
+      "direction": "bullish",
+      "gap_top": 97.313928,
+      "gap_bottom": 97.132797,
+      "filled": false
+    },
+    {
+      "index": 309,
+      "direction": "bullish",
+      "gap_top": 98.034955,
+      "gap_bottom": 97.627534,
+      "filled": true
+    },
+    {
+      "index": 311,
+      "direction": "bullish",
+      "gap_top": 98.28217,
+      "gap_bottom": 98.192591,
+      "filled": false
+    },
+    {
+      "index": 312,
+      "direction": "bullish",
+      "gap_top": 98.518819,
+      "gap_bottom": 98.38286,
+      "filled": false
+    },
+    {
+      "index": 313,
+      "direction": "bullish",
+      "gap_top": 99.042817,
+      "gap_bottom": 98.865529,
+      "filled": false
+    },
+    {
+      "index": 314,
+      "direction": "bullish",
+      "gap_top": 99.185462,
+      "gap_bottom": 99.1252,
+      "filled": false
+    },
+    {
+      "index": 315,
+      "direction": "bullish",
+      "gap_top": 99.962962,
+      "gap_bottom": 99.545154,
+      "filled": true
+    },
+    {
+      "index": 316,
+      "direction": "bullish",
+      "gap_top": 100.656778,
+      "gap_bottom": 100.257407,
+      "filled": true
+    },
+    {
+      "index": 317,
+      "direction": "bullish",
+      "gap_top": 100.823059,
+      "gap_bottom": 100.683526,
+      "filled": true
+    },
+    {
+      "index": 318,
+      "direction": "bullish",
+      "gap_top": 101.684964,
+      "gap_bottom": 100.999684,
+      "filled": true
+    },
+    {
+      "index": 319,
+      "direction": "bullish",
+      "gap_top": 102.584778,
+      "gap_bottom": 101.870852,
+      "filled": true
+    },
+    {
+      "index": 320,
+      "direction": "bullish",
+      "gap_top": 102.994661,
+      "gap_bottom": 102.667684,
+      "filled": true
+    },
+    {
+      "index": 321,
+      "direction": "bullish",
+      "gap_top": 103.620275,
+      "gap_bottom": 103.104458,
+      "filled": true
+    },
+    {
+      "index": 325,
+      "direction": "bullish",
+      "gap_top": 103.888226,
+      "gap_bottom": 103.877697,
+      "filled": true
+    },
+    {
+      "index": 335,
+      "direction": "bullish",
+      "gap_top": 103.785557,
+      "gap_bottom": 103.711083,
+      "filled": true
+    },
+    {
+      "index": 337,
+      "direction": "bullish",
+      "gap_top": 103.8698,
+      "gap_bottom": 103.841549,
+      "filled": true
+    },
+    {
+      "index": 340,
+      "direction": "bearish",
+      "gap_top": 103.955986,
+      "gap_bottom": 103.782438,
+      "filled": true
+    },
+    {
+      "index": 348,
+      "direction": "bullish",
+      "gap_top": 103.630272,
+      "gap_bottom": 103.521838,
+      "filled": true
+    },
+    {
+      "index": 356,
+      "direction": "bullish",
+      "gap_top": 103.900366,
+      "gap_bottom": 103.823612,
+      "filled": true
+    },
+    {
+      "index": 358,
+      "direction": "bullish",
+      "gap_top": 104.347647,
+      "gap_bottom": 104.328055,
+      "filled": true
+    },
+    {
+      "index": 359,
+      "direction": "bullish",
+      "gap_top": 104.916012,
+      "gap_bottom": 104.566452,
+      "filled": true
+    },
+    {
+      "index": 361,
+      "direction": "bullish",
+      "gap_top": 105.336106,
+      "gap_bottom": 105.234565,
+      "filled": true
+    },
+    {
+      "index": 368,
+      "direction": "bearish",
+      "gap_top": 105.442942,
+      "gap_bottom": 105.336958,
+      "filled": false
+    },
+    {
+      "index": 370,
+      "direction": "bearish",
+      "gap_top": 104.906309,
+      "gap_bottom": 104.831607,
+      "filled": false
+    },
+    {
+      "index": 371,
+      "direction": "bearish",
+      "gap_top": 104.588508,
+      "gap_bottom": 104.367405,
+      "filled": true
+    },
+    {
+      "index": 374,
+      "direction": "bearish",
+      "gap_top": 104.031222,
+      "gap_bottom": 103.95708,
+      "filled": false
+    },
+    {
+      "index": 375,
+      "direction": "bearish",
+      "gap_top": 103.828647,
+      "gap_bottom": 103.690089,
+      "filled": false
+    },
+    {
+      "index": 376,
+      "direction": "bearish",
+      "gap_top": 103.599689,
+      "gap_bottom": 103.512651,
+      "filled": false
+    },
+    {
+      "index": 377,
+      "direction": "bearish",
+      "gap_top": 103.448447,
+      "gap_bottom": 103.306658,
+      "filled": false
+    },
+    {
+      "index": 378,
+      "direction": "bearish",
+      "gap_top": 103.163298,
+      "gap_bottom": 103.157557,
+      "filled": false
+    },
+    {
+      "index": 379,
+      "direction": "bearish",
+      "gap_top": 103.098236,
+      "gap_bottom": 103.089362,
+      "filled": false
+    },
+    {
+      "index": 380,
+      "direction": "bearish",
+      "gap_top": 102.969005,
+      "gap_bottom": 102.865145,
+      "filled": false
+    },
+    {
+      "index": 381,
+      "direction": "bearish",
+      "gap_top": 102.837784,
+      "gap_bottom": 102.555527,
+      "filled": true
+    },
+    {
+      "index": 384,
+      "direction": "bearish",
+      "gap_top": 102.116677,
+      "gap_bottom": 102.046524,
+      "filled": false
+    },
+    {
+      "index": 385,
+      "direction": "bearish",
+      "gap_top": 101.970764,
+      "gap_bottom": 101.900444,
+      "filled": true
+    },
+    {
+      "index": 387,
+      "direction": "bearish",
+      "gap_top": 101.7421,
+      "gap_bottom": 101.521745,
+      "filled": false
+    },
+    {
+      "index": 388,
+      "direction": "bearish",
+      "gap_top": 101.458812,
+      "gap_bottom": 101.126143,
+      "filled": false
+    },
+    {
+      "index": 390,
+      "direction": "bearish",
+      "gap_top": 100.909204,
+      "gap_bottom": 100.680631,
+      "filled": false
+    },
+    {
+      "index": 391,
+      "direction": "bearish",
+      "gap_top": 100.650987,
+      "gap_bottom": 100.561074,
+      "filled": false
+    },
+    {
+      "index": 398,
+      "direction": "bullish",
+      "gap_top": 99.975953,
+      "gap_bottom": 99.845617,
+      "filled": false
+    }
+  ],
+  "displacement_nonzero": {
+    "35": -1,
+    "56": 1,
+    "72": 1,
+    "75": 1,
+    "93": 1,
+    "95": 1,
+    "98": 1,
+    "99": 1,
+    "101": 1,
+    "127": 1,
+    "147": -1,
+    "149": -1,
+    "172": -1,
+    "182": -1,
+    "183": -1,
+    "220": -1,
+    "224": -1,
+    "232": -1,
+    "239": 1,
+    "253": 1,
+    "255": 1,
+    "295": -1,
+    "300": 1,
+    "306": 1,
+    "315": 1,
+    "318": 1,
+    "319": 1,
+    "359": 1,
+    "388": -1
+  },
+  "mss_nonzero": {
+    "254": 1,
+    "302": 1
+  },
+  "cvd_checkpoints": {
+    "0": -607.95728,
+    "40": -28767.189284,
+    "80": -10601.134275,
+    "120": 13359.384077,
+    "160": 6190.448114,
+    "200": -2709.771241,
+    "240": -6584.176531,
+    "280": 7286.243314,
+    "320": 20073.612389,
+    "360": 21918.55031
+  },
+  "cvd_final": 8026.99169,
+  "killzone_true_counts": {
+    "asian": 152,
+    "london_open": 51,
+    "london_close": 33,
+    "ny_open": 51,
+    "ny_lunch": 32,
+    "ny_close": 32,
+    "london_silver_bullet": 17,
+    "ny_am_silver_bullet": 17,
+    "ny_pm_silver_bullet": 16
+  }
+}

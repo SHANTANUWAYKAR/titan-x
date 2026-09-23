@@ -1,0 +1,1178 @@
+Last, but definitely not least, uh we're going to talk about risk rules um and risk management when it comes to the RSI indicator.
+---
+I would set the stop loss uh you know just above the high of the move and we can target here when we have trading ranges we can usually set the target you know before the low of the range.
+---
+But right, so now before we put this all together in a step-by-step trading strategy, we need to talk about something very important and this is something that is, you know, nonnegotiable and that is risk rules and risk management.
+---
+When using the RSI indicator, like with all other, you know, technical analysis tools, we need to have proper risk management.
+---
+We usually set the stop loss just above the highest point of the pattern right here.
+---
+Do you wonder why your stop loss gets hit right before the market reverses?
+---
+And when it comes to significant lows, what traders usually do is that they set their stop loss orders uh below this significant level.
+---
+So some So some trader might set the stop loss here because he argues that if the price drops below this important level, it probably will fall even further.
+---
+Another trader might have a stop loss here.
+---
+Another trader might have a stop loss here and so on and so on.
+---
+There are many stop loss orders below that level.
+---
+Because Because we have these two lows, it means that when the price or if the price drops below uh this important level, it will trigger all the stop loss orders.
+---
+And when a stop loss order is triggered, uh the people that put out the stop loss is, you know, they are required to sell, which often which [clears throat] often leads to even more selling pressure.
+---
+Their stop losses would be the exact opposite of uh you know, normal trading.
+---
+Because their stop losses will be higher than the current price.
+---
+So he shorted right here, then a common way to set your stop loss it is to set your stop loss above the highs.
+---
+So maybe one trader have a stop loss right here.
+---
+Another have a stop loss right here.
+---
+There might be thousands of stop losses at each of these levels.
+---
+So if the price when or if the price goes up here and triggers all of these stop loss order, what the traders that shorted the market, what they need to do is that they are actually forced to buy uh the assets.
+---
+You know, in very simple terms, this is just support and resistance and stop losses.
+---
+But in simple terms, the knowledge here is just that stop loss orders tend to cluster.
+---
+We tend to put our stop losses there.
+---
+So what they can do is that they can push the price into these levels to on purpose trigger your stop losses.
+---
+Because when you trigger your stop losses, automatic buying or selling will happen uh depending on on if it's sell side liquidity or buy side liquidity.
+---
+But my point here is that because many traders saw this shooting star, many traders probably set their stop loss above this point right here.
+---
+So you probably have many stop loss orders.
+---
+So, you plan a max position size.
+---
+This video was just a very short clip from our full risk management trading course right here on YouTube.
+---
+So So smart money traders are basically the the big boys, the traders with lots of money, like hedge funds, banks, and so on and so on.
+---
+But right so now then now it's time to take a look at why institutions live by VWAP or in other words why does smart money traders like banks and hedge funds why do they like VWAP so much?
+---
+Well, here banks and hedge funds and other smart money traders like, you know, for example, Goldman Sachs and the hedge fund uh Bridgewwater, they actually use the VWAP to yudge their price.
+---
+So what many hedge funds try to do is of course to you know buy below the VWAP uh because you get a a a better buying deal and they also want to sell above the VWAP because you want to of course sell for better than the average price during that uh during that day.
+---
+And here and this is very important because many of the biggest players in the markets like banks like hedge funds are watching this line.
+---
+If we have a VWAP right here and we know that uh you know a hedge fund tries to buy below the VWAP.
+---
+If the price is now trading below and then it bounces down to the VWAP maybe a little bit below here when it goes below many hedge funds will think that you know this is now a good price.
+---
+So big players like banks and hedge funds use the VWAP.
+---
+Now the hedge funds can sell for a better price, they can get more than the average price during that day.
+---
+So this will lead to many hedge funds uh selling up here which leads to more selling pressure and we can get you know reactions uh on the resistance.
+---
+So they will set their stop losses for example right here, right here, right here.
+---
+When it comes to the failure test, you want to set the stop loss just above the extreme of the pattern.
+---
+And you can see that I set our stop loss a tiny bit above this point, right?
+---
+Um, and by the way guys, if you want to learn more about how to handle your risk, that is one of the most important things you can learn in trading in general, you are actually in luck because I do have a full course on risk management.
+---
+Uh, and last, but definitely not least, we're going to take a look at AI risk management and how to set alerts.
+---
+So maybe you need help with a certain aspect of your trading maybe it's risk management
+---
+Think about things like hedge funds or big banks and so on and so on.
+---
+So as you know when it when it comes to risk management if you fall down you know 83% you almost need to 10x your account to come back and what the SMA50 strategy uh basically did was that it allowed us to avoid the worst draw downs.
+---
+So now let's take a look at one of the best use cases for AI in trading and that is to use it for risk management.
+---
+When it comes to trading, one of the I would say the most important skill you can learn is risk management.
+---
+If your risk management is not in shake, you might never reach that point because you might, you know, uh, completely wreck your account.
+---
+Risk management is something you can't do without as a trader.
+---
+So being able to enhance your your uh risk management with the AI is a blessing.
+---
+Well, it can help you with things like for example position sizing math.
+---
+Um it can also help you, for example, build a complete uh trading plan, you know, where to set your stop loss and everything like that.
+---
+And here, as I just mentioned, risk management keep you in the game long enough so your edge can actually compound and you can make money.
+---
+And to demonstrate what an AI can do when it comes to risk management, let's just uh for example open up an imaginary uh trade here.
+---
+Let's say we set our stop loss just below the low right here.
+---
+And now I want to see if uh if uh Claude can actually help us with let's say position sizing.
+---
+uh the entry level, the stop loss, and the target level.
+---
+And as you can see on the chart, I have my target and stop loss right here.
+---
+And the stop loss is correct.
+---
+So here the position size for 2% risk on $10,000 is you know we want to risk 200 and risk per uh bitcoin is 2,69.
+---
+And here it's actually smart enough to notice here that our position sizing tool is actually set to our 1,00 account.
+---
+Both give you a clean entry with a defined stop loss and clear target.
+---
+The stop loss here is pretty straightforward.
+---
+So, we want to set the stop loss just below that line.
+---
+For this entry, we have a super clear stop loss.
+---
+We place the stop loss above the resistance that came from the previous support.
+---
+So we can place the stop loss just there.
+---
+So using a risk to reward of around two to one, your target would be somewhere around here.
+---
+Once again, the most clear stop placement is to place it above the high, but as you can see in this case, because we have a wider stop, in order to get our two to one risk to reward, our target level would have to be placed pretty far down.
+---
+The entry and stop loss is very similar to the ascending triangle.
+---
+Stop loss is placed above the most recent high.
+---
+The next thing we really need to do and this is one of the most important principles of risk management is that we need to set a stop uh a stop-loss or for short stop.
+---
+So a stop loss is basically a level that if the price if the price falls below this level we automatically sell and this is so so important and we will talk about uh that more soon.
+---
+But here we can trigger a stop-loss so that we can for example set the stop loss.
+---
+Remember we want to set the stop loss below the current price.
+---
+And your stop loss will of course be different depending on where you if you go long or short short.
+---
+So for example, if you go long, your stop loss will be to the downside.
+---
+But if you go short, your stop loss will be to the upside.
+---
+And last but not least, you need to have a position size.
+---
+And we can also choose here where to place our stop loss.
+---
+And when we go long the stop loss will be to the downside the target will be to the upside.
+---
+Let's say that we have done an analysis and that that we have you know came to the conclusion that we want to set the stop loss below here.
+---
+Then you know a common riskto-reward ratio is that the target is twice as uh long as the stop loss.
+---
+Uh but here you can see that when when we when we uh short the stop loss will actually be to the upside.
+---
+And this this creates something very very interesting and that is that if the market goes up here and you know goes to our stop loss that actually means that we will now have it's called buying back we need to buy back in this case gold and this can actually lead to more buying pressure and that is a very interesting aspect.
+---
+I know that I say this for I feel like I say this for every slide that it's very very important, but this right here, risk management is what prevents you from losing all your money.
+---
+but they completely forget about risk management and be before they know it they lose either most of their money
+---
+or you you will hear if you go to you know Reddit and forums you will hear many people losing basically anything and that is because the simple mistake that they didn't pay attention to risk management so this is so important and when it comes to risk management there are multiple things including included for example you know always setting A stop-loss is so so important.
+---
+Here it's also important that the position size will depend on your stop loss.
+---
+So the wider we have our stop loss you know the less the position size can actually be.
+---
+Here we have the position sizer.
+---
+You also have something called risk of ruin.
+---
+Um but for now let's actually focus on the position sizer.
+---
+Now, you can uh add right here what you plan to risk per trade.
+---
+And here to calculate the position size you need to uh enter you know your entry price.
+---
+Uh and let's say that we have our stop loss at 90.
+---
+Then we can simply click calculate position size here.
+---
+And here you can see that our position size is 10 units.
+---
+If we for example have our stop loss instead at 80, you can see that now because we have a wider stop-loss, we only uh our position size is only five units.
+---
+And here the risk per trade is autoc calculated from earlier.
+---
+uh because you know it's of course very important to focus on how to build a trading strategy your risk management and so on and so on but when you are actually inside when you are in the heat of a moment
+---
+So that is just what makes risk management even more important in the beginning and you really need to stick to your rules.
+---
+So, you need to know where to enter, where to set your stop loss, and you also need to have a target.
+---
+And to keep it simple, let's set our stop loss below here.
+---
+This is a common way to set your stop loss for the ascending triangle, below the most recent low before the breakout.
+---
+And using a risk-to-reward ratio of two, meaning that the target is, you know, twice the size as the stop loss, our trade would have looked something like this.
+---
+The stop loss is usually placed below the low of the pattern right here.
+---
+So right here is your stop loss.
+---
+The most common way to set your stop loss is to set your stop loss just above the upper wick.
+---
+So you measure the distance from the stop loss to the entry.
+---
+As for your stop loss, many people will set it just below the lowest point of the pattern.
+---
+So, setting your stop loss right there.
+---
+but you can hopefully see stop loss right there.
+---
+Or another way to set stop loss is if we have a support level like we have right here is to set the stop just you know uh a certain distance below the support.
+---
+And what you do here is that you measure the distance from the stop loss to the entry.
+---
+As for your stop loss, you can either set your stop loss just above the pattern or above the resistance level.
+---
+For now, let's keep it simple and set it uh set the stop loss just above the high of the bearish engulfing.
+---
+Uh the stop loss in this case I would definitely set below the extreme of the pattern.
+---
+And then uh one of the most common places to set your stop loss is to set your stop loss just below the low point within this pattern.
+---
+So you set the stop loss below right here.
+---
+So this can be a good place for stop losses.
+---
+a strong green green candle, but you want something that shows that the bulls uh take control of this support because that makes it much more easy for us to also set our um you know stop loss and target and so on and so on.
+---
+If we enter on this hammer, our entry would be at the candle close of the hammer and our the most common way to set your stop loss is to set your stop loss just below the hammer.
+---
+And when we do this kind of entry we usually set the stop loss below the low of the uh of the pullback.
+---
+So you can see the hammer goes below the support it takes out many people's stop losses which creates liquidity for you know often smart money to step in and push the price up again.
+---
+We can have our stop loss below the low and we can use, for example, a fixed risk to uh risk-to-reward to get our target level maybe somewhere up here, right?
+---
+Now your stop loss will of course be above the pattern.
+---
+Many entry models have uh much of subjectivity where you place your stop loss.
+---
+But for the failure test, the stop loss is pretty much always set um uh above or below the extreme of the pattern that briefly uh you know pushed above and then closed within.
+---
+So here if you once again uh focus on the text you see that the stop loss we place it past the wick of the failure.
+---
+Um if you try to trade these markets, you will notice that your stop losses will get hit all the time and the structure seems to change you know every few candles.
+---
+I you hopefully can see that this is a market that is very hard to trade it's easy to get burned and it's hard to know you know where should I even place my stop loss where should I even enter and so on and so on so this is a good example of a shopping market while this part right here is much cleaner but this is still far from asking clean as uh you know the daily time frame right here which is currently looking you know uh much much better.
+---
+The big players or in other words smart money uh think about the banks, hedge funds and basically you know traders with lots and lots of money they are also looking at the same levels and they can actually use these levels against you.
+---
+So maybe you set your stop loss here at 95,000.
+---
+Remember here that the stop loss is always at a worse price and when you go short the price is worse when it's higher because remember when you go short you want the price to go down.
+---
+In the case of a long position your stop loss will be when the price goes down.
+---
+But in the case of a short position your stop loss will be if the price goes up.
+---
+Setting your stop loss just below the low right here and with a risk-to-reward ratio your trade would have looked something like this and you would have locked in some very nice profit.
+---
+And let's say that we use a 1:1 risk to reward, meaning that when we win, we win, say, $100, and when we lose, we say, we lose $100.
+---
+And you know, there's a whole discipline called risk management, which is so so important.
+---
+I would say that trading psychology and risk management are the two pillars that, you know, prevent you from basically from destroying your trading account.
+---
+And I do have a full course on risk management as well that I recommend to watch after this video.
+---
+We can control exactly where we place our stop loss.
+---
+Of course, when it comes to target levels and stop losses, there are more advanced techniques.
+---
+Predefine your stop loss and target before you even take the trade.
+---
+And if you want to dive deeper, as I mentioned earlier, I do have a full course on risk management where you will learn, you know, multiple techniques on exactly how to set your stop loss correctly, how to set your target correctly, and so on and so on.
+---
+You know, in many cases you should don't even have big losses in the first place if you have proper risk management.
+---
+And I do talk more about that in my risk management course.
+---
+So that is position size.
+---
+You really, really need to have your risk management in check in order to become consistently profitable.
+---
+also a strong green green candle, but you want something that shows that the bulls uh take control of this support because that makes it much more easy for us to also set our um you know stop loss and target and so on and so on.
+---
+It takes out many people's stop losses with creates liquidity for you know often smart money to step in and push the price up again.
+---
+Many entry models have much of subjectivity where you place your stop loss.
+---
+It's easy to get burned, and it's hard to know, you know, where should I even place my stop loss, where should I even enter, and so on and so on.
+---
+The other type I want to talk about is something known as hedggers uh or hedge trading.
+---
+So what hedge traders do is that they uh are protecting either real world business risk or you know as I said their portfolio risk and they do that by taking both long and short positions at the same time.
+---
+So let's say that a hedge trader might be, you know, they might be uh long Bitcoin uh but for some reason they might have a portfolio that uh they can't really allow to sell to sell Bitcoin and it might be complicated to sell Bitcoin for multiple reasons but they might still think that uh you know Bitcoin will go down in the near term.
+---
+What they then can do is that they can hold their Bitcoin position but they can take a short position at the same time to hedge the risk.
+---
+Uh, and now as for your stop loss, we could set it, you know, below the low of the of the whole structure.
+---
+So now the time has come to take a look at the Kelly criterion and why >>
+---
+So first of all, you might have course wonder what the Kelly criterion is.
+---
+Well, the Kelly criterion is a mathematical formula developed by John Kelly in 1956.
+---
+The percent you should risk is simply your win rate minus your loss rate divided by your risk reward.
+---
+So to simplify, your percent to risk is equal to your percent win rate minus your percent of losing divided by your risk to reward.
+---
+In order for this formula to, you know, work, even to work in theory, you need to have very good numbers of both your win rate and your risk reward.
+---
+Let's say that you have back tested, maybe you have a back tested at least 100 trades and you have according to your test, you have a you know win rate of 60% which of course means that you have a loose rate of 40% and let's say that in this case you had a risk reward of to keep it simple one to one.
+---
+So now to calculate the Kelly criterion
+---
+So the amount we need to risk is simply 60% or in other words 0.60 minus remember our loss rate which is 0.4 or in other words 40% and divided by your risk reward and remember here we have divided by one which is just equal to 0.60 minus 0.40 here which is 0.20 or in other words 20%.
+---
+One example here is Larry Williams who used, you know, the Kelly formula for his risk management to turn around $10,000 to roughly $1.1 million in the 1987 Robbins Cup.
+---
+And if you are not even sure about your stats, I I recommend to do the more standard risk you know position sizings of maybe 2% or 1%.
+---
+A common way is to use a fixed risk to reward.
+---
+So, at the high of the close right here, if you enter at that point, the most common place to set your stop loss is to set it just below the lowest point of the double bottom.
+---
+And if you don't know, the stop loss is where you will automatically sell if the price goes down to this point.
+---
+For this type of entry, I would also place my stop loss just below the lowest point of that candle.
+---
+You may of course wonder where do we place our stop loss?
+---
+Uh well, for this type of entry point, I think the stop loss is very clear.
+---
+So in other words, the uh you want to set the stop loss above this point right here.
+---
+Remember, a short trade is when we make money when the price is going down, setting our stop loss just above the high.
+---
+That is a very common way to set stop losses.
+---
+And let's say for simplistic sake that we set our stop loss, you know, maybe above this uh maybe above that recent low just to show you guys.
+---
+And remember now the stop loss will be to the upside.
+---
+So let's say that we have our stop loss right here.
+---
+Or in other words, you can think about it as a stop loss.
+---
+I hope you guys have your notebook up and and running is that your stop loss in a long trade is a sell stop.
+---
+And then we have a stop loss, which is the level where we will automatically sell.
+---
+And if this one gets hit, we have this uh stop loss and take profit set as well.
+---
+And if we want to, we can also create a take profit and a stop loss of this order as well.
+---
+Breakouts basically means buying near, or I wouldn't say near, but it's closer to the top of the move, which basically forces, or at least in many times forces a worse a wider stop or a worse risk to reward.
+---
+And here, this doesn't always have to be true, but in many cases a pullback you will you will be able to have a sort of tighter stop, a better risk to reward, and you might even in general have better expected value.
+---
+And that is what I said that entries in the actual pullback often offers a more attractive risk to reward.
+---
+But here, the stop loss or sell stop is placed below the current price.
+---
+It's a very important risk management tool because it automatically limits losses from not going too far.
+---
+But here we can trigger a stop loss so that we can for example set the stop loss remember we want to set the stop loss below the current price.
+---
+So, for example, if you go long, your stop loss will be to the downside, but if you go short, your stop loss will be to the upside.
+---
+So we can choose here where to take our target and we can also choose here where to place our stop loss.
+---
+And when we go long the stop loss will be to the downside.
+---
+but here you can see that when when we when we uh short the stop loss will actually be to the upside and this this creates something very very interesting and that is that if the market goes up here and you know goes to our stop loss that actually means that we will now have it's called buying back.
+---
+but this right here risk management is what prevents you from losing all your money.
+---
+Uh maybe they are starting to make some money but they completely forget about risk management and be before they know it they lose either most of their money or you you will hear if you go to you know Reddit and forums you will hear many people losing basically anything and that is because the simple mistake that they didn't pay attention to risk management.
+---
+So this is so important and when it comes to risk management there are multiple things including included for example you know always setting a stop-loss is so so important this you always have to do uh but some other things you really need to do is that you need to you know risk small even if you have a stop-loss if you put everything into one trade if you put all your net worth into one trade that is super super reckless.
+---
+Here, it's also important that the position size will depend on your stop-loss.
+---
+So the wider we have our stop loss, you know, the less the position size can actually be.
+---
+But, all right, so now I want to show you guys the risk management calculator.
+---
+This is a common way to set your stop loss for the ascending triangle below the most recent low before the breakout.
+---
+So a key takeaway here is that one ETF share means instant diversification.
+---
+And in simple terms, diversification is when you are spreading your risk between you know multiple multiple companies because a very important principle to to remember here is that if you only buy one stock of course that stock can go to zero.
+---
+it's Ray Dalio and he's known for more diversification
+---
+So he has a diversification across assets and economies.
+---
+And here the first key concept that you need to learn about is diversification.
+---
+You know smart money like the big banks and hedge funds.
+---
+That is, you know, head hedge funds, big banks, and basically investors with tons of money.
+---
+All right, so now you know that AI is sort of decreasing the gap here between small investors and the investors on Wall Street or banks and hedge funds.
+---
+You know, when we talk about risk management in trading, we usually think about, you know, stop losses and position sizing and so on and so on.
+---
+So, for example, a very common fixed risk-to-reward ratio is two, and this is, remember, simply that this distance right here down to the entry point is twice the size compared to this distance right here from the stop loss to the entry point.
+---
+You can also for example use you know a three three to one risk reward or a 1.5, but I would say that a two to one risk reward is the most common one.
+---
+So now it's time to take a look at position sizing models.
+---
+In this free video course, you will learn everything you need to know about risk management for trading stocks, crypto, forex, or any other financial market.
+---
+By the end of this course, you will not only be able to manage risk correctly, but you will also learn about advanced risk management principles and techniques that most traders don't know about.
+---
+All right, so hello everyone and welcome to this full risk management trading course.
+---
+Risk management is the most powerful skill you can learn in trading.
+---
+And that is because even if you have a perfect trading strategy, you can still lose money if your risk management is off.
+---
+And a huge reason for that is that I think that 90% of beginner traders don't take the time to sit down and watch a full course on risk management.
+---
+And first and foremost, before we can start using and mastering risk management, we of course first need to know a little bit about what risk actually is in the first place, and the very important rule that survival comes first.
+---
+After that, it's time to take a look at the classical foundations behind modern risk management.
+---
+So, we will take a look at some of the risk management legends that you really need to learn about.
+---
+After that, it's time to move on to some important practical concepts such as win rate, risk reward, and the very important expectancy formula.
+---
+Uh next on, we will move on and take a look at things like stop losses and take profit types.
+---
+You know, many of you guys probably are familiar with stop losses, but in this video we'll take a look at many different types and strategies we can use to set our stop loss, and that we will also do for the take profit.
+---
+Next, we're also going to take a look at some position sizing models.
+---
+And position sizing is basically about how much you you are risking per trade, and here we have many interesting and useful formulas such such as the Kelly criterion, and we'll take a look at some others as well.
+---
+And as I said, if this sounds complicated right now, don't worry because that is how it's supposed to be, but after this course, you will walk away with a very very good understanding of risk management, and as a result, you will make more money.
+---
+So, here, risk management, it's all about surviving first and profit second because long-term traders are like slow ships and not speedboats.
+---
+Some traders even lose their whole account because they don't have the risk management in check.
+---
+This is something that should never happen and will never happen if you actually have your risk management in place.
+---
+So, now then, now it's time to take a look at the classical foundations of risk management.
+---
+So, I want to take a look at some of the most prominent people in the history of risk management.
+---
+Well, Markowitz here clearly described how risky individual assets are and why diversification is so key.
+---
+And that is win rate, risk reward, and very importantly, expectancy.
+---
+Um but first of all, we need to take a look at something called risk to reward ratio, or for short, RR.
+---
+And risk to reward ratio is simply the size of your reward divided by the size of your risk.
+---
+So, if you for example win three times more than you lose, then your risk to reward is three divided by one, which is simply three.
+---
+But if you lose three times more than you win, then your risk to reward is one divided by three, which is simply a third.
+---
+Uh so, we have the once again the reward divided by the risk, which in this case would give a risk to reward of two.
+---
+But all right, so now I want to jump back here into TradingView, because I want to show you guys the risk to reward tool in TradingView, which is a very good tool you can use to plan your trade.
+---
+Uh but as I said, what I want to do now is just to show you guys the risk reward tool in TradingView.
+---
+And when it comes to our stop loss, I will show you guys many methods to to set stop loss later on in this course.
+---
+And when it comes to hammers, I hope you can see the most common way to set your stop loss is to set it just below the lowest point of the hammer.
+---
+So, I set my stop loss right there.
+---
+But now, remember here the risk to reward ratio is how much do we win compared to to how much we lose.
+---
+So, as you can see, right now we have a risk to reward ratio of one or 1.01, but basically one.
+---
+But let's say here that we want to increase the risk reward ratio to, let's say, two.
+---
+So, if we increase the risk reward ratio of two, now we will win, you know, this length right here is twice the size, which means that we will win twice as much uh compared to what we lose when we lose, because this is just 1x.
+---
+So, this is an example of a 2:1 risk reward.
+---
+And of course, if we increase this ratio even more, this right here is a a risk reward ratio of three, up here is a risk reward ratio of five, and so on and so on.
+---
+And our stop loss is placed just above the pivot high of this move.
+---
+Now, once again, you can see here the risk reward would work the exact same thing, but now our reward side would be to the downside.
+---
+So, a risk reward ratio of one would look something like this.
+---
+A risk reward ratio of three would look something like this.
+---
+A risk reward ratio of five would look something like this.
+---
+It's a very easy way to plan out your trades using risk to reward.
+---
+So, if you have a certain risk reward, the break even win rate tell you, you know, how often do I need to win to make money.
+---
+It's basically 1 / 1 + your risk to reward.
+---
+So, for example, if you have a risk reward of three, which is a common risk reward ratio, then the formula would be 1 / 1 + 3, which is equal to, you know, 1/4 or 25%.
+---
+So that basically means as you can see right here that a risk reward of 1:3 only needs to win 25% of the time to break even.
+---
+Well, capital risk is simply how much money you lose if your stop loss is hit.
+---
+And if you set your stop loss, so let's say you set your stop loss at, you know, $99,000.
+---
+The capital risk here, or in other words, the money you lose if your stop loss gets hit, will simply be $1,000.
+---
+And positional risk is the chance that your stop stop loss gets hits at all.
+---
+But if we change our stop loss here, uh let's make the stop loss tighter.
+---
+So, let's change our stop loss to $99,500.
+---
+Now, you can see that we actually have less capital risk, but we have a tighter stop loss.
+---
+And it's actually more likely that this stop loss gets hit because, you know, the price can move something like this, hit the stop loss at $99,500, and then reverse.
+---
+If we have a tighter stop loss, we have a higher positional risk.
+---
+But at the same time, let's say we have a wider stop loss.
+---
+Let's say we have a stop loss here at 98,000.
+---
+In this case, we have, you know, a lower positional risk because it's less likely that our stop loss gets hit.
+---
+And let's begin here by you know, let's say we set our stop loss here at $98,000.
+---
+In this case, it's very simple to understand that our capital risk, the amount of money we risk if we buy one Bitcoin at $100,000 and how our stop loss at $98,000, it means that our capital risk is 2,000.
+---
+But, now in this case you can see that the stop loss is pretty tight, right?
+---
+So, it's pretty likely that the price will go down here and hit our stop loss and then maybe reverses.
+---
+And if we want to decrease our positional risk, we need to make a wider stop loss.
+---
+So, let's say we make our stop loss all the way down here at 95,000.
+---
+Because now if our stop loss get hit, we lose $5,000.
+---
+What we can do here is that we can, you know, uh move up our stop loss, for example, to our to our entry point.
+---
+So, now it's finally time to take a look at stop loss types.
+---
+And we have, in general, I would say that we have three main types of stop losses.
+---
+And the first stop loss here is a technical stop loss.
+---
+Well, a technical technical stop loss is a stop loss that is placed where the trade idea is invalidated.
+---
+So, if you look at this image right here, you can see that in this case, let's say that, as you can see on the image, uh let's say we just entered the trade right here, then a an example of a technical stop is to place the stop loss somewhere here, for example, be- below the swing low.
+---
+and we set the stop loss, you know, a certain distant here distance below the swing low.
+---
+But here, the other key type of stop losses is the volatility stop loss.
+---
+And this is when we place a stop loss based on, for example, a multiple of the ATR.
+---
+So, that is another stop loss type.
+---
+But the third top stop loss type here is actually to combine both methods.
+---
+So, we use both a technical and a volatility stop loss.
+---
+So, we might, for example, place our stop loss below a key level, but then we might, you know, leave some wiggle room here and we can base the wiggle room on the volatility itself.
+---
+And here, one important very important thing to have in mind, you can write this down, is that you really want to avoid, for example, mental stop loss.
+---
+No, you should pretty much always place a hard stop loss that, you know, you set it so it automatically sells at that level.
+---
+There are also some other stop types like, for example, money stop losses, time based stop losses that in general you want to avoid.
+---
+I really I really recommend to focus on these types, the technical, the volatility and the combined stop loss.
+---
+But now I want to show you guys the different stop loss types.
+---
+Now I want to show you guys the three different kinds of stop losses and let's begin here with technical stop loss.
+---
+So the technical stop loss, remember, is when we place the stop loss often above or below a key level.
+---
+So a very, you know, common way to set your stop loss in this case is to place your stop loss just beyond that level.
+---
+So this right here is a very simple example of a technical stop loss.
+---
+But now I also want to show you guys the volatility based stop loss.
+---
+But now then, how do we place our stop loss based on the ATR?
+---
+Well, a very common rule of thumb is that we usually want the stop loss to be 1.5 to 2x the ATR.
+---
+And one reason why why this kind of stop loss is so good is that we allow for the price.
+---
+By having this combined stop loss method, we can allow for this to happen and still make money.
+---
+But all right, so now it's time to take a look at position sizing models.
+---
+And position sizing is how we make sure that we stay in the game.
+---
+And here, there are multiple different models of position sizing models that you need to know about.
+---
+And the first model is called fixed fractional position size.
+---
+And if you use a position size of 1%, that simply means that you should risk $100 per trade, right?
+---
+If you use a 2% If you use a 2% position size, you risk $200 per trade, and so on and so on.
+---
+So, as you can see, if you only risk this small amount per trade, you know, the risk of ruin your account on one trade is basically gone.
+---
+Another way to position size, which can feel even more simple, is to have a fixed dollar risk.
+---
+So, for example, you might not want to, you know, calculate your exact, uh, know, account balance and position size every single trade.
+---
+So, so you might do something like calculating your fixed fractional position size maybe once a once a week or something like that, and then you use that that then you use that amount as your fixed dollar risk amount.
+---
+You have an account size of 10,000, you have a position size of 1%, which means that you risk 100.
+---
+And this is when your position size shrinks in volatile mark volatile market, and it and it grows in quiet ones.
+---
+So, to demonstrate this, let's go back here to our trading toolkit, and you want to make sure that you are here on the position size page.
+---
+But, here when it comes to the volatility-based position size, remember here that when the volatility increases, we need to uh, increase the distance of our stop loss.
+---
+So, that is for example when we use the ATR indicator, when the ATR is high, our distance to the stop loss will be larger.
+---
+So, as you can see here, if we increase the distance of our stop loss from 95 to 90, that means that we now only buy 10 units instead.
+---
+Or in other words, our position size is actually decreasing.
+---
+Yet another way to a position size is something known as fixed ratio.
+---
+And this is basically when your position size only increases after a defined profit milestone.
+---
+So, now the time has come to take a look at the Kelly criterion and why full Kelly will ruin you.
+---
+So, first of all, you might of course wonder what the Kelly criterion is.
+---
+In order for this formula to, you know, work, even to work in theory, you needed to have very good numbers of both your win rate and your risk to reward.
+---
+And let's say that in this case you had a risk to reward of, to keep it simple, 1 to 1.
+---
+So now to calculate the Kelly criterion, so how much we should risk, we simply plug in the numbers.
+---
+So the amount we need to risk is simply 60%, or in other words, 0.60, minus, remember our loss rate which is 0.4 or in other words 40% and divided by your risk reward and remember here we have divided by one which is just equal to 0.60 minus 0.40 here which is 0.20 or in other words 20%.
+---
+One example here is Larry Williams, who used uh you know uh the Kelly formula for his risk management to turn around $10,000 to roughly $1.1 million in the 1987 Robbins Cup.
+---
+And if you are not even sure about your stats, I recommend to do the more standard risk, you know, position sizings of maybe 2% or 1%.
+---
+Also, if you made it all the way to the end of this risk management course, make sure to drop down in the comments write full course in the comments to just prove that you watched all the way to the end.
+---
+You can also, if you want to, comment your biggest risk management mistake.
+---
+So, now when you know risk management, you are set up to start your trading journey.
+---
+When it comes to, for example, double tops, it's very common to have many uh you know, many stop loss orders above this double top.
+---
+It's super super common for for people to place their stop loss orders above significant levels.
+---
+And when smart money traders look for these stop losses and try to trigger them, we can call them call them a simple stop hunt.
+---
+So, to repeat here, what a liquidity sweep actually is is what when the market briefly breaks a level to trigger stop losses and then violently reverses to, you know, either the downside as in our example or the upside if we maybe have uh you can imagine this, but reverse it to a double bottom.
+---
+For these two reasons, it's very likely that we have tons of stop loss orders above this level, right?
+---
+We have stop loss right here, stop loss right here.
+---
+We have tons of stop loss orders.
+---
+Smart traders knows that there are many stop loss orders above this level.
+---
+You can see once again, we probably have many stop loss orders right here.
+---
+Once again, the price pushed into these stop loss orders right here, right?
+---
+So, so smart money traders are basically the the big boys, the traders with lots of money like hedge funds, banks and so on and so on.
+---
+So for example the the the most common stop order is a sell stop order or in other words you can think about it as a stop loss.
+---
+if and when this buy limit uh gets hit and then we have a stop loss which is the level where we will automatically sell.
+---
+And when the shorts stop losses get triggered, it leads to buying pressure.
+---
+Below key low levels like right here we will often have many you know stop losses and when a stop loss gets triggered it leads to selling pressure.
+---
+But here and this is very important smart money remember smart money is you know big traders like big banks and hedge funds they will actually often target these levels.
+---
+But you can see here for example below each of these small points right here we often have you know traders for example on the smaller time time frames will also have uh you know put their stop losses for example below this point right here.
+---
+And if you think about it very simply, remember above highs, that is, you know, by far the most common place to set your stop uh to set your stop loss.
+---
+And where is the most common place to set your stop loss for a double top pattern?
+---
+Well, the most common way is to set your stop loss just above the high.
+---
+Uh so in other words, many traders probably have their stop losses above this level.
+---
+Uh but don't worry because I do actually have a full course on risk management where I go over everything you need to set your stop-loss target level and multiple
+---
+And most importantly guys, you need to check out my risk management course.
+---
+I just recently put out a course more than one hour on risk management.
+---
+But yeah, guys, as I said, if you want to take your trading to the next level and start making money, I highly highly recommend to check out my risk management course next.
+---
+Another trader might have a stop loss here, another trader might have a stop loss here, and so on and so on.
+---
+So, if the price when or if the price goes up here and triggers all of these stop loss order, what the traders that shorted the market, what they need to do is that they are actually forced to buy uh the asset.
+---
+So, what they can do is that they can push the price into these levels to on purpose trigger your stop losses.
+---
+Because when you trigger your uh stop losses, automatic buying or selling will happen uh depending on if it's sell-side liquidity or buy-side liquidity.
+---
+So, you probably have many stop loss orders.
+---
+When it comes to, for example, double tops, it's very common to have many, uh, you know, many stop loss orders above this double top.
+---
+The simple name for this is a false false breakout and when smart money traders look for these stop losses and try to trigger them, we can call them call them a simple stop hunt.
+---
+Another interesting thing we can notice right here is that since we have a high right here and right here, remember from earlier in the course, it's likely that we will see stop loss orders placed above, right?
+---
+We might have stop loss orders right here.
+---
+And one simple rule of thumb you can use here that many trader uses is to set the stop loss around 2x the ATR.
+---
+So with a 2x ATR, that means that we should set our stop loss at 3,400 times 2 away from the entry.
+---
+So using an ATR multiple of two, our stop loss would be right here.
+---
+And in this case, it actually might make some sense because as you can see, in this case, this will mean that we set our stop loss just below the golden zone.
+---
+So setting our stop loss below there is a good rule of thumb.
+---
+You can also use the ATR for something called position sizing.
+---
+Setting our stop loss just above the high, that is a very common way to set stop losses.
+---
+And we also have very clear rules to set our stop loss.
+---
+So, if we set our stop loss, our stop is basically the level where we would automatically sell if the price goes below.
+---
+A very common way to set our stop loss is just below the lowest point here of the hammer.
+---
+And as for target levels, we can maybe use a two to one risk reward ratio, but don't worry about that.
+---
+And as for the stop loss, the by far most common and easiest point to set your stop loss is, as I said, used below the lowest point here of the reaction candle.
+---
+And as always you want to set the stop loss just below the low of the liquidity grab and using a risk-toreward ratio of for example two.
+---
+you set your stop loss below the wick.
+---
+And here this doesn't always have to be true, but in many cases a pullback you will you will be able to have a sort of tighter stop, a better risk reward and you might even in general have better expected value.
+---
+And a common place to set your stop loss is below here, and then maybe you set your target somewhere around here.
+---
+And don't worry, later on in this course, I will show you guys a step-by-step trading strategy, you know, where you need to enter, where you need to set your stop loss, and where you need to set your target.
+---
+As for your stop loss level, when it comes to the case when we briefly break support and then push above, uh our most common place to set our stop loss is just below the low of this point.
+---
+Well, a very simple rule is to use a risk a fixed risk reward ratio.
+---
+A super common one to use is a fixed risk reward ratio of two.
+---
+But here, and this is much more tricky, you know, where do we set our stop loss when it comes to breakouts?
+---
+There are so many ways to do this, but one method is to set the stop loss below the high of the previous impulse move.
+---
+And why is this a potential stop loss as well?
+---
+And if we set the stop loss below and leave some wiggle room as well, we can actually allow for this scenario to happen and still make money.
+---
+If we would have a tighter stop loss for example right here, we would have lost and got stopped out if the price did this ver you know, version.
+---
+So as a simple rule of thumb, you can have your stop loss right there.
+---
+But a very very simple rule of thumb is to place your stop loss somewhere around here.
+---
+And if we used a simple risk reward ratio of two, our trade would have looked something like this.
+---
+And also here using too wide stop losses.
+---
+And when we do this kind of entry, we usually set the stop loss below the low of the uh of the pullback.
+---
+And the other way is to use a fixed risk reward.
+---
+Let's say we have a line with entry right here, and we have a stop loss right here.
+---
+A fixed risk reward is basically when you measure the length to the stop loss, and then you use this length to take your target.
+---
+So, for example, a fixed risk to reward of one means that the length is the exact same.
+---
+So, the length the length to the stop loss and to the target is the same.
+---
+So, this right here is a one to one risk to reward.
+---
+A three to risk to reward is, uh you know, three times and so on and so on.
+---
+So, you can see, the hammer goes below the support, it takes out many people's stop losses, it creates liquidity for, you know, often smart money to step in and push the price up again.
+---
+So, we can, you know, enter at the candle close, we can have our stop loss below the low, and we can use, for example, a fixed risk to risk reward to get our target level maybe somewhere up here, right?
+---
+Now, your stop loss will, of course, be above the pattern.
+---
+Many entry models have uh much of subjectivity where you place your stop loss, but for the failure test, the stop loss is pretty much always set um uh above or the extreme of the pattern that briefly uh you know, pushed above and then closed within.
+---
+And let's say you use a fixed risk to reward, then maybe your target is down here using a risk reward of, say, 2:1.
+---
+So, here, if you once again uh focus on the text, you can see that the stop loss, we place it past the wick of the failure.
+---
+And as the price goes down further, they will eventually hit their stop loss, which leads to more selling, which can lead to even more traders stop getting hit.
+---
+Every trader's set their stop loss in the same obvious spot, right above equal highs, right below equal lows.
+---
+These stop losses pile up into a liquidity pool, and that pool is exactly what gets swept before the real move.
+---
+And if you think about it very simply, remember above highs that is, you know, by far the most common place to set your stop to set your stop loss.
+---
+So, we already have multiple, you know, stop losses above this level right here.
+---
+Now, you can see we have even more stop losses above this level.
+---
+Uh so, in other words, many traders probably have their stop losses above this level.
+---
+Maybe we have some stop loss orders from all the way back here that contributed to the liquidity grab right there, and so on and so on.
+---
+And, you know, being able to master how to set your stop losses and how to set your target levels is a whole topic on its own.
+---
+Uh but, don't worry because I do actually have a full course on risk management where I go over everything you need to set your stop-loss target level and multiple, you know, advanced and beginner-friendly uh techniques that I think every trader should know.
+---
+So, now, if the price, for example, drops below this level, remember it's likely that we have multiple stop losses here.
+---
+If we have a tool that creates, you know, predictable stop losses, we as traders can use that in our advantage to trade the liquidity that these tools produces, right?
+---
+There are many methods, but if you are a beginner, I would suggest a fixed risk reward ratio.
+---
+And why is this a potential stop loss?
+---
+If we would have a tighter stop loss, for example, right here, we would have lost and got stopped out if the price did this you know version.
+---
+So as a simple rule of thumb, you can have your stop loss right there or if we have some kind of market structure, if we have some kind of low you know before the move, we can use that.
+---
+The red area is what is known as a stop loss.
+---
+And here let's actually place our stop loss.
+---
+Remember our stop loss is where we automatically sell.
+---
+So we can for example place the stop loss just below that point and the green area right here that is basically where we will automatically lock in profit.
+---
+When we are in a short position, the stop loss will be to the upside.
+---
+So let's set the stop loss just above the highest point right here.
+---
+One bad trade is enough to blow up your entire trading account unless you know about position sizing.
+---
+In this video, we're breaking down the four position sizing models every single trader needs to know.
+---
+So, now it's time to take a look at position sizing models.
+---
+And here there are multiple different models uh position sizing models that you need to know about.
+---
+If you use a 2% uh if you use a 2% uh position size, you risk $200 per trade and so on and so on.
+---
+Another way to posi- position size, which can feel even more simple, is to have a fixed dollar risk.
+---
+So, for example, you might not want to, you know, calculate your exact, uh, you know, account balance and position size every single trade.
+---
+And this is when your position size shrinks in volatile mark- volatile market and it
+---
+But here, when it comes to the volatility-based position size, remember here that when the volatility increases, we need to increase the distance of our stop loss.
+---
+When the ATR is high, our distance to the stop loss will be larger.
+---
+Yet another way to position size is something known as fixed ratio.
+---
+All right, so now the time has come to take a look at the Kelly criterion.
+---
+But, you can see here for example below each of these small points right here, we often have, you know, traders for example on the smaller time time frames will also have, uh you know, put their stop losses for example below this point right here.
+---
+And that is win rate, risk to reward, and very importantly, expectancy.
+---
+So, if you, for example, win three times more than you lose, then your risk to reward is three divided by one, which is simply three.
+---
+But right, so now I want to jump back here into TradingView because I want to show you guys the risk to reward tool in TradingView, which is a very good tool you can use to plan your trade.
+---
+But as I said, what I want to do now is just to show you guys the risk reward tool in TradingView.
+---
+And when it comes to hammers, I hope you see the most common way to set your stop loss is to set it just below the lowest point of the hammer.
+---
+But say here that we want to increase the risk to reward ratio to let's say two.
+---
+So, if we increase the risk to reward ratio of two, now we will win, you know, this length right here is twice the size, which means that we will win twice as much uh compared to what we lose when we lose, because this is just 1x.
+---
+So, this is an example of a two to one risk to reward.
+---
+And uh our stop loss is placed just above the pivot high of this move.
+---
+Now, once again, you can see here the risk to reward would work the exact same thing, but now our reward side would be to the downside.
+---
+So, a risk risk to reward ratio of one would look something like this.
+---
+A risk to reward ratio of three would look something like this.
+---
+A risk to reward ratio of five would look something like this.
+---
+So, if you have a certain risk to reward, the break even win rate tell you uh you know, how often do I need to win to make money.
+---
+It's basically 1 / 1 plus your uh risk to reward.
+---
+So, for example, if you have a risk to reward of three, which is a common risk to reward ratio, then uh the formula would be 1 / 1 + 3, which is equal to uh you know, 1/4 or uh 25%.
+---
+So, that basically means, as you can see right here, that a risk to reward of 1:3 only needs to win 25% of the time to break even.
+---
+Let's say we have a 66% win rate with a two to one risk reward ratio.
+---
+It was just a very short clip from our full risk management trading course right here on YouTube.
+---
+Um, but when the price moves a lot, you want might want to uh use a wider stop loss.
+---
+When we are in a short position the stop loss will be to the upside.
+---
+So that is our take-profit and let's say for simplistic sake that we set our stop loss you know maybe above this uh maybe above that recent low um just to show you guys.
+---
+So, you want to plan where to take profit and where to set your your stop loss.
+---
+And let's say that we want to set stop loss maybe below this low.
+---
+Let's say that we want to set stop loss at uh 80 86,500.
+---
+You can see our takeprofit, our stop loss, and you can also see how it's currently going.
+---
+When the price comes to 90 90,000 we will automatically take profit or our stop loss is al also active.
+---
+And having a takerit and a stop-loss is so so important especially as a new trader but even if you are an advanced trader pretty much everyone uses stop-loss and take profit so that the the price automatically buys or sells and this helps you you know it's very important for risk management and it helps your trading psychology you know not involving emotions super super important and let's say that this trade locks in then You will have you know uh you will have your history of orders here.
+---
+So as you know when it when it comes to risk management, if you fall down, you know, 83%, you almost need to 10x your account to come back.
+---
+Every stop loss you set leaves a trail for smart money, and they know exactly where to find it.
+---
+So, these are basically stop losses from shorts and breakout entries from longs.
+---
+Because because people that are going short, that are betting that the market will go down, they actually set their sort of stop loss to the upside.
+---
+And when the shorts' stop losses get triggered, it leads to buying pressure.
+---
+So, this is uh you know, often normal stop losses from longs, but also it can also be breakout entries from shorts.
+---
+But here, and this is very important, smart money, remember smart money is, you know, big traders like big banks and hedge funds, they will actually often target these levels.
+---
+So if we set our stop loss, our stop is basically the level where we will automatically sell if the price goes below.
+---
+And as for target levels, we can maybe use a two to one risk reward ratio.
+---
+As for your stop loss, uh you usually place it below the lowest point of the flag.
+---
+The stop loss for the bearish flag is pretty straightforward.
+---
+You want to place the stop loss just above the highest point of the flag.
+---
+A bad stop loss can take you out of a winning trade right before it actually works.
+---
+In this video, I will show you the three stop loss types every trader must know to make more money.
+---
+All right, so now it's finally time to take a look at stop loss types.
+---
+And we have in general, I would say that we have three main types of stop losses.
+---
+Then a an example of a technical stop is to place the stop loss somewhere here, for example, below the swing low.
+---
+and we set the stop loss, you know, a certain distance here distance below the swing low.
+---
+So, that is another uh stop loss type.
+---
+But, the third stop loss stop loss type here is actually to combine both methods.
+---
+So, we might for example, place our stop loss below a key level, but then we might, you know, leave some wiggle room here, and we can base the wiggle room on the volatility itself.
+---
+And here, one important very important thing to uh have in mind, you can write this down, is that you really want to avoid uh for example, mental stop loss.
+---
+No, you should pretty much always place a hard stop loss that, you know, uh you set it so it automatically sells at that level.
+---
+There are also some other stop types like for example, money stop losses, time based stop losses that in general, you want to avoid.
+---
+I really uh I really recommend to focus on these types, the technical, the volatility, and the combined stop loss.
+---
+But, now I want to show you guys the different stop loss types.
+---
+Now, I want to show you guys the three different kinds of stop losses and let's begin here with technical stop loss.
+---
+So, the technical stop loss, remember, is when we place the stop loss uh often above or below a key level.
+---
+So, a very, you know, common way to set your stop loss in this case is to place your stop loss used beyond that level.
+---
+So, this right here is a very simple example of a technical stop loss.
+---
+But, now I also want to show you guys the volatility-based stop loss.
+---
+So, using this rule right here of 1.5 to 2x, let's use the 2x rule for for simple terms, that means that our stop loss should be uh around $8,000.
+---
+Well, we go to our stop loss, and you can see here that in this case, we were actually we were actually in one sense kind of lucky because you can see that our stop loss is already right here.
+---
+So, the stop loss is now around $8,000 from our entry level.
+---
+That means that our stop loss should maybe be at around uh $6,000.
+---
+So, if we use the AT 1 1.5 ATR rule, our stop loss would be somewhere around here.
+---
+Uh I hope you can see because now the uh now the stop loss is around $6,000 from the from the entry point.
+---
+But now, last but not least, let's use the combined stop loss.
+---
+So, remember that for the combined stop loss, we combine both approaches.
+---
+So, first of all, we want to set our stop loss be below the key level right here.
+---
+So, uh so we take a look at the technical stop loss, which was at around 8,200.
+---
+Then we have another pillar as well that is risk management.
+---
+Risk management is one of the most important pillars.
+---
+So it's very important to have good risk management.
+---
+So pillar four is risk management.
+---
+So how much should you buy and we also talk about things like you know where to set your stop loss.
+---
+So a stop loss is a level you set on the chart where you will automatically sell if the price goes there.
+---
+So yeah risk management pillar four.
+---
+Well, because this is a clearly visible resistance on the chart, many traders that are going short or in other words, many traders that bet that the price will go down, they will have their stop losses uh piling up here above the level
+---
+and you know the short traders stop losses are actually forcing them to buy and it leads to buying pressure.
+---
+So the traders that are buying here uh they usually set their stop losses somewhere below.
+---
+So maybe some traders set their stop loss right here.
+---
+And this uh buying pressure I talked about earlier from the stop losses right here.
+---
+Think about things like you know big banks, hedge funds or just in general traders that have you know lots of money and the ability to move and manipulate markets.
+---
+They usually take advantage of other people's stop losses so they can basically try to make these moves happen and sort of manipulate the market.
+---
+We want to be on the same page as the you know uh big banks and hedge funds.
+---
+Well, breakout traders place their stop losses just beyond the level.
+---
+So we might have a stop loss right here, right here, right here.
+---
+They are forced to exit because when their stop losses right here gets hit, they are for forced to exit.
+---
+This works the exact same because here first of all we have many stop losses to the downside which leads to this initial push to uh initial push down here.
+---
+But after this you will have many short traders that think the price will continue down that sets their stop losses to the upside right and this will lead to the buying pressure to the upside from the snapback.
+---
+And when the breakout traders enter, remember they place their stop losses maybe here, here, here, and here.
+---
+Many traders went long, set their stock stop losses, which fueled the move to the downside.
+---
+And I'm of course talking about risk management.
+---
+So in simple terms, risk management is basically what protects your capital.
+---
+A common very simple way you can start with risk management is by uh is with position sizing.
+---
+So for example, if you buy something and the price drops too much, you can you can set a stop loss.
+---
+So a stop loss and a target is something you need for every single plan for every single trade.
+---
+The position size is how much money you actually put on the line.
+---
+And here when it comes to risk management, this is actually a very deep topic.
+---
+And it's one of these topics that if you can master risk management, you will become a you know so much better trader.
+---
+So what I highly highly recommend that every single one of you that are watching this video, I highly recommend to watch my full course on risk management.
+---
+I have a course it's you know around 1 hour long where you will learn everything you need to know about about risk management when it comes to trading.
+---
+And what I want to mention here is that if you want, you know, help with your risk management and much more, uh, we have this trading toolkit, uh, by the way, this toolkit and all of the content, you know, we have so much content here for channel members, is available if you join the YouTube community on a gold tier or below, uh, above, I mean above, of course.
+---
+I don't really have time to go very deep into expected value in this in this video, but I talk more about it in my membersonly video where I uh show this trading toolkit and I also talk more about expected value in our free risk management c course here on YouTube that as I said is completely free and I highly recommend to watch that one uh watch that one.
+---
+So I just wanted to show you guys this uh this toolkit super quickly and how you can use it for you know both your risk management your trading journals and much more.
+---
+and we're looking out for the failure test as the trigger and remember we can use the RSI divergence as the confirmation and now you might wonder you know how do we know when to enter and where to set our stop loss and target.
+---
+But remember here last but definitely not least we need to have our risk management in check.
+---
+And one very important thing that is of course included in risk management is where to enter, where to place our target and where to place our stop loss.
+---
+And when it comes to the stop loss, it's pretty straightforward.
+---
+You pretty much always want to set your stop loss.
+---
+And I also leave some space for some wiggle room, but you want to set the stop loss just above that point.
+---
+if you have and of course the last pillar risk management super important and you have to watch the course on risk management but here you definitely don't have to use the failure test you can swap out uh you know the things inside so for example when we talk about the level
+---
+And expected value is something I talk about more deeply in the risk management course.
+---
+Professionals like big banks and hedge funds had armies of analysts, lightning-fast data, and Bloomberg terminals, while you used had a savings account.
+---
+That is, you know, hedge hedge funds, big banks, and basically investors with tons of money.
+---
+But all right, so now you know that AI is sort of decreasing the gap here between small investors and the investors on Wall Street or banks and hedge funds.
+---
+Crypto is basically a form of digital money with very high price swings or in other words, it has very high volatility and also very high risk reward.
+---
+The stop loss is usually set below the lowest part of the wedge.
+---
+But as with most patterns, you can also use a risk to reward ratio.
+---
+And our rule of thumb here is to use a risk to reward ratio of two.
+---
+So, twice as long as the part between the stop loss and the entry.
+---
+Your stop loss, once again, it will be the same as the other strategy.
+---
+You set your stop loss below the hammer.
+---
+So, for example, using a risk to reward ratio of two, your target level would be right here.
+---
+But for this case, the stop loss is a little bit more tricky.
+---
+One way to place your stop loss is to place it just above the high here, pretty similar to the falling wedge we talked about recently.
+---
+So, some traders, because we have a wick all the way up here, would actually aim to place the stop loss above this point right here.
+---
+And in my opinion, none of these stop losses are bad.
+---
+And the stop loss you decide to choose here is, you know, pretty dependent on your own trading style.
+---
+So, if you are more of a short-term trader, you might prefer to choose the first stop loss because if you choose a tighter stop loss, you will be able to also choose tighter targets.
+---
+While if you use the larger stop loss, the the positive thing about the larger stop loss is that it's less likely that you will get stopped out.
+---
+But at the same time, if you use the wider stop loss, you will need to use a wider target as well.
+---
+So, as you can see here, if you use the first stop loss type, perhaps your target would be down here.
+---
+But if you use the other stop loss, in order to get a two to one risk to reward ratio, your target would have to be lower.
+---
+We have the stop loss.
+---
+And this helps you, you know, it's very important for risk management and it helps your trading psychology, you know, not involving emotions.
+---

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | Risk Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>Risk Dashboard</h1>
+                <span class="sub">Funded-account rules · trade-proposal evaluator — Engine #45 (CRO)</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">RESEARCH ONLY — NO EXECUTION</span></div>
+        </header>
+        <main class="content">
+            <div class="section-heading">Funded-Account Status</div>
+            <div id="funded-status" class="card"><div class="skel-block"></div></div>
+
+            <div class="section-heading">Funded-Account Profiles &amp; Activation</div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="panel-head"><h3>Available Profiles</h3></div>
+                    <div id="funded-profiles-table"><div class="skel-block"></div></div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Activate / Update / Deactivate</h3></div>
+                    <div class="filter-group">
+                        <label class="field-label">Profile</label>
+                        <select id="fa-profile"></select>
+                    </div>
+                    <div class="filter-inputs" style="margin-bottom:14px;">
+                        <div>
+                            <label class="field-label">Account Size</label>
+                            <input id="fa-account-size" type="number" step="any" placeholder="e.g. 100000">
+                        </div>
+                        <div>
+                            <label class="field-label">Current Equity (optional)</label>
+                            <input id="fa-current-equity" type="number" step="any" placeholder="defaults to account size">
+                        </div>
+                    </div>
+                    <div class="btn-row" style="margin-bottom:18px;">
+                        <button onclick="activateFundedAccount()">Activate</button>
+                    </div>
+                    <div class="filter-group">
+                        <label class="field-label">Mark-to-Market Equity Update</label>
+                        <div class="filter-inputs">
+                            <input id="fa-equity-update" type="number" step="any" placeholder="new current equity">
+                        </div>
+                    </div>
+                    <div class="btn-row">
+                        <button class="secondary" onclick="updateFundedEquity()">Update Equity</button>
+                        <button class="secondary" onclick="deactivateFundedAccount()">Deactivate</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading">Risk Evaluator — Trade Proposal Check</div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="panel-head"><h3>Proposal</h3></div>
+                    <div class="filter-group">
+                        <label class="field-label">Asset</label>
+                        <input id="re-asset" value="GOLD" placeholder="e.g. GOLD, BTCUSD">
+                    </div>
+                    <div class="filter-group">
+                        <label class="field-label">Direction</label>
+                        <div class="pill-row">
+                            <div class="pill selected" id="re-dir-long" onclick="setReDirection('LONG')">Long</div>
+                            <div class="pill" id="re-dir-short" onclick="setReDirection('SHORT')">Short</div>
+                        </div>
+                    </div>
+                    <div class="filter-inputs" style="margin-bottom:14px;">
+                        <div><label class="field-label">Entry Price</label><input id="re-entry" type="number" step="any" placeholder="entry"></div>
+                        <div><label class="field-label">Stop Loss</label><input id="re-stop" type="number" step="any" placeholder="stop"></div>
+                        <div><label class="field-label">Take Profit</label><input id="re-target" type="number" step="any" placeholder="target"></div>
+                    </div>
+                    <div class="filter-inputs" style="margin-bottom:14px;">
+                        <div><label class="field-label">Risk % of Capital</label><input id="re-risk-pct" type="number" step="any" value="0.5"></div>
+                        <div><label class="field-label">Confidence (0-100)</label><input id="re-confidence" type="number" min="0" max="100" value="60"></div>
+                        <div><label class="field-label">Regime (optional)</label><input id="re-regime" placeholder="e.g. trending"></div>
+                    </div>
+                    <div class="btn-row">
+                        <button onclick="evaluateRisk()">Evaluate</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="panel-head"><h3>Verdict</h3></div>
+                    <div id="re-result"><div class="placeholder-note">Submit a proposal to see the CRO's verdict.</div></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('risk');
+
+let fundedProfiles = {};
+let reDirection = 'LONG';
+
+function setReDirection(dir) {
+    reDirection = dir;
+    document.getElementById('re-dir-long').classList.toggle('selected', dir === 'LONG');
+    document.getElementById('re-dir-short').classList.toggle('selected', dir === 'SHORT');
+}
+
+function renderFundedStatus(s) {
+    const el = document.getElementById('funded-status');
+    if (!s.active) {
+        el.innerHTML = '<div class="placeholder-note">No funded account activated. Use the form below to activate one — this only tightens which signals the risk engine approves; it never places any order (no execution engine on this platform).</div>';
+        return;
+    }
+    el.innerHTML = `
+        <div class="kpi-row">
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Profile</span></div><div class="kpi-value" style="font-size:16px;">${escapeHtml(s.profile)}</div></div>
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Current Equity</span></div><div class="kpi-value">${fmtNum(s.current_equity, 2)}</div><div class="kpi-sub">Daily start: ${fmtNum(s.daily_start_balance, 2)}</div></div>
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Max Daily Loss</span></div><div class="kpi-value">${fmtNum(s.max_daily_loss_pct, 2)}%</div></div>
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Max Overall Drawdown</span></div><div class="kpi-value">${fmtNum(s.max_overall_drawdown_pct, 2)}%</div><div class="kpi-sub">Account start: ${fmtNum(s.account_start_balance, 2)}</div></div>
+        </div>`;
+}
+
+async function loadFundedStatus() {
+    try {
+        const s = await getJson('/api/v1/risk/funded-account/status');
+        renderFundedStatus(s);
+    } catch (e) {
+        document.getElementById('funded-status').innerHTML = `<div class="placeholder-note">Could not load funded-account status: ${escapeHtml(e.message)}</div>`;
+    }
+}
+
+async function loadFundedProfiles() {
+    const tableEl = document.getElementById('funded-profiles-table');
+    const selectEl = document.getElementById('fa-profile');
+    try {
+        fundedProfiles = await getJson('/api/v1/risk/funded-account/profiles');
+        const keys = Object.keys(fundedProfiles);
+        selectEl.innerHTML = keys.map(k => `<option value="${escapeHtml(k)}">${escapeHtml(fundedProfiles[k].name)}</option>`).join('');
+        const rows = keys.map(k => {
+            const p = fundedProfiles[k];
+            return `<tr>
+                <td>${escapeHtml(p.name)}</td>
+                <td class="num">${fmtNum(p.profit_target_pct, 1)}%</td>
+                <td class="num">${fmtNum(p.max_daily_loss_pct, 1)}%</td>
+                <td class="num">${fmtNum(p.max_overall_drawdown_pct, 1)}%</td>
+                <td>${escapeHtml(p.drawdown_type)}</td>
+                <td class="num">${p.min_trading_days}</td>
+            </tr>`;
+        }).join('');
+        tableEl.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Profile</th><th class="num">Target</th><th class="num">Daily Loss</th><th class="num">Max DD</th><th>DD Type</th><th class="num">Min Days</th></tr></thead><tbody>${rows}</tbody></table></div>
+            <div class="helper-note">${keys.length ? escapeHtml(fundedProfiles[keys[0]].source_note || '') : ''}</div>`;
+    } catch (e) {
+        tableEl.innerHTML = `<div class="placeholder-note">Could not load profiles: ${escapeHtml(e.message)}</div>`;
+    }
+}
+
+async function activateFundedAccount() {
+    const profile = document.getElementById('fa-profile').value;
+    const accountSize = parseFloat(document.getElementById('fa-account-size').value);
+    const currentEquityRaw = document.getElementById('fa-current-equity').value;
+    if (!profile || !accountSize || accountSize <= 0) { toast('Enter a profile and a positive account size', true); return; }
+    const body = { profile, account_size: accountSize };
+    if (currentEquityRaw) body.current_equity = parseFloat(currentEquityRaw);
+    try {
+        const r = await postJson('/api/v1/risk/funded-account/activate', body);
+        toast(r.message || 'Funded account activated');
+        await loadFundedStatus();
+    } catch (e) {
+        toast('Activation failed: ' + e.message, true);
+    }
+}
+
+async function updateFundedEquity() {
+    const val = parseFloat(document.getElementById('fa-equity-update').value);
+    if (Number.isNaN(val)) { toast('Enter a current equity value', true); return; }
+    try {
+        const r = await postJson('/api/v1/risk/funded-account/update-equity', { current_equity: val });
+        toast(r.message || 'Equity updated');
+        await loadFundedStatus();
+    } catch (e) {
+        toast('Equity update failed: ' + e.message, true);
+    }
+}
+
+async function deactivateFundedAccount() {
+    try {
+        const r = await postJson('/api/v1/risk/funded-account/deactivate', {});
+        toast(r.message || 'Funded account deactivated');
+        await loadFundedStatus();
+    } catch (e) {
+        toast('Deactivation failed: ' + e.message, true);
+    }
+}
+
+function renderPositionSize(pos) {
+    if (!pos) return '<div class="placeholder-note">No position size returned.</div>';
+    const rows = Object.entries(pos).map(([k, v]) => `<tr><td>${escapeHtml(k)}</td><td class="num">${typeof v === 'number' ? fmtNum(v, 4) : escapeHtml(String(v))}</td></tr>`).join('');
+    return `<div class="table-wrap"><table><thead><tr><th>Field</th><th class="num">Value</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+async function evaluateRisk() {
+    const el = document.getElementById('re-result');
+    const body = {
+        asset: document.getElementById('re-asset').value.trim(),
+        direction: reDirection,
+        entry_price: parseFloat(document.getElementById('re-entry').value),
+        stop_loss: parseFloat(document.getElementById('re-stop').value),
+        take_profit: parseFloat(document.getElementById('re-target').value),
+        risk_percent: parseFloat(document.getElementById('re-risk-pct').value) || 0.5,
+        confidence_score: parseInt(document.getElementById('re-confidence').value, 10) || 0,
+        regime: document.getElementById('re-regime').value.trim(),
+    };
+    if (!body.asset || Number.isNaN(body.entry_price) || Number.isNaN(body.stop_loss) || Number.isNaN(body.take_profit)) {
+        toast('Fill in asset, entry, stop, and target', true);
+        return;
+    }
+    el.innerHTML = '<div class="skel-block"></div>';
+    try {
+        const r = await postJson('/api/v1/risk/evaluate', body);
+        const verdictBadge = r.approved ? dirBadge('bullish', 'APPROVED — ' + r.verdict) : dirBadge('bearish', 'VETOED — ' + r.verdict);
+        el.innerHTML = `
+            <div style="margin-bottom:12px;">${verdictBadge}</div>
+            ${r.veto_reason ? `<div class="placeholder-note" style="text-align:left;">Veto reason: ${escapeHtml(r.veto_reason)}</div>` : ''}
+            ${r.adjusted_risk_pct !== null && r.adjusted_risk_pct !== undefined ? `<div class="helper-note">Adjusted risk: ${fmtNum(r.adjusted_risk_pct, 3)}%</div>` : ''}
+            <div class="section-heading" style="margin:16px 0 8px;">Messages</div>
+            ${r.messages && r.messages.length ? r.messages.map(m => `<div class="helper-note">• ${escapeHtml(m)}</div>`).join('') : '<div class="placeholder-note">No messages.</div>'}
+            <div class="section-heading" style="margin:16px 0 8px;">Position Size</div>
+            ${renderPositionSize(r.position_size)}
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Evaluation failed: ${escapeHtml(e.message)}</div>`;
+        toast('Risk evaluation failed: ' + e.message, true);
+    }
+}
+
+loadFundedStatus();
+loadFundedProfiles();
+</script>
+</body>
+</html>

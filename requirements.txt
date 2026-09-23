@@ -1,0 +1,166 @@
+# PROJECT TITAN-X -- Python dependencies
+#
+# INSTALL ORDER MATTERS ON A FRESH VENV. `pip install -r requirements.txt`
+# in one pass FAILS with ResolutionImpossible, because pandas-ta 0.4.71b0
+# publishes `numpy>=2.2.6` metadata while this project pins numpy<2 (see the
+# pandas/numpy note below). On an existing environment pip tolerates it; on a
+# brand-new venv the resolver treats that metadata as authoritative and
+# refuses outright. Two passes:
+#
+#   1. python -m venv .venv                 # Python 3.12 ONLY -- see below
+#   2. pip install -r <this file, minus the pandas-ta line> -e .
+#   3. pip install pandas-ta==0.4.71b0 --no-deps
+#
+# `pip check` afterwards reports pandas-ta/numpy and pandas-ta/numba
+# mismatches. Those are expected and informational -- pandas-ta runs fine
+# against numpy<2 in practice.
+#
+# PYTHON 3.12, not whatever is newest. numpy 1.26.x has no prebuilt wheel for
+# 3.13+, and building it from source needs GCC >= 8.4. Install with:
+#   winget install --id Python.Python.3.12 --version 3.12.10 -e
+#
+# .venv IS NOT PORTABLE between machines -- pyvenv.cfg hardcodes an absolute
+# interpreter path, so a copied .venv fails on every command with "No Python
+# at ...". Always rebuild it after moving this folder.
+
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+sqlalchemy>=2.0.25
+alembic>=1.13.1
+asyncpg>=0.29.0
+psycopg2-binary>=2.9.9
+redis>=5.0.1
+# Upper bound added 2026-09-10. qdrant-client's own compatibility check
+# warns when client and server minor versions differ by more than 1, and this
+# unbounded spec has silently drifted past docker-compose.yml's pinned server
+# image TWICE (v1.7.4 -> v1.15.4 -> v1.19.0), both times caught only by
+# running against a live server rather than by any test. Keep this ceiling in
+# step with the `qdrant/qdrant:` tag in docker-compose.yml.
+qdrant-client>=1.7.0,<1.20
+# Upper bounds pinned deliberately: this environment's other installed
+# packages (matplotlib, sdv) require numpy<2. An unbounded pandas/numpy
+# spec here previously let pip's resolver silently upgrade to pandas
+# 3.x/numpy 2.x (pulled in by pandas-ta) and broke both. (vectorbt used to
+# be the other reason for the pandas<3 half of this -- removed 2026-09-13,
+# docs/UPGRADE_ROADMAP.md P3 item 12, confirmed unused by grep across the
+# whole codebase -- but the numpy<2 half stays independently required.)
+pandas>=2.1.4,<3.0
+polars>=0.20.3
+numpy>=1.26.3,<2.0
+scipy>=1.11.4
+pyarrow>=14.0.2
+duckdb>=0.9.2
+yfinance>=0.2.36
+ta>=0.11.0
+# pandas-ta releases newer than 0.4.71b0 may raise their numpy floor further;
+# pin exactly since it already works fine against numpy<2 despite its own
+# (overly conservative) numpy>=2.2.6 metadata requirement.
+pandas-ta==0.4.71b0
+finta>=1.3
+ccxt>=4.5.0
+nselib>=2.5.0
+hmmlearn>=0.3.3
+ruptures>=1.1.10
+# Quantitative Research (E12): GARCH(1,1) volatility forecasting, explicitly
+# required by MASTER_PROMPT.md's QUANTITATIVE FINANCE section
+arch>=6.3.0
+statsmodels>=0.14.1
+scikit-learn>=1.4.0
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+httpx>=0.26.0
+python-multipart>=0.0.6
+structlog>=24.1.0
+tenacity>=8.2.3
+aiohttp>=3.9.1
+websockets>=16.0  # E07/E17 order flow: real Bybit trade WebSocket (core/data_providers/bybit_trade_feed.py), was only a transitive dep before
+feedparser>=6.0.11
+# Knowledge Intelligence (E01): real embeddings + local vector index fallback
+# (trader-profile knowledge base -- Qdrant primary / FAISS fallback)
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+# HTML parsing for the E01 document loaders (engines/e01_knowledge/loaders.py
+# imports `from bs4 import BeautifulSoup` directly). Declared explicitly as of
+# 2026-09-10: it was previously satisfied only as a TRANSITIVE dependency of
+# newspaper3k/unstructured, so a future release of either dropping it would
+# have broken a live engine with no signal from this file.
+beautifulsoup4>=4.12.0
+# News Intelligence (E03): RSS ingestion + full-article extraction, no API key
+newspaper3k>=0.2.8
+lxml_html_clean>=0.4.0
+# Sentiment Intelligence (E09): FinBERT (via transformers, reuses whatever
+# torch build is already installed) + lexicon-based fallback ensemble
+transformers>=4.40.0
+vaderSentiment>=3.3.2
+textblob>=0.18.0
+# Macro Intelligence (E04): World Bank indicators, no API key
+wbdata>=1.1.0
+# Knowledge Intelligence (E01) document RAG pipeline: multi-format ingestion
+# (PDF/EPUB/DOCX/TXT/HTML/Markdown), chunking, hybrid vector+keyword search.
+# ChromaDB (embedded, no server required) is the primary document vector
+# store -- Qdrant above stays as-is for the existing trader-profile store.
+pymupdf>=1.24.0
+pdfplumber>=0.11.0
+python-docx>=1.1.0
+ebooklib>=0.18
+trafilatura>=1.8.0
+unstructured>=0.15.0
+chromadb>=0.5.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+llama-index-core>=0.11.0
+llama-index-embeddings-huggingface>=0.3.0
+llama-index-vector-stores-chroma>=0.2.0
+networkx>=3.2
+rank-bm25>=0.2.2
+# YouTube transcript scraper (scripts/youtube_scraper.py,
+# scripts/resume_when_unblocked.py) -- a RAG corpus builder, not part of the
+# trading path. Both were undeclared until 2026-09-10 even though the script
+# exits with "Missing dependency" without them, so a fresh install could not
+# run the scraper at all. NOTE: the separate youtube_pipeline/ tree has its
+# OWN venv and its own requirements; these two are for the top-level scripts.
+yt-dlp>=2024.1.1
+youtube-transcript-api>=1.0.0
+pytest>=7.4.4
+pytest-asyncio>=0.23.3
+pytest-cov>=4.1.0
+# Imported directly by tests/unit/test_api_security.py (starlette.requests.
+# Request) rather than only via FastAPI. Explicit because a test that builds a
+# raw Request is depending on starlette's API, not FastAPI's re-export.
+starlette>=0.36.0
+# Linter configured in pyproject.toml ([tool.ruff], line-length 100) but never
+# installed, so `python -m ruff check` fails with "No module named ruff" and
+# the configuration has never actually been enforced.
+ruff>=0.6.0
+
+# Research/validation tooling from REPO_REFERENCE.md (added 2026-09-11).
+# Installed and verified importable + full suite green (1088 passed) -- NOT
+# yet wired into any engine. Comparing these against Stage 0's hand-built
+# purged CV/synthetic-null work, and integrating meta-labeling/portfolio/
+# property-testing where each one demonstrably beats what's already shipped,
+# is separate follow-up work per this file's own Rule 3 (validate before
+# replacing a shipped default).
+purgedcv>=0.1.6
+skfolio>=1.0.6
+# Use mlfinpy, NOT mlfinlab -- Hudson & Thames relicensed mlfinlab to
+# closed/commercial; mlfinpy is the MIT-licensed reimplementation.
+mlfinpy>=0.1.2
+quantstats>=0.0.81
+tsfresh>=0.21.2
+PyPortfolioOpt>=1.6.0
+Riskfolio-Lib>=7.3.0
+# Property-based testing (E45/sizing/features candidates) + mutation testing.
+hypothesis>=6.168.0
+mutmut>=3.7.0
+# Event-driven backtesting framework, reference/comparison only -- E26 is
+# this platform's own validated backtesting laboratory, not replaced by this.
+backtrader>=1.9.78.123
+dvc>=3.67.1
+mlflow>=3.16.0
+# fracdiff (REPO_REFERENCE.md Tier 2) has NO PyPI distribution compatible
+# with Python 3.12 as of 2026-09-11 -- confirmed via `pip index versions`
+# returning zero installable versions for this interpreter, not guessed.
+# Deliberately not installed; fractional differentiation would need a
+# from-scratch implementation if this project ever needs it.

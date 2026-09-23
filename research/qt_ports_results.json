@@ -1,0 +1,108 @@
+{
+  "GOLD_4h": {
+    "strategy": "dual_thrust",
+    "params": {
+      "lookback": 4,
+      "k1": 0.3,
+      "k2": 0.3
+    },
+    "is_trades": 396,
+    "is_sharpe": 1.3223,
+    "is_max_dd": 0.12,
+    "oos_sharpe": 1.3027,
+    "win_rate": 0.3914,
+    "robustness": 0.9861,
+    "passed_validation": true,
+    "expectancy": 0.0854,
+    "avg_win_r": 1.0622,
+    "avg_loss_r": -0.5428,
+    "profit_factor": 1.2586,
+    "reward_risk": 1.957,
+    "breakeven_win_rate": 0.3382,
+    "n_passed": 5
+  },
+  "SILVER_4h": {
+    "strategy": "heikin_ashi_trend",
+    "params": {
+      "confirm": 2
+    },
+    "is_trades": 387,
+    "is_sharpe": 1.1498,
+    "is_max_dd": 0.22,
+    "oos_sharpe": 0.7397,
+    "win_rate": 0.3773,
+    "robustness": 0.973,
+    "passed_validation": true,
+    "expectancy": 0.129,
+    "avg_win_r": 1.9283,
+    "avg_loss_r": -0.9611,
+    "profit_factor": 1.2155,
+    "reward_risk": 2.006,
+    "breakeven_win_rate": 0.3326,
+    "n_passed": 5
+  },
+  "USDJPY_4h": {
+    "strategy": "heikin_ashi_trend",
+    "params": {
+      "confirm": 2
+    },
+    "is_trades": 445,
+    "is_sharpe": 0.5322,
+    "is_max_dd": 0.12,
+    "oos_sharpe": 1.7352,
+    "win_rate": 0.3865,
+    "robustness": 0.939,
+    "passed_validation": true,
+    "expectancy": 0.0358,
+    "avg_win_r": 0.6129,
+    "avg_loss_r": -0.3277,
+    "profit_factor": 1.1782,
+    "reward_risk": 1.87,
+    "breakeven_win_rate": 0.3484,
+    "n_passed": 2
+  },
+  "BTCUSD_1d": {
+    "strategy": "dual_thrust",
+    "params": {
+      "lookback": 8,
+      "k1": 0.5,
+      "k2": 0.5
+    },
+    "is_trades": 113,
+    "is_sharpe": 0.7392,
+    "is_max_dd": 1.2,
+    "oos_sharpe": 0.7217,
+    "win_rate": 0.4513,
+    "robustness": 0.9949,
+    "passed_validation": true,
+    "expectancy": 4.8073,
+    "avg_win_r": 20.0303,
+    "avg_loss_r": -7.7149,
+    "profit_factor": 2.1357,
+    "reward_risk": 2.596,
+    "breakeven_win_rate": 0.2781,
+    "n_passed": 4
+  },
+  "ETHUSD_1d": {
+    "strategy": "dual_thrust",
+    "params": {
+      "lookback": 8,
+      "k1": 0.7,
+      "k2": 0.7
+    },
+    "is_trades": 40,
+    "is_sharpe": 0.6524,
+    "is_max_dd": 4.21,
+    "oos_sharpe": 1.0096,
+    "win_rate": 0.55,
+    "robustness": 0.9976,
+    "passed_validation": true,
+    "expectancy": 22.2284,
+    "avg_win_r": 51.1805,
+    "avg_loss_r": -13.1576,
+    "profit_factor": 4.7542,
+    "reward_risk": 3.89,
+    "breakeven_win_rate": 0.2045,
+    "n_passed": 4
+  }
+}

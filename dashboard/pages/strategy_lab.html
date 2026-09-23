@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | Strategy Lab &amp; Backtesting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>Strategy Laboratory &amp; Backtesting</h1>
+                <span class="sub">Engine #24 research reports (read-only) · Engine #51 live edge check</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">READ-ONLY — NO LIVE RESEARCH RUNS FROM THIS UI</span></div>
+        </header>
+        <main class="content">
+            <div class="placeholder-note" style="text-align:left; margin-bottom:20px;">
+                This page reads already-computed research results. Nothing here triggers a new backtest sweep or promotes a strategy —
+                promotion only ever happens through the offline E24 → E26 → explicit-promotion pipeline (Rule 3: "nothing enters live signals except through this pipeline, promote_if_validated=True, never automatic").
+            </div>
+
+            <div class="section-heading">Live Historical Edge Check (Engine #51 → #26)</div>
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-inputs" style="margin-bottom:12px;">
+                    <div><label class="field-label">Symbol</label><input id="ve-symbol" value="GOLD"></div>
+                    <div>
+                        <label class="field-label">Timeframe</label>
+                        <select id="ve-timeframe"><option value="1d" selected>1d</option><option value="4h">4h</option><option value="1h">1h</option></select>
+                    </div>
+                    <div style="align-self:end;"><button onclick="validateEdge()">Check Edge</button></div>
+                </div>
+                <div id="ve-result"><div class="placeholder-note">Runs the same edge-gate backtest live signal generation itself uses, against 2 years of real history.</div></div>
+            </div>
+
+            <div class="section-heading">Research Reports (Engine #24)</div>
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-inputs" style="margin-bottom:0;">
+                    <div>
+                        <label class="field-label">Filter</label>
+                        <div class="pill-row">
+                            <div class="pill selected" id="sr-filter-all" onclick="setReportFilter('all')">All (<span id="sr-count-all">—</span>)</div>
+                            <div class="pill" id="sr-filter-promoted" onclick="setReportFilter('promoted')">Promoted only (<span id="sr-count-promoted">—</span>)</div>
+                        </div>
+                    </div>
+                    <div style="align-self:end;"><button class="secondary" onclick="loadReports()">Refresh</button></div>
+                </div>
+            </div>
+            <div id="sr-list"><div class="skel-block"></div><div class="skel-block"></div></div>
+
+            <div id="sr-detail-section" style="display:none;">
+                <div class="section-heading">Report Detail: <span id="sr-detail-title"></span></div>
+                <div id="sr-detail" class="card"></div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('strategy-lab');
+
+let allReports = [];
+let reportFilter = 'all';
+
+function setReportFilter(f) {
+    reportFilter = f;
+    document.getElementById('sr-filter-all').classList.toggle('selected', f === 'all');
+    document.getElementById('sr-filter-promoted').classList.toggle('selected', f === 'promoted');
+    renderReportsList();
+}
+
+async function validateEdge() {
+    const symbol = document.getElementById('ve-symbol').value.trim();
+    const timeframe = document.getElementById('ve-timeframe').value;
+    const el = document.getElementById('ve-result');
+    if (!symbol) { toast('Enter a symbol', true); return; }
+    el.innerHTML = '<div class="skel-block"></div>';
+    try {
+        const d = await getJson(`/api/v1/signals/validate-edge?symbol=${encodeURIComponent(symbol)}&timeframe=${encodeURIComponent(timeframe)}`);
+        const statusLabel = d.status.replace(/_/g, ' ');
+        const badge = d.passed_validation ? dirBadge('bullish', 'PASSED — ' + statusLabel) : dirBadge('bearish', 'NOT PASSED — ' + statusLabel);
+        el.innerHTML = `
+            <div style="margin-bottom:10px;">${badge}</div>
+            <div class="kpi-row">
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Trades</span></div><div class="kpi-value">${d.total_trades}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Win Rate</span></div><div class="kpi-value">${fmtNum(d.win_rate * 100, 1)}%</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Sharpe</span></div><div class="kpi-value">${fmtNum(d.sharpe_ratio, 3)}</div></div>
+                <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Max Drawdown</span></div><div class="kpi-value">${fmtNum(d.max_drawdown_pct, 2)}%</div></div>
+            </div>
+            ${d.bayesian_posterior_mean !== null && d.bayesian_posterior_mean !== undefined ? `<div class="helper-note" style="margin-top:10px;">Bayesian posterior win-rate: ${fmtNum(d.bayesian_posterior_mean * 100, 1)}% (90% credible interval: ${d.bayesian_credible_interval_90pct ? d.bayesian_credible_interval_90pct.map(v => fmtNum(v * 100, 1) + '%').join(' – ') : '—'})</div>` : ''}
+            <div class="helper-note" style="margin-top:6px;">${escapeHtml(d.message)}</div>
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not validate edge: ${escapeHtml(e.message)}</div>`;
+        toast('Edge check failed: ' + e.message, true);
+    }
+}
+
+function renderReportsList() {
+    const el = document.getElementById('sr-list');
+    const rows = allReports.filter(r => reportFilter === 'all' || r.promoted);
+    if (!rows.length) {
+        el.innerHTML = '<div class="placeholder-note">No reports match this filter.</div>';
+        return;
+    }
+    const tableRows = rows.map(r => {
+        const best = r.best;
+        return `
+        <tr class="signal-row" style="cursor:pointer;" onclick="showReportDetail('${escapeHtml(r.symbol)}','${escapeHtml(r.timeframe)}')">
+            <td>${escapeHtml(r.symbol)}</td>
+            <td>${escapeHtml(r.timeframe)}</td>
+            <td class="num">${r.n_candidates}</td>
+            <td class="num">${r.n_passed}</td>
+            <td>${r.promoted ? '<span class="tag green">Promoted</span>' : '<span class="tag neutral">Not promoted</span>'}</td>
+            <td>${best ? escapeHtml(best.strategy) : '—'}</td>
+            <td class="num">${best && best.is_sharpe !== undefined ? fmtNum(best.is_sharpe, 3) : '—'}</td>
+            <td>${fmtDate(r.generated_at)}</td>
+        </tr>`;
+    }).join('');
+    el.innerHTML = `<div class="card"><div class="table-wrap"><table><thead><tr>
+        <th>Symbol</th><th>Timeframe</th><th class="num">Candidates</th><th class="num">Passed</th><th>Status</th><th>Best Strategy</th><th class="num">Best IS Sharpe</th><th>Generated</th>
+    </tr></thead><tbody>${tableRows}</tbody></table></div>
+    <div class="helper-note">Click a row for the full candidate grid.</div></div>`;
+}
+
+async function loadReports() {
+    const el = document.getElementById('sr-list');
+    el.innerHTML = '<div class="skel-block"></div><div class="skel-block"></div>';
+    try {
+        const d = await getJson('/api/v1/strategy-research/reports');
+        allReports = d.reports;
+        document.getElementById('sr-count-all').textContent = allReports.length;
+        document.getElementById('sr-count-promoted').textContent = allReports.filter(r => r.promoted).length;
+        renderReportsList();
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load research reports: ${escapeHtml(e.message)}</div>`;
+        toast('Loading reports failed: ' + e.message, true);
+    }
+}
+
+async function showReportDetail(symbol, timeframe) {
+    const section = document.getElementById('sr-detail-section');
+    const titleEl = document.getElementById('sr-detail-title');
+    const el = document.getElementById('sr-detail');
+    section.style.display = 'block';
+    titleEl.textContent = `${symbol} ${timeframe}`;
+    el.innerHTML = '<div class="skel-block"></div>';
+    section.scrollIntoView({ behavior: 'smooth' });
+    try {
+        const d = await getJson(`/api/v1/strategy-research/reports/${encodeURIComponent(symbol)}/${encodeURIComponent(timeframe)}`);
+        const candidates = (d.all_candidates || []).slice().sort((a, b) => (b.is_sharpe || -999) - (a.is_sharpe || -999)).slice(0, 40);
+        const rows = candidates.map(c => `
+            <tr>
+                <td>${escapeHtml(c.strategy)}</td>
+                <td class="num">${c.is_trades ?? '—'}</td>
+                <td>${pnlValue(c.is_sharpe, '', 3)}</td>
+                <td>${pnlValue(c.oos_sharpe, '', 3)}</td>
+                <td class="num">${c.win_rate !== undefined && c.win_rate !== null ? fmtNum(c.win_rate * 100, 1) + '%' : '—'}</td>
+                <td>${c.passed_validation ? '<span class="tag green">Pass</span>' : '<span class="tag neutral">Fail</span>'}</td>
+                <td style="font-family:var(--mono); font-size:11px;">${escapeHtml(JSON.stringify(c.params || {}))}</td>
+            </tr>`).join('');
+        el.innerHTML = `
+            <div class="helper-note" style="margin-bottom:10px;">Showing top 40 of ${d.all_candidates.length} candidates by IS Sharpe. Validation bar: ${escapeHtml(JSON.stringify(d.validation_bar || {}))}</div>
+            <div class="table-wrap"><table><thead><tr>
+                <th>Strategy</th><th class="num">IS Trades</th><th>IS Sharpe</th><th>OOS Sharpe</th><th class="num">Win Rate</th><th>Validation</th><th>Params</th>
+            </tr></thead><tbody>${rows}</tbody></table></div>
+        `;
+    } catch (e) {
+        el.innerHTML = `<div class="placeholder-note">Could not load report detail: ${escapeHtml(e.message)}</div>`;
+        toast('Report detail failed: ' + e.message, true);
+    }
+}
+
+loadReports();
+</script>
+</body>
+</html>

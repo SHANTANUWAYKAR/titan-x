@@ -1,0 +1,16 @@
+total videos: 542
+
+--- first 8 ---
+VITVNaXsDUI | OUT NOW: My New TradingView Indicator For Channel Members 🔓💎 | dur:371 | date:None | short:False
+0wl83uVpVXw | 4 VWAP Settings in TradingView Every Trader Should Know | dur:921 | date:None | short:False
+EvuGW9eo6tI | MASTER Investing in 89 Minutes (Start With Just $1) | dur:5354 | date:None | short:False
+uMK_vE2KUIE | How To Backtest a Trading Strategy in 11 Minutes (Claude AI Trading) | dur:683 | date:None | short:False
+HrNw9hiRis4 | Loss Aversion: The #1 Trading Psychology Trap | dur:504 | date:None | short:False
+ZCWVy4yOTUo | How to Use VWAP in TradingView ✔️ VWAP Indicator Explained 📈 Volume We | dur:570 | date:None | short:False
+OmagROjr9dk | BEST Way to Find Support and Resistance Levels in Trading | dur:388 | date:None | short:False
+XlUrc618RlU | OUT NOW: 2 New Trading Courses For Channel Members 🔓💎 | dur:316 | date:None | short:False
+
+videos with duration data: 542  missing duration: 0
+<=60s (likely Shorts): 1
+flagged is_live: 0
+min: 29  max: 21228  median: 493

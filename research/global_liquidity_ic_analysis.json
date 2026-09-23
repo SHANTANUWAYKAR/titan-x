@@ -1,0 +1,185 @@
+{
+  "symbols": {
+    "BTCUSD": {
+      "n_dates_sampled": 864,
+      "n_dates_with_signal": 116,
+      "per_horizon": {
+        "21": {
+          "expanding": {
+            "n": 116,
+            "mean_return_pct": 5.3634,
+            "median_return_pct": 0.9348
+          },
+          "all_other_periods": {
+            "n": 748,
+            "mean_return_pct": 3.8963,
+            "median_return_pct": 1.9324
+          },
+          "expanding_minus_baseline_mean_return_pct": 1.4671,
+          "mann_whitney_u": 43522.0,
+          "mann_whitney_p_value": 0.9562
+        },
+        "63": {
+          "expanding": {
+            "n": 116,
+            "mean_return_pct": 13.6426,
+            "median_return_pct": 9.0308
+          },
+          "all_other_periods": {
+            "n": 748,
+            "mean_return_pct": 13.221,
+            "median_return_pct": 5.2135
+          },
+          "expanding_minus_baseline_mean_return_pct": 0.4216,
+          "mann_whitney_u": 44714.0,
+          "mann_whitney_p_value": 0.595
+        }
+      }
+    },
+    "ETHUSD": {
+      "n_dates_sampled": 634,
+      "n_dates_with_signal": 116,
+      "per_horizon": {
+        "21": {
+          "expanding": {
+            "n": 116,
+            "mean_return_pct": 11.9978,
+            "median_return_pct": 6.2064
+          },
+          "all_other_periods": {
+            "n": 518,
+            "mean_return_pct": 1.7371,
+            "median_return_pct": -1.0651
+          },
+          "expanding_minus_baseline_mean_return_pct": 10.2607,
+          "mann_whitney_u": 36337.0,
+          "mann_whitney_p_value": 0.0004
+        },
+        "63": {
+          "expanding": {
+            "n": 116,
+            "mean_return_pct": 32.5868,
+            "median_return_pct": 29.9018
+          },
+          "all_other_periods": {
+            "n": 518,
+            "mean_return_pct": 5.9929,
+            "median_return_pct": -0.6785
+          },
+          "expanding_minus_baseline_mean_return_pct": 26.5939,
+          "mann_whitney_u": 40100.0,
+          "mann_whitney_p_value": 0.0
+        }
+      }
+    },
+    "SP500": {
+      "n_dates_sampled": 358,
+      "n_dates_with_signal": 81,
+      "per_horizon": {
+        "21": {
+          "expanding": {
+            "n": 81,
+            "mean_return_pct": 2.6104,
+            "median_return_pct": 2.3052
+          },
+          "all_other_periods": {
+            "n": 277,
+            "mean_return_pct": 0.8491,
+            "median_return_pct": 1.7621
+          },
+          "expanding_minus_baseline_mean_return_pct": 1.7613,
+          "mann_whitney_u": 13196.0,
+          "mann_whitney_p_value": 0.0158
+        },
+        "63": {
+          "expanding": {
+            "n": 81,
+            "mean_return_pct": 6.027,
+            "median_return_pct": 6.6867
+          },
+          "all_other_periods": {
+            "n": 277,
+            "mean_return_pct": 2.9581,
+            "median_return_pct": 4.0342
+          },
+          "expanding_minus_baseline_mean_return_pct": 3.0689,
+          "mann_whitney_u": 13419.0,
+          "mann_whitney_p_value": 0.0072
+        }
+      }
+    },
+    "NIFTY50": {
+      "n_dates_sampled": 919,
+      "n_dates_with_signal": 123,
+      "per_horizon": {
+        "21": {
+          "expanding": {
+            "n": 123,
+            "mean_return_pct": 1.2788,
+            "median_return_pct": 1.3846
+          },
+          "all_other_periods": {
+            "n": 796,
+            "mean_return_pct": 0.8684,
+            "median_return_pct": 0.9965
+          },
+          "expanding_minus_baseline_mean_return_pct": 0.4104,
+          "mann_whitney_u": 51402.0,
+          "mann_whitney_p_value": 0.3717
+        },
+        "63": {
+          "expanding": {
+            "n": 123,
+            "mean_return_pct": 4.0708,
+            "median_return_pct": 2.1596
+          },
+          "all_other_periods": {
+            "n": 796,
+            "mean_return_pct": 2.4094,
+            "median_return_pct": 3.1201
+          },
+          "expanding_minus_baseline_mean_return_pct": 1.6614,
+          "mann_whitney_u": 51202.0,
+          "mann_whitney_p_value": 0.412
+        }
+      }
+    },
+    "BANKNIFTY": {
+      "n_dates_sampled": 922,
+      "n_dates_with_signal": 119,
+      "per_horizon": {
+        "21": {
+          "expanding": {
+            "n": 119,
+            "mean_return_pct": 0.8382,
+            "median_return_pct": 0.764
+          },
+          "all_other_periods": {
+            "n": 803,
+            "mean_return_pct": 1.355,
+            "median_return_pct": 1.2633
+          },
+          "expanding_minus_baseline_mean_return_pct": -0.5168,
+          "mann_whitney_u": 45232.0,
+          "mann_whitney_p_value": 0.3477
+        },
+        "63": {
+          "expanding": {
+            "n": 119,
+            "mean_return_pct": 1.1021,
+            "median_return_pct": 0.2515
+          },
+          "all_other_periods": {
+            "n": 803,
+            "mean_return_pct": 4.177,
+            "median_return_pct": 4.1455
+          },
+          "expanding_minus_baseline_mean_return_pct": -3.0749,
+          "mann_whitney_u": 39955.0,
+          "mann_whitney_p_value": 0.0039
+        }
+      }
+    }
+  },
+  "pooled_note": "No single pooled IC across symbols is reported -- see each symbol's own spearman_ic per horizon above. Pooling raw returns across assets of very different volatility (BTC vs NIFTY) would let the noisiest asset dominate a blended correlation."
+}

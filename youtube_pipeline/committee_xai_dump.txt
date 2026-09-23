@@ -1,0 +1,208 @@
+=== best_practices (64) ===
+And here the key takeaway from this slide is that RSI is a momentum translator or you can think about it as that RSI is a momentum indicator.
+---
+You know, the rule of thumb here is that we usually see the RSI printing, you know, going higher and higher in uptrend.
+---
+So here you can also write down the key takeaway.
+---
+Then this rule can be a little bit tricky, but as a general rule of thumb, you want the momentum candle to have a real body at least twice the size of the previous candles.
+---
+So the key takeaway here is that VWAP is a moving average that lets volume decide which prices matter the most.
+---
+What are some best practices to to use AI in a safe manner?
+---
+So, a good rule of thumb here is that if the level is not obvious, ignore the level.
+---
+So to hammer it home here the key takeaway is that ma uh that market structure is basically the macro structure.
+---
+This is a good uh rule of thumb to do.
+---
+But as a rule of thumb, when we enter this zone, this is a good zone to look out for, you know, the beginning of the next impulsive move.
+---
+Uh and this is once again, it's definitely not a perfect rule, but this is just more of a rule of thumb.
+---
+Make sure you have your notebook because now we're about to lock in to the final part of the course.
+---
+And as a general rule rule of thumb, when price and delta agree, the move is stronger.
+---
+And here, one pro tip or sort of key takeaway from this whole uh this whole slide is that if you cannot answer "What is my plan?
+---
+So to hammer it home here, the key takeaway is that ma uh that market structure is basically the macro structure.
+---
+volume will be a bar often here at the bottom of the chart and I will show you this uh how to find the correct indicator and so on soon but it basically show show you a number let's say it says 1,00 right here that means that 1,000 if this was a stock that means that 1,000 stocks were trading were traded during that candle and as a simple rule of thumb the more uh stocks that get traded during a specific candle the more you can think about it the more buyers agree that this is a valid move and the stronger and more significant the move becomes.
+---
+Uh that is definitely, you know, definitely doesn't always happen, but that is a slight rule of thumb.
+---
+So, a key takeaway here that you can write down in your notebook.
+---
+So here the key takeaway is that starting early beats starting big.
+---
+So a key takeaway here is that one ETF share means instant diversification.
+---
+So that is what why one metric that can be much more useful especially for companies that are growing fast is the PEG ratio because as you can see if we type in PEG ratio right here you can see that this is a huristic a heristic is bas basically a rule of thumb that used to measure the level of earnings growth reflected in the market price.
+---
+But now if you are a sort of if you are skeptical when you hear things like that, which you always should be, you should always be skeptical and verify, you know, verify the things yourself.
+---
+And here a simple rule of thumb especially if you are a beginner is to keep any single stock under around 5 to 10% of your portfolio.
+---
+And, you know, the the big key takeaway here is that we need to avoid big losses.
+---
+So, as a general rule of thumb, you want to be reinvesting your growth if you want to become really rich over time.
+---
+But, the important takeaway here that the key takeaway that you need to write down is that you cannot actually eliminate risk.
+---
+Well, a very common rule of thumb is that we usually want the stop loss to be 1.5 to 2x the ATR.
+---
+So a key takeaway here that you can write down in your notebook, I hope you guys have your notebook up and and running, is that your stop-loss in a long trade is a sell stop.
+---
+And here a key takeaway from these slides is that stops whether it's buy stops or sell stops are you know relatively predictable.
+---
+And here, one of my personal rule of thumbs when it comes to the ATR indicator is that I like to keep my indicators consistent.
+---
+And one simple rule of thumb you can use here that many trader uses is to set the stop loss around 2x the ATR.
+---
+So setting our stop loss below there is a good rule of thumb.
+---
+So this you can see here on the key takeaway, that form is by far the most important.
+---
+So, the key takeaway here, and that you can write down in your notebook, I hope you guys are taking notes, is that every candlestick is a snapshot of trading psychology.
+---
+Then, this rule can be a little bit tricky, but as a general rule of thumb, you want the momentum candle to have a real body at least twice the size of the previous candles.
+---
+So, that is a general rule of thumb, but I I actually prefer when when the wick is maybe, you know, 3x or even 4x the real body.
+---
+And to find a good impulse, a good rule of thumb is that you want the histogram to be larger compared to the previous histogram.
+---
+So as a simple rule of thumb, you can have your stop loss right there.
+---
+But a very very simple rule of thumb is to place your stop loss somewhere around here.
+---
+So as a simple rule of thumb, you can have your stop loss right there or if we have some kind of market structure, if we have some kind of low you know before the move, we can use that.
+---
+And here, the key takeaway from this slide is that RSI is a momentum translator.
+---
+That is a good rule of thumb especially if you are a beginner.
+---
+And here a key takeaway from these slides is that stops, whether it's buy stops or sell stops, are, you know, relatively predictable.
+---
+So make sure you guys to really pay attention now.
+---
+So the key takeaway here, the very important takeaway that you can write down, I hope you are using your notebook throughout the course.
+---
+But the key takeaway here is that together they are far stronger than either alone.
+---
+As always, you should always do your own research and so on and so on.
+---
+So, it's still a very good rule of thumb to try to double-check at least the most important facts.
+---
+So, a good rule of thumb here is to never, you know, blindly, for example, you don't you can't really ask an AI, you know, what stock is guaranteed to go up tomorrow.
+---
+So, the key takeaway here is that VWAP is a moving average that lets volume decide which prices matter the most.
+---
+And our rule of thumb here is to use a risk to reward ratio of two.
+---
+=== decision_frameworks (57) ===
+But right so now let's jump back here into silver one final time because now let's you know do a sort of trading strategy here step by step.
+---
+But let's take a look at these concepts now step by step.
+---
+But to understand first of all what these percentages even mean in the first place, I actually want to jump into TradingView and show you this step by step.
+---
+We will take a look at step by step how you can change the settings and what the settings do.
+---
+By the end of this course, you will not only be able to analyze any chart using AI directly in Trading View, but you will also be able to build, back test, and automate your very own trading strategy step by step.
+---
+So make sure to follow along step by step.
+---
+But as I said uh don't really worry about that because I have created a a guide and a prompt that will guide you through how to connect trading view to cloud step by step.
+---
+But now, I'm going to guide you through how to connect Claude to Trading View step by step.
+---
+So by using this prompt, Claude will guide you guide you through the installation process step by step.
+---
+And I have made this prompt to be beginner friendly and step by step.
+---
+This is the prompt that will guide you through the installation process step by step.
+---
+It shows show you everything, you know, everything really step by step.
+---
+And of course when it comes to building a trading strategy, this is a long process and I do actually have a full course where I go uh you know step by step I give you guys a process you can use to build your own trading strategy.
+---
+Um it can also help you, for example, build a complete uh trading plan, you know, where to set your stop loss and everything like that.
+---
+It can help you come come up with checklists.
+---
+It might sound a little bit old school but having checklist is an underrated thing not only in trading
+---
+So it can help you create these uh pre-trading checklists as you can see right here.
+---
+And what I also want to say is that I do have a full course where I teach you how to use all these order flow indicators step by step, and I'll make sure to link that video course up in the video card as well as the description.
+---
+This video is built on my four best video courses here on YouTube and I have put them all together in a massive guide so you can learn trading in the correct order step by step from being a beginner to an advanced trader.
+---
+I will show you how to do that step by step.
+---
+And this [clears throat] might looks you know super complicated in the beginning but I will try to break this down in super simple terms step by step.
+---
+Uh but then you will get a $15 bonus if you want to continue on your trading plan.
+---
+So here I basically have made a cheat sheet of all the different CVD divergences you can find uh and don't worry I will go over all of these step by step.
+---
+We're talking about pre-trading checklist, journaling, you know, routines, and so on and so on that can, you know, practical things that can improve your trading.
+---
+It can also lead things to ignoring the trading plan to chase bigger wins and so on and so on.
+---
+If you are following your trading plan, let's say you have a tested strategy that you know has a 60% win rate with a 1:1 risk-reward ratio, then you know that no matter what, I should follow this plan.
+---
+So you know step by step uh uh you know how to trade with market structure step by step.
+---
+However, even when it comes to these concepts different traders have uh you know some slightly different variations but let's take a look at these concepts now step by step.
+---
+Uh but let's take a look at this uh uh step 1 to 10 here because now especially when you're learning I think it can be very uh helpful to really follow this and have a clear step by step.
+---
+But yeah guys, there you have the full process in action step by step.
+---
+Let's clear this up step by step.
+---
+In this video, I will show you the entry point pro traders actually use step by step.
+---
+Uh what we will also do in this course is that we will build a complete beginner trading plan.
+---
+So we will go over step by step from start to finish everything you need to sort of build your uh maybe your first trading plan or maybe you have been trading for a while but as I said maybe you have gotten lots of misinformation and also this course will focus as I already said this course will focus on process and not hype.
+---
+It's a complete AI investing and trading system where AI basically picks all the stocks and it's across, you know, more than 25 countries.
+---
+Let me break this down super simply step by step.
+---
+This setting is also known as the 3 10 16 and don't worry, I will show you guys these settings step by step later on.
+---
+So now let's take a look at Trading View alerts step by step.
+---
+So, let's press okay here and let's take a look at how to use the ATR indicator step by step.
+---
+But right, so now it's finally time to take a look at the swing trading strategy step by step.
+---
+Let's make this super simple step by step.
+---
+So, let's take a look at them step by step.
+---
+And I actually have a full course uh where I show you guys the best chart patterns step by step.
+---
+But now I want to keep this very simple and step by step.
+---
+So let's now take a look at the bull flag strategy and how to trade a bull flag step by step.
+---
+By the end of this course, you will not only have one complete readytouse trading strategy, but you will also know exactly how to build your own strategy from scratch step by step.
+---
+And this free video course is one of the most important videos I have ever made because you will not only learn, you know, a trading strategy step by step from start to finish, but even more importantly, and this is so so important, you will learn how to build your own trading strategy.
+---
+So here before we can start looking at trading strategies step by step, we of course need to know what a trading strategy is in the first place.
+---
+I will walk through that step by step in this video course and then most importantly in the end we will of course take a look at how to combine all of these pillars into one complete trading strategy and then how you can build your own trading strategy.
+---
+So let's take a look at them step by step.
+---
+And now we're ready to look at the trading strategy step by step.
+---
+Here's how to actually do it step by step.
+---

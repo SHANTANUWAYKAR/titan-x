@@ -1,0 +1,55 @@
+MIT License
+
+Copyright (c) 2026 Shantanu Waykar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===============================================================================
+                    NOT FINANCIAL ADVICE - READ THIS
+===============================================================================
+
+This software is a RESEARCH AND MEASUREMENT tool. It exists to test whether
+trading strategies work, and the honest answer it keeps returning is that they
+do not.
+
+NOTHING IN THIS REPOSITORY HAS PASSED ITS OWN LIVE-READINESS GATES.
+
+At the time of publication, measured on this project's own data:
+
+  - Six signal families were tested. All six were net-negative after costs.
+  - Of 87 (asset x style) cells, ZERO cleared all four validation gates.
+  - Of 155,017 backtested candidates, the best deflated Sharpe was 0.702,
+    below the 0.95 bar, meaning its edge is not clearly distinguishable
+    from the luck of having searched 155,017 candidates.
+  - Published opening-range-breakout rules measured 0 of 24 profitable years.
+
+The reports in this repository document those results in full, including the
+cases where a promising result was retracted after further testing.
+
+Trading involves substantial risk of loss, including total loss of capital.
+Past performance -- backtested or live -- does not indicate future results.
+A backtest is not a promise; it is a measurement of the past under assumptions
+that are stated in the code and are certainly incomplete.
+
+The authors and contributors are not investment advisers, accept no liability
+for any decision taken using this software, and strongly recommend that you do
+not risk money you cannot afford to lose.
+
+Independently verify every number before acting on it. The tooling here is
+built to make that verification possible; please use it for that.

@@ -1,0 +1,63 @@
+# ── Data and artefacts ───────────────────────────────────────────────────────
+# Never publish. ~1.8 GB in the working copy, regenerable via scripts/, and
+# four files in the private repo exceed GitHub's 100 MB hard limit outright.
+data/*
+!data/README.md
+logs/
+*.log
+
+# Anything big or derived, wherever it lands
+*.parquet
+*.zip
+*.sqlite3
+*.db
+chroma_db*/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+secrets*
+credentials*
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# ── Tooling ──────────────────────────────────────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.ipynb_checkpoints/
+
+# ── Editors / OS ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── Local agent config ───────────────────────────────────────────────────────
+.claude/
+CLAUDE.md
+MASTER_PROMPT.md

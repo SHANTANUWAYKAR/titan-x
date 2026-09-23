@@ -1,0 +1,157 @@
+{
+  "generated_at": "2026-08-27T13:44:44.392281+00:00",
+  "report": {
+    "GOLD": {
+      "full": {
+        "trades": 90,
+        "win_rate": 0.3888888888888889,
+        "expectancy": 0.5443675816263598,
+        "reward_risk": 3.288375300959281,
+        "profit_factor": 2.092602464246816,
+        "sharpe": 0.7615503655137774,
+        "sortino": 0.3239664536347557,
+        "max_dd": 0.11123235974642369,
+        "total_return": 0.4782687059089019
+      },
+      "eras": {
+        "2003-2011 bull": {
+          "trades": 35,
+          "win_rate": 0.4,
+          "profit_factor": 2.391790700715521,
+          "total_pnl_pct": 29.873
+        },
+        "2011-2015 bear": {
+          "trades": 13,
+          "win_rate": 0.3076923076923077,
+          "profit_factor": 1.6948430271828763,
+          "total_pnl_pct": 4.697
+        },
+        "2015-2018 range": {
+          "trades": 8,
+          "win_rate": 0.375,
+          "profit_factor": 1.0093404153265042,
+          "total_pnl_pct": 0.029
+        },
+        "2018-2020 bull": {
+          "trades": 5,
+          "win_rate": 0.4,
+          "profit_factor": 1.2942887038528577,
+          "total_pnl_pct": 0.705
+        },
+        "2020-2022 range": {
+          "trades": 11,
+          "win_rate": 0.36363636363636365,
+          "profit_factor": 0.791566035947239,
+          "total_pnl_pct": -1.277
+        },
+        "2022-2026 bull": {
+          "trades": 13,
+          "win_rate": 0.5384615384615384,
+          "profit_factor": 3.6627039148252893,
+          "total_pnl_pct": 12.155
+        }
+      },
+      "concentration": {
+        "n_trades": 90,
+        "n_winners": 35,
+        "top1_pct_of_gross": 9.8,
+        "top5_pct_of_gross": 32.2,
+        "top10_pct_of_gross": 49.5
+      },
+      "direction": {
+        "LONG": {
+          "trades": 56,
+          "win_rate": 0.375,
+          "total_pnl_pct": 24.973,
+          "profit_factor": 1.87
+        },
+        "SHORT": {
+          "trades": 34,
+          "win_rate": 0.4118,
+          "total_pnl_pct": 24.02,
+          "profit_factor": 2.5
+        }
+      },
+      "eras_profitable": 5,
+      "eras_tested": 6,
+      "overfitting_flags": []
+    },
+    "EURUSD": {
+      "full": {
+        "trades": 128,
+        "win_rate": 0.3984375,
+        "expectancy": 0.1500381425825324,
+        "reward_risk": 2.3724841916556803,
+        "profit_factor": 1.5713856334342824,
+        "sharpe": 0.5632047687839964,
+        "sortino": 0.2166424597381823,
+        "max_dd": 0.0781171809166228,
+        "total_return": 0.17244278733090646
+      },
+      "eras": {
+        "2003-2011 bull": {
+          "trades": 41,
+          "win_rate": 0.4634146341463415,
+          "profit_factor": 2.0074452123255844,
+          "total_pnl_pct": 10.097
+        },
+        "2011-2015 bear": {
+          "trades": 22,
+          "win_rate": 0.18181818181818182,
+          "profit_factor": 0.4316164422009798,
+          "total_pnl_pct": -4.468
+        },
+        "2015-2018 range": {
+          "trades": 19,
+          "win_rate": 0.3684210526315789,
+          "profit_factor": 1.3286543231503007,
+          "total_pnl_pct": 1.446
+        },
+        "2018-2020 bull": {
+          "trades": 11,
+          "win_rate": 0.2727272727272727,
+          "profit_factor": 0.619598843845598,
+          "total_pnl_pct": -0.96
+        },
+        "2020-2022 range": {
+          "trades": 13,
+          "win_rate": 0.3076923076923077,
+          "profit_factor": 0.869747190198332,
+          "total_pnl_pct": -0.373
+        },
+        "2022-2026 bull": {
+          "trades": 24,
+          "win_rate": 0.4583333333333333,
+          "profit_factor": 2.809403780501361,
+          "total_pnl_pct": 5.908
+        }
+      },
+      "concentration": {
+        "n_trades": 128,
+        "n_winners": 51,
+        "top1_pct_of_gross": 4.7,
+        "top5_pct_of_gross": 20.3,
+        "top10_pct_of_gross": 35.2
+      },
+      "direction": {
+        "LONG": {
+          "trades": 56,
+          "win_rate": 0.3393,
+          "total_pnl_pct": 4.52,
+          "profit_factor": 1.27
+        },
+        "SHORT": {
+          "trades": 72,
+          "win_rate": 0.4444,
+          "total_pnl_pct": 14.685,
+          "profit_factor": 1.86
+        }
+      },
+      "eras_profitable": 3,
+      "eras_tested": 6,
+      "overfitting_flags": [
+        "works in only 3/6 eras"
+      ]
+    }
+  }
+}

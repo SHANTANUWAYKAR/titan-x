@@ -1,0 +1,1328 @@
+{
+  "generated_at": "2026-08-23T11:20:28.652405+00:00",
+  "results": {
+    "GOLD_1h_bos_choch": {
+      "base": {
+        "trades": 291,
+        "win_rate": 0.5120274914089347,
+        "expectancy": 0.10088222426397234,
+        "reward_risk": 1.3618166834287584,
+        "sharpe": -0.32673726155093497,
+        "max_dd": 0.3212992612706971,
+        "profit_factor": 1.428948491766796
+      },
+      "with_discount": {
+        "trades": 171,
+        "win_rate": 0.42105263157894735,
+        "expectancy": 0.009463234522390923,
+        "reward_risk": 1.4375615416867178,
+        "sharpe": -0.5259553470510883,
+        "max_dd": 0.32785054279472303,
+        "profit_factor": 1.0454993030448863
+      },
+      "delta_expectancy": -0.0914
+    },
+    "GOLD_1h_choch_only": {
+      "base": {
+        "trades": 150,
+        "win_rate": 0.47333333333333333,
+        "expectancy": 0.04900608498740183,
+        "reward_risk": 1.3178414888306835,
+        "sharpe": -0.364818207491326,
+        "max_dd": 0.24376321277351656,
+        "profit_factor": 1.1843891861642852
+      },
+      "with_discount": {
+        "trades": 115,
+        "win_rate": 0.41739130434782606,
+        "expectancy": -0.033543957202205016,
+        "reward_risk": 1.192742176901044,
+        "sharpe": -0.577948673890366,
+        "max_dd": 0.2706862079086982,
+        "profit_factor": 0.85450185807836
+      },
+      "delta_expectancy": -0.0826
+    },
+    "GOLD_1h_order_block": {
+      "base": {
+        "trades": 288,
+        "win_rate": 0.5208333333333334,
+        "expectancy": 0.12327706911113201,
+        "reward_risk": 1.4273408975580322,
+        "sharpe": -0.2506954476573847,
+        "max_dd": 0.25402137929361174,
+        "profit_factor": 1.551457497345688
+      },
+      "with_discount": {
+        "trades": 170,
+        "win_rate": 0.4235294117647059,
+        "expectancy": 0.01699657503107993,
+        "reward_risk": 1.474557836129062,
+        "sharpe": -0.5012393997793622,
+        "max_dd": 0.3131854207706747,
+        "profit_factor": 1.0833486142989028
+      },
+      "delta_expectancy": -0.1063
+    },
+    "GOLD_1h_mss": {
+      "base": {
+        "trades": 151,
+        "win_rate": 0.5165562913907285,
+        "expectancy": 0.0919703712891404,
+        "reward_risk": 1.3151010829419478,
+        "sharpe": -0.2634063755487916,
+        "max_dd": 0.1892588562541604,
+        "profit_factor": 1.405176499581808
+      },
+      "with_discount": {
+        "trades": 87,
+        "win_rate": 0.4367816091954023,
+        "expectancy": -0.005919714467889803,
+        "reward_risk": 1.2548582319586896,
+        "sharpe": -0.38579614085170116,
+        "max_dd": 0.17900759733664018,
+        "profit_factor": 0.9731553635597998
+      },
+      "delta_expectancy": -0.0979
+    },
+    "GOLD_4h_choch_only": {
+      "base": {
+        "trades": 40,
+        "win_rate": 0.575,
+        "expectancy": 0.20793779792506545,
+        "reward_risk": 1.2017759458508825,
+        "sharpe": 0.01140477684071084,
+        "max_dd": 0.07469531544194294,
+        "profit_factor": 1.6259321620335467
+      },
+      "with_discount": {
+        "trades": 28,
+        "win_rate": 0.32142857142857145,
+        "expectancy": -0.1909087158440525,
+        "reward_risk": 0.9979565267942467,
+        "sharpe": -0.5282197854230529,
+        "max_dd": 0.1326923323621921,
+        "profit_factor": 0.47271624953411695
+      },
+      "delta_expectancy": -0.3988
+    },
+    "GOLD_4h_mss": {
+      "base": {
+        "trades": 46,
+        "win_rate": 0.5434782608695652,
+        "expectancy": 0.01451632221953253,
+        "reward_risk": 0.870726804858996,
+        "sharpe": -0.28624682413389824,
+        "max_dd": 0.1406454694749955,
+        "profit_factor": 1.0365795295940432
+      },
+      "with_discount": {
+        "trades": 31,
+        "win_rate": 0.3870967741935484,
+        "expectancy": -0.22692918130480833,
+        "reward_risk": 0.599956202098352,
+        "sharpe": -0.6024366632400643,
+        "max_dd": 0.15787561207252931,
+        "profit_factor": 0.3789197065884328
+      },
+      "delta_expectancy": -0.2414
+    },
+    "GOLD_1d_choch_only": {
+      "base": {
+        "trades": 29,
+        "win_rate": 0.4827586206896552,
+        "expectancy": -0.23786623642387295,
+        "reward_risk": 0.7873747685595424,
+        "sharpe": -0.2945784395102996,
+        "max_dd": 0.21968943948300793,
+        "profit_factor": 0.7348831173222395
+      },
+      "with_discount": {
+        "trades": 21,
+        "win_rate": 0.42857142857142855,
+        "expectancy": -0.4520182782681328,
+        "reward_risk": 0.738924567268243,
+        "sharpe": -0.40049923758483325,
+        "max_dd": 0.2148403085936952,
+        "profit_factor": 0.5541934254511821
+      },
+      "delta_expectancy": -0.2142
+    },
+    "GOLD_1d_mss": {
+      "base": {
+        "trades": 29,
+        "win_rate": 0.5517241379310345,
+        "expectancy": 0.02268947664885146,
+        "reward_risk": 0.835637134769501,
+        "sharpe": -0.10695109075475066,
+        "max_dd": 0.149392546575096,
+        "profit_factor": 1.0284764735624625
+      },
+      "with_discount": {
+        "trades": 19,
+        "win_rate": 0.5263157894736842,
+        "expectancy": -0.20119289767174997,
+        "reward_risk": 0.6890858877576228,
+        "sharpe": -0.23032155120057737,
+        "max_dd": 0.15831365536492648,
+        "profit_factor": 0.7656509863973587
+      },
+      "delta_expectancy": -0.2239
+    },
+    "SILVER_1h_bos_choch": {
+      "base": {
+        "trades": 296,
+        "win_rate": 0.5168918918918919,
+        "expectancy": 0.13600726751231523,
+        "reward_risk": 1.2530747981838164,
+        "sharpe": -0.1344055644598666,
+        "max_dd": 0.40507904231402664,
+        "profit_factor": 1.3407024064484192
+      },
+      "with_discount": {
+        "trades": 188,
+        "win_rate": 0.4627659574468085,
+        "expectancy": -0.02879656901040001,
+        "reward_risk": 1.072360179297313,
+        "sharpe": -0.4636123369920548,
+        "max_dd": 0.4929454828264207,
+        "profit_factor": 0.9237161940481805
+      },
+      "delta_expectancy": -0.1648
+    },
+    "SILVER_1h_choch_only": {
+      "base": {
+        "trades": 138,
+        "win_rate": 0.5,
+        "expectancy": 0.07006022082057195,
+        "reward_risk": 1.1740396889983404,
+        "sharpe": -0.19791582668304414,
+        "max_dd": 0.29083645086642945,
+        "profit_factor": 1.1740396889983402
+      },
+      "with_discount": {
+        "trades": 119,
+        "win_rate": 0.42016806722689076,
+        "expectancy": -0.07182987419938996,
+        "reward_risk": 1.1089789049032883,
+        "sharpe": -0.49125588274713883,
+        "max_dd": 0.37774117295432014,
+        "profit_factor": 0.8036079021038323
+      },
+      "delta_expectancy": -0.1419
+    },
+    "SILVER_1h_order_block": {
+      "base": {
+        "trades": 294,
+        "win_rate": 0.5204081632653061,
+        "expectancy": 0.15101739878573117,
+        "reward_risk": 1.2760848114259353,
+        "sharpe": -0.10222084329660354,
+        "max_dd": 0.3598439073995946,
+        "profit_factor": 1.3846877741004835
+      },
+      "with_discount": {
+        "trades": 187,
+        "win_rate": 0.45989304812834225,
+        "expectancy": -0.02021511640161,
+        "reward_risk": 1.1108229470639452,
+        "sharpe": -0.4440527494543211,
+        "max_dd": 0.474700519584915,
+        "profit_factor": 0.9458492420544485
+      },
+      "delta_expectancy": -0.1712
+    },
+    "SILVER_1h_mss": {
+      "base": {
+        "trades": 166,
+        "win_rate": 0.4879518072289157,
+        "expectancy": 0.055695761250334874,
+        "reward_risk": 1.1911628805682613,
+        "sharpe": -0.22455437623154365,
+        "max_dd": 0.3284100327133499,
+        "profit_factor": 1.135108156776813
+      },
+      "with_discount": {
+        "trades": 115,
+        "win_rate": 0.4434782608695652,
+        "expectancy": -0.022788996367143988,
+        "reward_risk": 1.1868134459631121,
+        "sharpe": -0.3136242418170219,
+        "max_dd": 0.31545513388264457,
+        "profit_factor": 0.9457419647518551
+      },
+      "delta_expectancy": -0.0785
+    },
+    "SILVER_4h_choch_only": {
+      "base": {
+        "trades": 54,
+        "win_rate": 0.48148148148148145,
+        "expectancy": -0.0009143472824867382,
+        "reward_risk": 1.075768584863739,
+        "sharpe": -0.20569607948408622,
+        "max_dd": 0.28431160879277906,
+        "profit_factor": 0.9989279716591863
+      },
+      "with_discount": {
+        "trades": 39,
+        "win_rate": 0.41025641025641024,
+        "expectancy": -0.43827447201316144,
+        "reward_risk": 0.6897832203103175,
+        "sharpe": -0.687679661507304,
+        "max_dd": 0.279950161798924,
+        "profit_factor": 0.4798491967376121
+      },
+      "delta_expectancy": -0.4374
+    },
+    "SILVER_1d_bos_choch": {
+      "base": {
+        "trades": 61,
+        "win_rate": 0.5081967213114754,
+        "expectancy": -0.08348699334089749,
+        "reward_risk": 0.9180291819535831,
+        "sharpe": -0.1632633475906992,
+        "max_dd": 0.4435036754764581,
+        "profit_factor": 0.9486301546853689
+      },
+      "with_discount": {
+        "trades": 47,
+        "win_rate": 0.40425531914893614,
+        "expectancy": -0.5186990401849721,
+        "reward_risk": 0.9660091697054691,
+        "sharpe": -0.4379400254438838,
+        "max_dd": 0.4450573190745305,
+        "profit_factor": 0.6555062223001398
+      },
+      "delta_expectancy": -0.4352
+    },
+    "SILVER_1d_choch_only": {
+      "base": {
+        "trades": 34,
+        "win_rate": 0.5882352941176471,
+        "expectancy": 0.09602875087867013,
+        "reward_risk": 0.7452081910660935,
+        "sharpe": -0.04456485550456927,
+        "max_dd": 0.19982012258439938,
+        "profit_factor": 1.0645831300944193
+      },
+      "with_discount": {
+        "trades": 28,
+        "win_rate": 0.4642857142857143,
+        "expectancy": -0.20686922185863588,
+        "reward_risk": 0.9717095901335185,
+        "sharpe": -0.19651368384681228,
+        "max_dd": 0.247266024190351,
+        "profit_factor": 0.8421483114490493
+      },
+      "delta_expectancy": -0.3029
+    },
+    "SILVER_1d_order_block": {
+      "base": {
+        "trades": 57,
+        "win_rate": 0.5087719298245614,
+        "expectancy": 0.003329160394945241,
+        "reward_risk": 0.9675054477055318,
+        "sharpe": -0.10868177596921788,
+        "max_dd": 0.4435036754764649,
+        "profit_factor": 1.0020592136950148
+      },
+      "with_discount": {
+        "trades": 40,
+        "win_rate": 0.4,
+        "expectancy": -0.4553849064332942,
+        "reward_risk": 1.0570454781133576,
+        "sharpe": -0.3524571755065652,
+        "max_dd": 0.35642563924225773,
+        "profit_factor": 0.7046969854089051
+      },
+      "delta_expectancy": -0.4587
+    },
+    "SILVER_1d_mss": {
+      "base": {
+        "trades": 30,
+        "win_rate": 0.5333333333333333,
+        "expectancy": 0.5850205378168825,
+        "reward_risk": 1.3268167149915437,
+        "sharpe": 0.1572743604949027,
+        "max_dd": 0.21624320978728007,
+        "profit_factor": 1.5163619599903357
+      },
+      "with_discount": {
+        "trades": 21,
+        "win_rate": 0.47619047619047616,
+        "expectancy": -0.2765793262725935,
+        "reward_risk": 0.9149035290692745,
+        "sharpe": -0.16942276553804028,
+        "max_dd": 0.268126096681017,
+        "profit_factor": 0.8317304809720677
+      },
+      "delta_expectancy": -0.8616
+    },
+    "BTCUSD_1h_bos_choch": {
+      "base": {
+        "trades": 411,
+        "win_rate": 0.48175182481751827,
+        "expectancy": 0.05956447500827611,
+        "reward_risk": 1.1986416976750727,
+        "sharpe": -0.24933101418914866,
+        "max_dd": 0.6098965677930471,
+        "profit_factor": 1.1142303105148572
+      },
+      "with_discount": {
+        "trades": 295,
+        "win_rate": 0.46779661016949153,
+        "expectancy": -0.017708102776536505,
+        "reward_risk": 1.0941106452957123,
+        "sharpe": -0.3874486269731241,
+        "max_dd": 0.6404229016772297,
+        "profit_factor": 0.9617023506420911
+      },
+      "delta_expectancy": -0.0773
+    },
+    "BTCUSD_1h_choch_only": {
+      "base": {
+        "trades": 211,
+        "win_rate": 0.4834123222748815,
+        "expectancy": 0.09343633928500777,
+        "reward_risk": 1.2950348846668103,
+        "sharpe": -0.1362491575545153,
+        "max_dd": 0.3073837083582431,
+        "profit_factor": 1.2118675067524278
+      },
+      "with_discount": {
+        "trades": 169,
+        "win_rate": 0.5088757396449705,
+        "expectancy": 0.0039106784458979305,
+        "reward_risk": 0.9748113631264902,
+        "sharpe": -0.29550953369111777,
+        "max_dd": 0.3646961368201188,
+        "profit_factor": 1.0100455087816644
+      },
+      "delta_expectancy": -0.0895
+    },
+    "BTCUSD_1h_order_block": {
+      "base": {
+        "trades": 402,
+        "win_rate": 0.5074626865671642,
+        "expectancy": 0.15638187441567852,
+        "reward_risk": 1.2870022194379085,
+        "sharpe": -0.07633563342699141,
+        "max_dd": 0.2890290702904695,
+        "profit_factor": 1.326002286693604
+      },
+      "with_discount": {
+        "trades": 289,
+        "win_rate": 0.49480968858131485,
+        "expectancy": 0.057917431353755655,
+        "reward_risk": 1.1602495733787952,
+        "sharpe": -0.2492780122319919,
+        "max_dd": 0.4580046864338381,
+        "profit_factor": 1.1364088287203262
+      },
+      "delta_expectancy": -0.0985
+    },
+    "BTCUSD_1h_mss": {
+      "base": {
+        "trades": 272,
+        "win_rate": 0.4632352941176471,
+        "expectancy": 0.03302514740383844,
+        "reward_risk": 1.232337189326303,
+        "sharpe": -0.23538685960433522,
+        "max_dd": 0.4703060499798407,
+        "profit_factor": 1.0635238757199608
+      },
+      "with_discount": {
+        "trades": 197,
+        "win_rate": 0.467005076142132,
+        "expectancy": 0.005705639921879113,
+        "reward_risk": 1.155159261807117,
+        "sharpe": -0.2658539327599649,
+        "max_dd": 0.38353681090891767,
+        "profit_factor": 1.0121395436786167
+      },
+      "delta_expectancy": -0.0273
+    },
+    "BTCUSD_4h_bos_choch": {
+      "base": {
+        "trades": 103,
+        "win_rate": 0.5436893203883495,
+        "expectancy": 0.5974262058157389,
+        "reward_risk": 1.3969548722133447,
+        "sharpe": 0.3497462758716181,
+        "max_dd": 0.20883561819033777,
+        "profit_factor": 1.6644568690201558
+      },
+      "with_discount": {
+        "trades": 69,
+        "win_rate": 0.6521739130434783,
+        "expectancy": 0.8152449859429031,
+        "reward_risk": 1.2209700783157866,
+        "sharpe": 0.489123160673747,
+        "max_dd": 0.11577005056117472,
+        "profit_factor": 2.2893188968420994
+      },
+      "delta_expectancy": 0.2178
+    },
+    "BTCUSD_4h_choch_only": {
+      "base": {
+        "trades": 52,
+        "win_rate": 0.5769230769230769,
+        "expectancy": 0.7476701402415479,
+        "reward_risk": 1.5070931445823892,
+        "sharpe": 0.33422677579223914,
+        "max_dd": 0.1323122442156691,
+        "profit_factor": 2.0551270153396213
+      },
+      "with_discount": {
+        "trades": 43,
+        "win_rate": 0.7209302325581395,
+        "expectancy": 1.2227921676197284,
+        "reward_risk": 1.6129947997183662,
+        "sharpe": 0.6358207674939572,
+        "max_dd": 0.08398222753539028,
+        "profit_factor": 4.166903232605778
+      },
+      "delta_expectancy": 0.4751
+    },
+    "BTCUSD_4h_order_block": {
+      "base": {
+        "trades": 102,
+        "win_rate": 0.5490196078431373,
+        "expectancy": 0.6465698851905958,
+        "reward_risk": 1.4232118395090516,
+        "sharpe": 0.3890932291583732,
+        "max_dd": 0.20883561819038088,
+        "profit_factor": 1.732605717663193
+      },
+      "with_discount": {
+        "trades": 68,
+        "win_rate": 0.6470588235294118,
+        "expectancy": 0.8235465040895737,
+        "reward_risk": 1.2455846090764,
+        "sharpe": 0.48855091085423447,
+        "max_dd": 0.11577005056113027,
+        "profit_factor": 2.283571783306732
+      },
+      "delta_expectancy": 0.177
+    },
+    "BTCUSD_4h_mss": {
+      "base": {
+        "trades": 69,
+        "win_rate": 0.5362318840579711,
+        "expectancy": 0.4740670422155746,
+        "reward_risk": 1.3223515225886555,
+        "sharpe": 0.20884978870940343,
+        "max_dd": 0.20883561819036806,
+        "profit_factor": 1.5289689479931325
+      },
+      "with_discount": {
+        "trades": 49,
+        "win_rate": 0.6122448979591837,
+        "expectancy": 0.6311020368498617,
+        "reward_risk": 1.2459053197228407,
+        "sharpe": 0.2830949584889291,
+        "max_dd": 0.09988784833496,
+        "profit_factor": 1.9672189258781698
+      },
+      "delta_expectancy": 0.157
+    },
+    "BTCUSD_1d_bos_choch": {
+      "base": {
+        "trades": 80,
+        "win_rate": 0.5,
+        "expectancy": 3.000280877070932,
+        "reward_risk": 1.8118954963224922,
+        "sharpe": 0.6126483118065182,
+        "max_dd": 0.6807747557767222,
+        "profit_factor": 1.8118954963224914
+      },
+      "with_discount": {
+        "trades": 55,
+        "win_rate": 0.4909090909090909,
+        "expectancy": -0.5233853953862817,
+        "reward_risk": 0.8889591193045578,
+        "sharpe": -0.11394890005812697,
+        "max_dd": 0.7980265750075705,
+        "profit_factor": 0.8572105793293948
+      },
+      "delta_expectancy": -3.5237
+    },
+    "BTCUSD_1d_choch_only": {
+      "base": {
+        "trades": 37,
+        "win_rate": 0.43243243243243246,
+        "expectancy": -0.11724639760730593,
+        "reward_risk": 1.2754779020462281,
+        "sharpe": -0.04858745099269355,
+        "max_dd": 0.44372135385921296,
+        "profit_factor": 0.9717926872733162
+      },
+      "with_discount": {
+        "trades": 30,
+        "win_rate": 0.43333333333333335,
+        "expectancy": -3.375923319484218,
+        "reward_risk": 0.4270783690021848,
+        "sharpe": -0.5465701796630242,
+        "max_dd": 1.0908576608644944,
+        "profit_factor": 0.3265893410016707
+      },
+      "delta_expectancy": -3.2587
+    },
+    "BTCUSD_1d_order_block": {
+      "base": {
+        "trades": 80,
+        "win_rate": 0.5,
+        "expectancy": 3.000280877070932,
+        "reward_risk": 1.8118954963224922,
+        "sharpe": 0.6126483118065182,
+        "max_dd": 0.6807747557767222,
+        "profit_factor": 1.8118954963224914
+      },
+      "with_discount": {
+        "trades": 55,
+        "win_rate": 0.4909090909090909,
+        "expectancy": -0.5233853953862817,
+        "reward_risk": 0.8889591193045578,
+        "sharpe": -0.11394890005812697,
+        "max_dd": 0.7980265750075705,
+        "profit_factor": 0.8572105793293948
+      },
+      "delta_expectancy": -3.5237
+    },
+    "BTCUSD_1d_mss": {
+      "base": {
+        "trades": 61,
+        "win_rate": 0.5081967213114754,
+        "expectancy": 2.9404453724208013,
+        "reward_risk": 1.7988844993600752,
+        "sharpe": 0.5378388768899726,
+        "max_dd": 0.7457885702289428,
+        "profit_factor": 1.8588473160054102
+      },
+      "with_discount": {
+        "trades": 45,
+        "win_rate": 0.4666666666666667,
+        "expectancy": -0.3927780984318856,
+        "reward_risk": 1.0190737350111099,
+        "sharpe": -0.11109541253337808,
+        "max_dd": 0.5905050498229867,
+        "profit_factor": 0.891689518134721
+      },
+      "delta_expectancy": -3.3332
+    },
+    "ETHUSD_1h_choch_only": {
+      "base": {
+        "trades": 192,
+        "win_rate": 0.4583333333333333,
+        "expectancy": 0.24030794045644377,
+        "reward_risk": 1.583099280824953,
+        "sharpe": 0.033514676062891366,
+        "max_dd": 0.30504204660604295,
+        "profit_factor": 1.3395455453134222
+      },
+      "with_discount": {
+        "trades": 148,
+        "win_rate": 0.4391891891891892,
+        "expectancy": 0.06926581212433136,
+        "reward_risk": 1.410728201212373,
+        "sharpe": -0.11630482776930903,
+        "max_dd": 0.2546397829032503,
+        "profit_factor": 1.1047871455277618
+      },
+      "delta_expectancy": -0.171
+    },
+    "ETHUSD_1h_mss": {
+      "base": {
+        "trades": 275,
+        "win_rate": 0.48,
+        "expectancy": 0.271357260318541,
+        "reward_risk": 1.4865916014429126,
+        "sharpe": 0.0672065624133683,
+        "max_dd": 0.4676781551085114,
+        "profit_factor": 1.37223840133192
+      },
+      "with_discount": {
+        "trades": 183,
+        "win_rate": 0.4426229508196721,
+        "expectancy": 0.12982587997815653,
+        "reward_risk": 1.4827345051205034,
+        "sharpe": -0.058968793584242195,
+        "max_dd": 0.35913408294676974,
+        "profit_factor": 1.177465636419223
+      },
+      "delta_expectancy": -0.1415
+    },
+    "ETHUSD_4h_bos_choch": {
+      "base": {
+        "trades": 96,
+        "win_rate": 0.5520833333333334,
+        "expectancy": 1.2224663785821535,
+        "reward_risk": 1.564212785967747,
+        "sharpe": 0.5680158032500611,
+        "max_dd": 0.32258309902798976,
+        "profit_factor": 1.9279832013090838
+      },
+      "with_discount": {
+        "trades": 65,
+        "win_rate": 0.6153846153846154,
+        "expectancy": 0.6042569489182423,
+        "reward_risk": 0.9144844140802048,
+        "sharpe": 0.1954265950760843,
+        "max_dd": 0.24948840338941056,
+        "profit_factor": 1.4631750625283277
+      },
+      "delta_expectancy": -0.6182
+    },
+    "ETHUSD_4h_choch_only": {
+      "base": {
+        "trades": 60,
+        "win_rate": 0.6,
+        "expectancy": 1.0663816693026373,
+        "reward_risk": 1.1970010986348416,
+        "sharpe": 0.3938467245240515,
+        "max_dd": 0.3135353523905773,
+        "profit_factor": 1.795501647952262
+      },
+      "with_discount": {
+        "trades": 51,
+        "win_rate": 0.5882352941176471,
+        "expectancy": 0.2631126675857467,
+        "reward_risk": 0.8608032342763275,
+        "sharpe": 0.032076329599530475,
+        "max_dd": 0.2951210289958149,
+        "profit_factor": 1.2297189061090394
+      },
+      "delta_expectancy": -0.8033
+    },
+    "ETHUSD_4h_order_block": {
+      "base": {
+        "trades": 95,
+        "win_rate": 0.5789473684210527,
+        "expectancy": 1.2080923322977164,
+        "reward_risk": 1.4299836869432032,
+        "sharpe": 0.5622158829958959,
+        "max_dd": 0.2584233786779598,
+        "profit_factor": 1.966227569546904
+      },
+      "with_discount": {
+        "trades": 65,
+        "win_rate": 0.6153846153846154,
+        "expectancy": 0.6782807965651814,
+        "reward_risk": 0.9610881706605476,
+        "sharpe": 0.2315778148695661,
+        "max_dd": 0.22605483260665468,
+        "profit_factor": 1.5377410730568764
+      },
+      "delta_expectancy": -0.5298
+    },
+    "ETHUSD_4h_mss": {
+      "base": {
+        "trades": 69,
+        "win_rate": 0.5797101449275363,
+        "expectancy": 0.9149880371049872,
+        "reward_risk": 1.1602198742512202,
+        "sharpe": 0.3378564124542904,
+        "max_dd": 0.3611040769626756,
+        "profit_factor": 1.6003032748292685
+      },
+      "with_discount": {
+        "trades": 46,
+        "win_rate": 0.6739130434782609,
+        "expectancy": 0.41784972727164216,
+        "reward_risk": 0.6323888116833701,
+        "sharpe": 0.08374340457452699,
+        "max_dd": 0.2543505795503975,
+        "profit_factor": 1.3069368774789647
+      },
+      "delta_expectancy": -0.4971
+    },
+    "EURUSD_1h_choch_only": {
+      "base": {
+        "trades": 240,
+        "win_rate": 0.4,
+        "expectancy": -0.05750111318689817,
+        "reward_risk": 0.9057287183480488,
+        "sharpe": -1.568835714839357,
+        "max_dd": 0.6185247276359042,
+        "profit_factor": 0.6038191455653659
+      },
+      "with_discount": {
+        "trades": 204,
+        "win_rate": 0.29901960784313725,
+        "expectancy": -0.08174414615995663,
+        "reward_risk": 0.9147987177114247,
+        "sharpe": -1.925396092537404,
+        "max_dd": 0.5755329504747897,
+        "profit_factor": 0.39022882363913913
+      },
+      "delta_expectancy": -0.0242
+    },
+    "EURUSD_4h_bos_choch": {
+      "base": {
+        "trades": 108,
+        "win_rate": 0.5092592592592593,
+        "expectancy": 0.018208579655322354,
+        "reward_risk": 1.064736075825012,
+        "sharpe": -0.9123082648330741,
+        "max_dd": 0.2125433757402552,
+        "profit_factor": 1.104914795667465
+      },
+      "with_discount": {
+        "trades": 72,
+        "win_rate": 0.4722222222222222,
+        "expectancy": -0.08354940319047917,
+        "reward_risk": 0.6161248719897326,
+        "sharpe": -1.3575019901720338,
+        "max_dd": 0.21163419237678988,
+        "profit_factor": 0.551269622306603
+      },
+      "delta_expectancy": -0.1018
+    },
+    "EURUSD_4h_choch_only": {
+      "base": {
+        "trades": 54,
+        "win_rate": 0.5185185185185185,
+        "expectancy": 0.008572501349482231,
+        "reward_risk": 0.9739138596064731,
+        "sharpe": -0.6932137400316222,
+        "max_dd": 0.11651202106380273,
+        "profit_factor": 1.0488303103454328
+      },
+      "with_discount": {
+        "trades": 43,
+        "win_rate": 0.46511627906976744,
+        "expectancy": -0.07067771227652864,
+        "reward_risk": 0.6585032072989737,
+        "sharpe": -1.0120723620319763,
+        "max_dd": 0.12208646880848836,
+        "profit_factor": 0.5726114846078033
+      },
+      "delta_expectancy": -0.0793
+    },
+    "EURUSD_4h_order_block": {
+      "base": {
+        "trades": 107,
+        "win_rate": 0.5233644859813084,
+        "expectancy": 0.02611258617096729,
+        "reward_risk": 1.0507716280917,
+        "sharpe": -0.8681993529376649,
+        "max_dd": 0.2022893034860243,
+        "profit_factor": 1.1537884543752
+      },
+      "with_discount": {
+        "trades": 72,
+        "win_rate": 0.4861111111111111,
+        "expectancy": -0.07279129404553422,
+        "reward_risk": 0.6282500901554032,
+        "sharpe": -1.316821264007682,
+        "max_dd": 0.20390429236519028,
+        "profit_factor": 0.5942906258226788
+      },
+      "delta_expectancy": -0.0989
+    },
+    "EURUSD_4h_mss": {
+      "base": {
+        "trades": 61,
+        "win_rate": 0.5245901639344263,
+        "expectancy": 0.009758359072891104,
+        "reward_risk": 0.9523626272519142,
+        "sharpe": -0.6673443210817015,
+        "max_dd": 0.12713976882699013,
+        "profit_factor": 1.050882899036595
+      },
+      "with_discount": {
+        "trades": 41,
+        "win_rate": 0.43902439024390244,
+        "expectancy": -0.12294084579174559,
+        "reward_risk": 0.5749951203210025,
+        "sharpe": -1.0984616960120448,
+        "max_dd": 0.14230634764713745,
+        "profit_factor": 0.44999618112078454
+      },
+      "delta_expectancy": -0.1327
+    },
+    "EURUSD_1d_order_block": {
+      "base": {
+        "trades": 47,
+        "win_rate": 0.425531914893617,
+        "expectancy": -0.08651713904711356,
+        "reward_risk": 1.1359774482032632,
+        "sharpe": -0.5233698726359706,
+        "max_dd": 0.16675675404933854,
+        "profit_factor": 0.8414647764468615
+      },
+      "with_discount": {
+        "trades": 36,
+        "win_rate": 0.3055555555555556,
+        "expectancy": -0.2474657445375057,
+        "reward_risk": 1.205555582993979,
+        "sharpe": -0.8394040946709653,
+        "max_dd": 0.18728460784385484,
+        "profit_factor": 0.5304444565173506
+      },
+      "delta_expectancy": -0.1609
+    },
+    "GBPUSD_1h_bos_choch": {
+      "base": {
+        "trades": 433,
+        "win_rate": 0.38799076212471134,
+        "expectancy": -0.06457267338891802,
+        "reward_risk": 0.8914915714353651,
+        "sharpe": -2.192760338507623,
+        "max_dd": 1.1534661346637058,
+        "profit_factor": 0.5651720150986465
+      },
+      "with_discount": {
+        "trades": 315,
+        "win_rate": 0.31746031746031744,
+        "expectancy": -0.08468628297815259,
+        "reward_risk": 0.8828989333517593,
+        "sharpe": -2.2586087914299355,
+        "max_dd": 0.8927702933950241,
+        "profit_factor": 0.4106506666752368
+      },
+      "delta_expectancy": -0.0201
+    },
+    "GBPUSD_1h_choch_only": {
+      "base": {
+        "trades": 246,
+        "win_rate": 0.3902439024390244,
+        "expectancy": -0.06657456895412156,
+        "reward_risk": 0.8265377300919862,
+        "sharpe": -1.7000847209852457,
+        "max_dd": 0.6600635125586086,
+        "profit_factor": 0.5289841472588712
+      },
+      "with_discount": {
+        "trades": 210,
+        "win_rate": 0.3142857142857143,
+        "expectancy": -0.08348925338485702,
+        "reward_risk": 0.8403890885518576,
+        "sharpe": -1.8845945396310797,
+        "max_dd": 0.5935697147509199,
+        "profit_factor": 0.38517833225293474
+      },
+      "delta_expectancy": -0.0169
+    },
+    "GBPUSD_1h_order_block": {
+      "base": {
+        "trades": 423,
+        "win_rate": 0.40425531914893614,
+        "expectancy": -0.045627551063731564,
+        "reward_risk": 0.9895972579667914,
+        "sharpe": -2.007525285336988,
+        "max_dd": 1.0480428564267845,
+        "profit_factor": 0.6715124250488946
+      },
+      "with_discount": {
+        "trades": 313,
+        "win_rate": 0.3450479233226837,
+        "expectancy": -0.06896485749525541,
+        "reward_risk": 0.9172037157498129,
+        "sharpe": -2.130275060416838,
+        "max_dd": 0.8383427849459076,
+        "profit_factor": 0.48320976244380354
+      },
+      "delta_expectancy": -0.0233
+    },
+    "GBPUSD_1h_mss": {
+      "base": {
+        "trades": 280,
+        "win_rate": 0.37857142857142856,
+        "expectancy": -0.05784679753663097,
+        "reward_risk": 0.9894485516266717,
+        "sharpe": -1.7052091589037026,
+        "max_dd": 0.7346143904862117,
+        "profit_factor": 0.6027675084622256
+      },
+      "with_discount": {
+        "trades": 209,
+        "win_rate": 0.3062200956937799,
+        "expectancy": -0.07604941193494621,
+        "reward_risk": 1.0145486833989927,
+        "sharpe": -1.8183518554803064,
+        "max_dd": 0.5752933092054263,
+        "profit_factor": 0.4478007981899
+      },
+      "delta_expectancy": -0.0182
+    },
+    "GBPUSD_4h_bos_choch": {
+      "base": {
+        "trades": 126,
+        "win_rate": 0.42063492063492064,
+        "expectancy": -0.0300840648409611,
+        "reward_risk": 1.1719780876843422,
+        "sharpe": -1.310782493724874,
+        "max_dd": 0.2914664535719662,
+        "profit_factor": 0.8508882006475355
+      },
+      "with_discount": {
+        "trades": 82,
+        "win_rate": 0.4268292682926829,
+        "expectancy": -0.06434537600755709,
+        "reward_risk": 0.8642839066416319,
+        "sharpe": -1.3561549334110699,
+        "max_dd": 0.21712100882814037,
+        "profit_factor": 0.643615675158662
+      },
+      "delta_expectancy": -0.0343
+    },
+    "GBPUSD_4h_choch_only": {
+      "base": {
+        "trades": 68,
+        "win_rate": 0.4264705882352941,
+        "expectancy": -0.0313427772652424,
+        "reward_risk": 1.1358801716296467,
+        "sharpe": -0.9009394968704532,
+        "max_dd": 0.159165461525364,
+        "profit_factor": 0.8446288455707625
+      },
+      "with_discount": {
+        "trades": 54,
+        "win_rate": 0.46296296296296297,
+        "expectancy": -0.05242534994295585,
+        "reward_risk": 0.7816213392317468,
+        "sharpe": -1.055140094636791,
+        "max_dd": 0.1368068593462168,
+        "profit_factor": 0.6738114993377128
+      },
+      "delta_expectancy": -0.0211
+    },
+    "GBPUSD_4h_order_block": {
+      "base": {
+        "trades": 125,
+        "win_rate": 0.424,
+        "expectancy": -0.022140152691588033,
+        "reward_risk": 1.2067687183659044,
+        "sharpe": -1.2585601907398578,
+        "max_dd": 0.2792705145889525,
+        "profit_factor": 0.8883158621304567
+      },
+      "with_discount": {
+        "trades": 82,
+        "win_rate": 0.4268292682926829,
+        "expectancy": -0.0662845320241153,
+        "reward_risk": 0.8498612980883452,
+        "sharpe": -1.3669838165174724,
+        "max_dd": 0.2187076245187576,
+        "profit_factor": 0.6328754347466401
+      },
+      "delta_expectancy": -0.0441
+    },
+    "GBPUSD_4h_mss": {
+      "base": {
+        "trades": 76,
+        "win_rate": 0.42105263157894735,
+        "expectancy": -0.037727009313759025,
+        "reward_risk": 1.1140305981176104,
+        "sharpe": -1.0513600107219767,
+        "max_dd": 0.18248423267849634,
+        "profit_factor": 0.8102040713582619
+      },
+      "with_discount": {
+        "trades": 54,
+        "win_rate": 0.3888888888888889,
+        "expectancy": -0.04830282274309591,
+        "reward_risk": 1.1502341378092091,
+        "sharpe": -0.9900217144298683,
+        "max_dd": 0.13458409969412838,
+        "profit_factor": 0.7319671786058605
+      },
+      "delta_expectancy": -0.0106
+    },
+    "GBPUSD_1d_bos_choch": {
+      "base": {
+        "trades": 55,
+        "win_rate": 0.509090909090909,
+        "expectancy": 0.10908675404684964,
+        "reward_risk": 1.1417757131709574,
+        "sharpe": -0.1184363746130997,
+        "max_dd": 0.14756754480428283,
+        "profit_factor": 1.1840637025476595
+      },
+      "with_discount": {
+        "trades": 34,
+        "win_rate": 0.4411764705882353,
+        "expectancy": -0.07119844865391822,
+        "reward_risk": 1.1051550043340004,
+        "sharpe": -0.27997039729137335,
+        "max_dd": 0.14261145959233826,
+        "profit_factor": 0.8724907928952633
+      },
+      "delta_expectancy": -0.1803
+    },
+    "GBPUSD_1d_choch_only": {
+      "base": {
+        "trades": 24,
+        "win_rate": 0.5833333333333334,
+        "expectancy": 0.22293527178578787,
+        "reward_risk": 0.9985570850584191,
+        "sharpe": 0.02164250485225027,
+        "max_dd": 0.05838780562897976,
+        "profit_factor": 1.3979799190817865
+      },
+      "with_discount": {
+        "trades": 17,
+        "win_rate": 0.47058823529411764,
+        "expectancy": -0.0606243140856037,
+        "reward_risk": 0.9977184592410334,
+        "sharpe": -0.2555510386224144,
+        "max_dd": 0.06479677473760341,
+        "profit_factor": 0.8868608526586964
+      },
+      "delta_expectancy": -0.2836
+    },
+    "GBPUSD_1d_order_block": {
+      "base": {
+        "trades": 55,
+        "win_rate": 0.509090909090909,
+        "expectancy": 0.10908675404684964,
+        "reward_risk": 1.1417757131709574,
+        "sharpe": -0.1184363746130997,
+        "max_dd": 0.14756754480428283,
+        "profit_factor": 1.1840637025476595
+      },
+      "with_discount": {
+        "trades": 34,
+        "win_rate": 0.4411764705882353,
+        "expectancy": -0.07119844865391822,
+        "reward_risk": 1.1051550043340004,
+        "sharpe": -0.27997039729137335,
+        "max_dd": 0.14261145959233826,
+        "profit_factor": 0.8724907928952633
+      },
+      "delta_expectancy": -0.1803
+    },
+    "USDJPY_1h_bos_choch": {
+      "base": {
+        "trades": 398,
+        "win_rate": 0.44221105527638194,
+        "expectancy": -0.03504508784673824,
+        "reward_risk": 0.9994270075313375,
+        "sharpe": -1.4666429459985448,
+        "max_dd": 0.9495439539672357,
+        "profit_factor": 0.7923385284933125
+      },
+      "with_discount": {
+        "trades": 257,
+        "win_rate": 0.38132295719844356,
+        "expectancy": -0.058647868035271944,
+        "reward_risk": 1.0192771291696268,
+        "sharpe": -1.4396810354891876,
+        "max_dd": 0.6788056275170229,
+        "profit_factor": 0.6282337022554932
+      },
+      "delta_expectancy": -0.0236
+    },
+    "USDJPY_1h_choch_only": {
+      "base": {
+        "trades": 211,
+        "win_rate": 0.4218009478672986,
+        "expectancy": -0.05743577743702302,
+        "reward_risk": 0.940388375767838,
+        "sharpe": -1.1669936580035143,
+        "max_dd": 0.5452684764234232,
+        "profit_factor": 0.6860210282240787
+      },
+      "with_discount": {
+        "trades": 180,
+        "win_rate": 0.36666666666666664,
+        "expectancy": -0.060007037826420834,
+        "reward_risk": 1.0204999602341875,
+        "sharpe": -1.2785266020175028,
+        "max_dd": 0.47046426154168003,
+        "profit_factor": 0.5908157664513721
+      },
+      "delta_expectancy": -0.0026
+    },
+    "USDJPY_1h_order_block": {
+      "base": {
+        "trades": 394,
+        "win_rate": 0.4543147208121827,
+        "expectancy": -0.02419182202519693,
+        "reward_risk": 1.0217990497335439,
+        "sharpe": -1.3913161395996514,
+        "max_dd": 0.8978608642779811,
+        "profit_factor": 0.8507071158246714
+      },
+      "with_discount": {
+        "trades": 254,
+        "win_rate": 0.38976377952755903,
+        "expectancy": -0.052539367626669845,
+        "reward_risk": 1.031290715660551,
+        "sharpe": -1.393148654008702,
+        "max_dd": 0.6556853109055591,
+        "profit_factor": 0.6586953603251263
+      },
+      "delta_expectancy": -0.0283
+    },
+    "USDJPY_1h_mss": {
+      "base": {
+        "trades": 208,
+        "win_rate": 0.40384615384615385,
+        "expectancy": -0.06594851444831985,
+        "reward_risk": 0.9651892414031671,
+        "sharpe": -1.157291396784792,
+        "max_dd": 0.5620404170949038,
+        "profit_factor": 0.6538378732085967
+      },
+      "with_discount": {
+        "trades": 153,
+        "win_rate": 0.3464052287581699,
+        "expectancy": -0.08000942216059367,
+        "reward_risk": 1.0489176346378328,
+        "sharpe": -1.1731447299375137,
+        "max_dd": 0.4394278821722361,
+        "profit_factor": 0.5559263463580516
+      },
+      "delta_expectancy": -0.0141
+    },
+    "USDJPY_4h_bos_choch": {
+      "base": {
+        "trades": 104,
+        "win_rate": 0.49038461538461536,
+        "expectancy": 0.0391853395761389,
+        "reward_risk": 1.1980017273146732,
+        "sharpe": -0.5639489165191596,
+        "max_dd": 0.20862924267883218,
+        "profit_factor": 1.1527941149631762
+      },
+      "with_discount": {
+        "trades": 67,
+        "win_rate": 0.43283582089552236,
+        "expectancy": 0.03347254575595168,
+        "reward_risk": 1.522094450345513,
+        "sharpe": -0.5121556543314824,
+        "max_dd": 0.1332769995437632,
+        "profit_factor": 1.1615983963163126
+      },
+      "delta_expectancy": -0.0057
+    },
+    "USDJPY_4h_choch_only": {
+      "base": {
+        "trades": 58,
+        "win_rate": 0.39655172413793105,
+        "expectancy": -0.07997081572327708,
+        "reward_risk": 1.131230316657988,
+        "sharpe": -0.7933588284384779,
+        "max_dd": 0.19474579300784134,
+        "profit_factor": 0.7433799223752494
+      },
+      "with_discount": {
+        "trades": 46,
+        "win_rate": 0.30434782608695654,
+        "expectancy": -0.11429301299063754,
+        "reward_risk": 1.2705547511662325,
+        "sharpe": -1.000546448674421,
+        "max_dd": 0.16115303377215595,
+        "profit_factor": 0.5558677036352268
+      },
+      "delta_expectancy": -0.0343
+    },
+    "USDJPY_4h_order_block": {
+      "base": {
+        "trades": 104,
+        "win_rate": 0.49038461538461536,
+        "expectancy": 0.0391853395761389,
+        "reward_risk": 1.1980017273146732,
+        "sharpe": -0.5639489165191596,
+        "max_dd": 0.20862924267883218,
+        "profit_factor": 1.1527941149631762
+      },
+      "with_discount": {
+        "trades": 67,
+        "win_rate": 0.43283582089552236,
+        "expectancy": 0.03347254575595168,
+        "reward_risk": 1.522094450345513,
+        "sharpe": -0.5121556543314824,
+        "max_dd": 0.1332769995437632,
+        "profit_factor": 1.1615983963163126
+      },
+      "delta_expectancy": -0.0057
+    },
+    "USDJPY_4h_mss": {
+      "base": {
+        "trades": 60,
+        "win_rate": 0.4666666666666667,
+        "expectancy": 0.06134928465730516,
+        "reward_risk": 1.4274534101210867,
+        "sharpe": -0.3549856453513938,
+        "max_dd": 0.10385288441627265,
+        "profit_factor": 1.2490217338559513
+      },
+      "with_discount": {
+        "trades": 42,
+        "win_rate": 0.42857142857142855,
+        "expectancy": 0.06692450624165214,
+        "reward_risk": 1.7562062622076973,
+        "sharpe": -0.3064478638379108,
+        "max_dd": 0.07367936444100567,
+        "profit_factor": 1.3171546966557726
+      },
+      "delta_expectancy": 0.0056
+    },
+    "USDJPY_1d_bos_choch": {
+      "base": {
+        "trades": 56,
+        "win_rate": 0.5357142857142857,
+        "expectancy": 0.19264308727054524,
+        "reward_risk": 1.178542431396145,
+        "sharpe": -0.01186971758033814,
+        "max_dd": 0.1791255788401387,
+        "profit_factor": 1.3598566516109363
+      },
+      "with_discount": {
+        "trades": 32,
+        "win_rate": 0.46875,
+        "expectancy": -0.2771526660974107,
+        "reward_risk": 0.615296024628098,
+        "sharpe": -0.6644841590684106,
+        "max_dd": 0.16551325631016453,
+        "profit_factor": 0.5429082570247922
+      },
+      "delta_expectancy": -0.4698
+    },
+    "USDJPY_1d_choch_only": {
+      "base": {
+        "trades": 22,
+        "win_rate": 0.5,
+        "expectancy": 0.32851290034444436,
+        "reward_risk": 1.6481051644035574,
+        "sharpe": 0.148944519740349,
+        "max_dd": 0.08872647586769321,
+        "profit_factor": 1.6481051644035578
+      },
+      "with_discount": {
+        "trades": 17,
+        "win_rate": 0.47058823529411764,
+        "expectancy": -0.061197169199338874,
+        "reward_risk": 0.9691994812164225,
+        "sharpe": -0.3521266769906929,
+        "max_dd": 0.059066190749318265,
+        "profit_factor": 0.8615106499701534
+      },
+      "delta_expectancy": -0.3897
+    },
+    "USDJPY_1d_order_block": {
+      "base": {
+        "trades": 45,
+        "win_rate": 0.5111111111111111,
+        "expectancy": 0.07416632835616088,
+        "reward_risk": 1.082618740245105,
+        "sharpe": -0.1985888288026692,
+        "max_dd": 0.1791255788401149,
+        "profit_factor": 1.1318286829835185
+      },
+      "with_discount": {
+        "trades": 29,
+        "win_rate": 0.4827586206896552,
+        "expectancy": -0.17719912501465523,
+        "reward_risk": 0.7268689065606208,
+        "sharpe": -0.5414002649729103,
+        "max_dd": 0.15024247096613907,
+        "profit_factor": 0.6784109794565795
+      },
+      "delta_expectancy": -0.2514
+    }
+  }
+}

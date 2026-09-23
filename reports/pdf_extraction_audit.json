@@ -1,0 +1,716 @@
+[
+  {
+    "file": "10EMA INTRADAY STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1922,
+    "avg_chars_per_page": 961.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "200_EMA_Trading_Strategy_Guide.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1432,
+    "avg_chars_per_page": 1432.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "200EMA DEVANSHRAI STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 892,
+    "avg_chars_per_page": 892.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "200EMA TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1515,
+    "avg_chars_per_page": 757.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "3 MOVING AVERAGE TRADING SETUP.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 801,
+    "avg_chars_per_page": 801.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "5EMA TRADING STRATEGY POWEROFSTOCKS.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1309,
+    "avg_chars_per_page": 1309.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "72MIN TBS GOLD STRATEGY BY JOURNEXFX (1).pdf",
+    "type": "pdf",
+    "pages": 9,
+    "text_chars": 3109,
+    "avg_chars_per_page": 345.4,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "8020-mean-reversion-okala.docx",
+    "type": "docx",
+    "text_chars": null,
+    "status": "skip_docx_handled_separately"
+  },
+  {
+    "file": "9 15 EMA DETAILED STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 12,
+    "text_chars": 2200,
+    "avg_chars_per_page": 183.3,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9 15EMA MAYANKRAJ STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 956,
+    "avg_chars_per_page": 956.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9 15EMA STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 992,
+    "avg_chars_per_page": 992.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9 20 EMA STOCKBURNER STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1577,
+    "avg_chars_per_page": 1577.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9 20EMA STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 2215,
+    "avg_chars_per_page": 738.3,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9,15,200 EMA TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 980,
+    "avg_chars_per_page": 980.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "9_20EMA STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1045,
+    "avg_chars_per_page": 1045.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Ali Crooks Playbook.pdf",
+    "type": "pdf",
+    "pages": 13,
+    "text_chars": 10614,
+    "avg_chars_per_page": 816.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "ANISH SINGH VWAP STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1165,
+    "avg_chars_per_page": 1165.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "ASIAN SESSION BOS STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 3019,
+    "avg_chars_per_page": 1509.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BEST FIBONACCI STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1935,
+    "avg_chars_per_page": 967.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BEST INTRADAY STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1015,
+    "avg_chars_per_page": 1015.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BEST SCALPING STRATEGY MAMBAFX.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 1339,
+    "avg_chars_per_page": 446.3,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BIG BAR STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 787,
+    "avg_chars_per_page": 787.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BLACKBOX STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1763,
+    "avg_chars_per_page": 881.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BLACKBOX TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1208,
+    "avg_chars_per_page": 1208.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "BOX TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 1125,
+    "avg_chars_per_page": 375.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "CANDLESTICK WICK STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 3023,
+    "avg_chars_per_page": 1007.7,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "EMA + Trendline Breakout Trading Strategy.pdf",
+    "type": "pdf",
+    "pages": 6,
+    "text_chars": 1515,
+    "avg_chars_per_page": 252.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "EMA Crossover Trading Strategy (1).pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 1473,
+    "avg_chars_per_page": 491.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "EMA REJECTION STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 872,
+    "avg_chars_per_page": 872.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "EMA+Pivot Intraday Strategy.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 2181,
+    "avg_chars_per_page": 727.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "FABIO VALENTINI SCALPING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1974,
+    "avg_chars_per_page": 987.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "FARE VALUE GAP.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1495,
+    "avg_chars_per_page": 1495.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "FIBONACCI TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1478,
+    "avg_chars_per_page": 739.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "FXAlexG Swing Trading Strategy (Step-by-Step Guide).pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 1122,
+    "avg_chars_per_page": 374.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GAUTAM JHA STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2017,
+    "avg_chars_per_page": 1008.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GAUTAM JHA TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1714,
+    "avg_chars_per_page": 1714.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GAUTAM TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1511,
+    "avg_chars_per_page": 755.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GAUTAMJHA TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2396,
+    "avg_chars_per_page": 1198.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GUARDEER SMC STRATEGY (2).pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1931,
+    "avg_chars_per_page": 965.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "GUARDEER SMC STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1931,
+    "avg_chars_per_page": 965.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "ICT,SMC TRADING STRATEGY GUARDEER.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1598,
+    "avg_chars_per_page": 1598.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "ict-smt-divergence.docx",
+    "type": "docx",
+    "text_chars": null,
+    "status": "skip_docx_handled_separately"
+  },
+  {
+    "file": "Inna Rosputnia STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1161,
+    "avg_chars_per_page": 1161.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "JadeCap Playbook.pdf",
+    "type": "pdf",
+    "pages": 7,
+    "text_chars": 6832,
+    "avg_chars_per_page": 976.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "JADECAP TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2833,
+    "avg_chars_per_page": 1416.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Lance PlayBook.pdf",
+    "type": "pdf",
+    "pages": 23,
+    "text_chars": 19726,
+    "avg_chars_per_page": 857.7,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "LIQUIDITY SWEEP STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1223,
+    "avg_chars_per_page": 1223.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "LITTLE RIZZY PRO STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1607,
+    "avg_chars_per_page": 1607.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "LITTLE RIZZY TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2097,
+    "avg_chars_per_page": 1048.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "london_breakout_strategy.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1543,
+    "avg_chars_per_page": 1543.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Mamba_FX_1_Min_Scalping_Strategy.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1476,
+    "avg_chars_per_page": 1476.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "MAMBAFX NY SESSION STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1222,
+    "avg_chars_per_page": 611.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "MAMBAFX PREMIUM STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 2693,
+    "avg_chars_per_page": 897.7,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Marci.pdf",
+    "type": "pdf",
+    "pages": 12,
+    "text_chars": 10350,
+    "avg_chars_per_page": 862.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Marco Trades Playbook.pdf",
+    "type": "pdf",
+    "pages": 8,
+    "text_chars": 6385,
+    "avg_chars_per_page": 798.1,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "martin-luke-swing-trading.docx",
+    "type": "docx",
+    "text_chars": null,
+    "status": "skip_docx_handled_separately"
+  },
+  {
+    "file": "Measured move trend strategy.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2113,
+    "avg_chars_per_page": 1056.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "NBB Trader Playbook.pdf",
+    "type": "pdf",
+    "pages": 9,
+    "text_chars": 9249,
+    "avg_chars_per_page": 1027.7,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "ORB STRATEGY ANISH BOOMING BULLS.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1426,
+    "avg_chars_per_page": 1426.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "PDF FVG x Edgeful (1).pdf",
+    "type": "pdf",
+    "pages": 14,
+    "text_chars": 2050,
+    "avg_chars_per_page": 146.4,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "PHOTON TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1658,
+    "avg_chars_per_page": 1658.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "POWER OF STOCKS STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1336,
+    "avg_chars_per_page": 668.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "POWEROFSTOCKS 5MIN STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1792,
+    "avg_chars_per_page": 896.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "quant-x-architecture-guide.pdf",
+    "type": "pdf",
+    "pages": 14,
+    "text_chars": 13938,
+    "avg_chars_per_page": 995.6,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "STOCKBURNER RSI DIVERGENCE STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1731,
+    "avg_chars_per_page": 865.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Stocks to Riches by Parag Parikh _.pdf",
+    "type": "pdf",
+    "pages": 128,
+    "text_chars": 207049,
+    "avg_chars_per_page": 1617.6,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "SWAPPY TRADING 3C STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1367,
+    "avg_chars_per_page": 683.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "SWING TRADING STRATEGY FXALEXG.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1585,
+    "avg_chars_per_page": 1585.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TG Capital Playbook.pdf",
+    "type": "pdf",
+    "pages": 9,
+    "text_chars": 6284,
+    "avg_chars_per_page": 698.2,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "THE TRADING GEEK STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2316,
+    "avg_chars_per_page": 1158.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "The Travelling Trader Playbook.pdf",
+    "type": "pdf",
+    "pages": 10,
+    "text_chars": 10414,
+    "avg_chars_per_page": 1041.4,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "The-First-Red-Day-Strategy.pdf",
+    "type": "pdf",
+    "pages": 9,
+    "text_chars": 18047,
+    "avg_chars_per_page": 2005.2,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "THETRADEROOM EMA STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1259,
+    "avg_chars_per_page": 1259.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TIMEFRAME BASED STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1218,
+    "avg_chars_per_page": 1218.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TOM HAUGAARD TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2671,
+    "avg_chars_per_page": 1335.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TOM VORWALD TRADING STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1617,
+    "avg_chars_per_page": 808.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Tori Trades Playbook.pdf",
+    "type": "pdf",
+    "pages": 11,
+    "text_chars": 8980,
+    "avg_chars_per_page": 816.4,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TORI TRADES TRENDLINE STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1141,
+    "avg_chars_per_page": 1141.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TORITRADES TRENDLINE STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 2450,
+    "avg_chars_per_page": 816.7,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Trader Kane Playbook.pdf",
+    "type": "pdf",
+    "pages": 11,
+    "text_chars": 11377,
+    "avg_chars_per_page": 1034.3,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Trader Mayne Playbook.pdf",
+    "type": "pdf",
+    "pages": 10,
+    "text_chars": 7625,
+    "avg_chars_per_page": 762.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TRADERS PARADISE BB STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 3,
+    "text_chars": 3558,
+    "avg_chars_per_page": 1186.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TRADEWITHSUNIL 5MIN STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1238,
+    "avg_chars_per_page": 619.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TRADEWITHSUNIL STRATEGY WITH BACKTEST RESULTS.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 927,
+    "avg_chars_per_page": 463.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "TRENDLINE BASED STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1109,
+    "avg_chars_per_page": 554.5,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "UMAR PUNJABI GOLD STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1461,
+    "avg_chars_per_page": 1461.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "UMAR PUNJABI ORDERBLOCK STRATEGY.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 2594,
+    "avg_chars_per_page": 1297.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "Usman Noah.pdf",
+    "type": "pdf",
+    "pages": 11,
+    "text_chars": 3606,
+    "avg_chars_per_page": 327.8,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "VWAP STRATEGY OF DEVANSHRAIYT.pdf",
+    "type": "pdf",
+    "pages": 1,
+    "text_chars": 1344,
+    "avg_chars_per_page": 1344.0,
+    "status": "HAS_TEXT"
+  },
+  {
+    "file": "worlds best scalping strategy.pdf",
+    "type": "pdf",
+    "pages": 2,
+    "text_chars": 1483,
+    "avg_chars_per_page": 741.5,
+    "status": "HAS_TEXT"
+  }
+]

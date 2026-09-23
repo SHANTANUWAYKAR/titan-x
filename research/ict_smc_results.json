@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-08-23T10:43:06.477166+00:00",
+  "n_configs": 48,
+  "results": {
+    "GOLD_4h": null,
+    "SILVER_4h": null,
+    "BTCUSD_4h": {
+      "strategy": "ict_smc_confluence",
+      "params": {
+        "min_confluence": 2,
+        "atr_mult": 2.0,
+        "max_bars_sweep_to_entry": 20,
+        "require_killzone": true,
+        "use_cvd": false
+      },
+      "is_trades": 44,
+      "is_sharpe": 1.2076,
+      "is_max_dd": 0.17,
+      "oos_sharpe": 1.0425,
+      "win_rate": 0.4545,
+      "robustness": 0.983,
+      "passed_validation": true,
+      "expectancy": 1.1849,
+      "avg_win_r": 4.3626,
+      "avg_loss_r": -1.4631,
+      "profit_factor": 2.4847,
+      "reward_risk": 2.982,
+      "breakeven_win_rate": 0.2511
+    },
+    "ETHUSD_4h": {
+      "strategy": "ict_smc_confluence",
+      "params": {
+        "min_confluence": 2,
+        "atr_mult": 2.0,
+        "max_bars_sweep_to_entry": 20,
+        "require_killzone": true,
+        "use_cvd": false
+      },
+      "is_trades": 37,
+      "is_sharpe": 0.7125,
+      "is_max_dd": 0.44,
+      "oos_sharpe": 2.4752,
+      "win_rate": 0.3784,
+      "robustness": 0.9805,
+      "passed_validation": true,
+      "expectancy": 1.0579,
+      "avg_win_r": 7.5163,
+      "avg_loss_r": -2.8732,
+      "profit_factor": 1.5923,
+      "reward_risk": 2.616,
+      "breakeven_win_rate": 0.2766
+    },
+    "EURUSD_4h": {
+      "strategy": "ict_smc_confluence",
+      "params": {
+        "min_confluence": 2,
+        "atr_mult": 3.0,
+        "max_bars_sweep_to_entry": 20,
+        "require_killzone": true,
+        "use_cvd": true
+      },
+      "is_trades": 49,
+      "is_sharpe": 0.8212,
+      "is_max_dd": 0.06,
+      "oos_sharpe": 0.0459,
+      "win_rate": 0.2857,
+      "robustness": 0.9898,
+      "passed_validation": true,
+      "expectancy": 0.1398,
+      "avg_win_r": 1.1128,
+      "avg_loss_r": -0.2495,
+      "profit_factor": 1.7843,
+      "reward_risk": 4.461,
+      "breakeven_win_rate": 0.1831
+    },
+    "GBPUSD_4h": null,
+    "USDJPY_4h": null
+  }
+}

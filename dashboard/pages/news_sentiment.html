@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITAN-X | News &amp; Sentiment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/shared/tokens.css">
+</head>
+<body>
+<div id="toast-stack"></div>
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar-root"></aside>
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <h1>News &amp; Sentiment</h1>
+                <span class="sub">Entity extraction · event type · market impact · dedup — Engines #03/#09 (Phase 11)</span>
+            </div>
+            <div class="topbar-meta"><span class="badge">CONFIRMING FILTER ONLY — NEVER A TRIGGER</span></div>
+        </header>
+        <main class="content">
+            <div class="card" style="margin-bottom:14px;">
+                <div class="filter-inputs" style="margin-bottom:0;">
+                    <div>
+                        <label class="field-label">Limit per feed</label>
+                        <input id="ns-limit" type="number" value="10" min="1" max="50">
+                    </div>
+                    <div>
+                        <label class="field-label">Sources (optional, comma-separated)</label>
+                        <input id="ns-sources" placeholder="e.g. cnbc_markets,marketwatch">
+                    </div>
+                    <div style="align-self:end;">
+                        <button onclick="loadNewsSentiment()">Fetch &amp; Score</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kpi-row" id="ns-summary" style="margin-bottom:14px;"></div>
+
+            <div id="ns-result"><div class="skel-block"></div><div class="skel-block"></div><div class="skel-block"></div></div>
+        </main>
+    </div>
+</div>
+<script src="/dashboard/shared/common.js"></script>
+<script>
+renderSidebar('news-sentiment');
+
+const EVENT_TYPE_LABELS = {
+    monetary_policy: 'Monetary Policy', macro_data: 'Macro Data', geopolitical: 'Geopolitical',
+    regulatory: 'Regulatory', corporate_action: 'Corporate Action', earnings: 'Earnings', other: 'Other',
+};
+
+function eventTypeTag(t) {
+    const label = EVENT_TYPE_LABELS[t] || t;
+    const cls = (t === 'monetary_policy' || t === 'macro_data') ? 'warn' : (t === 'other' ? 'neutral' : 'blue');
+    return `<span class="tag ${cls}">${escapeHtml(label)}</span>`;
+}
+
+function newItemTag(isNew) {
+    if (isNew === true) return '<span class="tag green">New</span>';
+    if (isNew === false) return '<span class="tag neutral">Duplicate</span>';
+    return '<span class="tag warn">Unknown (dedup check unavailable)</span>';
+}
+
+function renderNewsItem(item) {
+    const entities = (item.entities || []).map(e => `<span class="tag blue">${escapeHtml(e)}</span>`).join(' ') || '<span class="tag neutral">No matched instrument</span>';
+    const impact = item.market_impact_score !== null && item.market_impact_score !== undefined ? fmtNum(item.market_impact_score, 3) : '—';
+    return `
+        <div class="card" style="margin-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:240px;">
+                    <a href="${safeUrl(item.link)}" target="_blank" rel="noopener noreferrer" style="color:var(--foreground); font-weight:600; text-decoration:none;">${escapeHtml(item.title)}</a>
+                    <div class="helper-note">${escapeHtml(item.source)} · ${fmtDate(item.published)}</div>
+                </div>
+                <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+                    ${dirBadge(item.directional_label || 'neutral')}
+                    ${eventTypeTag(item.event_type)}
+                    ${newItemTag(item.is_new)}
+                </div>
+            </div>
+            <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                <div>${entities}</div>
+                <div class="helper-note">Market impact score: <span class="num">${impact}</span></div>
+            </div>
+        </div>`;
+}
+
+async function loadNewsSentiment() {
+    const limit = document.getElementById('ns-limit').value || 10;
+    const sources = document.getElementById('ns-sources').value.trim();
+    const summaryEl = document.getElementById('ns-summary');
+    const resultEl = document.getElementById('ns-result');
+    resultEl.innerHTML = '<div class="skel-block"></div><div class="skel-block"></div><div class="skel-block"></div>';
+    summaryEl.innerHTML = '';
+    try {
+        let url = `/api/v1/news/sentiment?limit_per_feed=${limit}`;
+        if (sources) url += `&sources=${encodeURIComponent(sources)}`;
+        const d = await getJson(url);
+        const newCount = d.items.filter(i => i.is_new === true).length;
+        const dupCount = d.items.filter(i => i.is_new === false).length;
+        summaryEl.innerHTML = `
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Items</span></div><div class="kpi-value">${d.count}</div></div>
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">Aggregate Sentiment</span></div><div class="kpi-value" style="font-size:16px;">${dirBadge(d.aggregate_label)}</div><div class="kpi-sub">Score ${fmtNum(d.aggregate_score, 3)}</div></div>
+            <div class="card kpi-card"><div class="kpi-top"><span class="kpi-label">New / Duplicate</span></div><div class="kpi-value" style="font-size:16px;">${newCount} / ${dupCount}</div></div>
+        `;
+        if (!d.items.length) {
+            resultEl.innerHTML = '<div class="placeholder-note">No headlines returned for these filters.</div>';
+            return;
+        }
+        resultEl.innerHTML = d.items.map(renderNewsItem).join('');
+    } catch (e) {
+        resultEl.innerHTML = `<div class="placeholder-note">Could not load news &amp; sentiment: ${escapeHtml(e.message)}</div>`;
+        toast('News/sentiment load failed: ' + e.message, true);
+    }
+}
+
+loadNewsSentiment();
+</script>
+</body>
+</html>

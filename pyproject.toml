@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-titan-x"
+version = "1.0.0"
+description = "Institutional-Grade Trading Intelligence Platform"
+authors = [{ name = "Shantanu Waykar" }]
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "sqlalchemy>=2.0.25",
+    "alembic>=1.13.1",
+    "asyncpg>=0.29.0",
+    "psycopg2-binary>=2.9.9",
+    "redis>=5.0.1",
+    "qdrant-client>=1.7.0",
+    "pandas>=2.1.4",
+    "polars>=0.20.3",
+    "numpy>=1.26.3",
+    "scipy>=1.11.4",
+    "pyarrow>=14.0.2",
+    "duckdb>=0.9.2",
+    "yfinance>=0.2.36",
+    "ta>=0.11.0",
+    "statsmodels>=0.14.1",
+    "scikit-learn>=1.4.0",
+    "pydantic>=2.5.3",
+    "pydantic-settings>=2.1.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "httpx>=0.26.0",
+    "python-multipart>=0.0.6",
+    "structlog>=24.1.0",
+    "tenacity>=8.2.3",
+    "aiohttp>=3.9.1",
+    "websockets>=16.0",
+    "feedparser>=6.0.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.4",
+    "pytest-asyncio>=0.23.3",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.14",
+    "mypy>=1.8.0",
+]
+ml = [
+    "torch>=2.1.2",
+    "mlflow>=2.10.0",
+    "optuna>=3.5.0",
+    "xgboost>=2.0.3",
+    "lightgbm>=4.2.0",
+]
+agents = [
+    "langchain>=0.1.0",
+    "langgraph>=0.0.20",
+    "openai>=1.10.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["project_titan_x*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+pythonpath = ["."]
+markers = [
+    "network: test makes a real network/external-data call (yfinance, live APIs, etc.)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
