@@ -40,6 +40,14 @@ def test_plugin_strategies_registered_and_grid_keys_resolve():
 
 @pytest.fixture(scope="module")
 def aapl_1d() -> pd.DataFrame:
+    # Guarded in the fixture rather than on each test: nine tests depend on this
+    # frame, and without the guard a fresh clone (where data/ ships empty) errors
+    # all nine at setup with a FileNotFoundError that looks like nine bugs.
+    if not _AAPL_1D.is_file():
+        pytest.skip(
+            "needs data/processed/AAPL_1d.parquet, not shipped in this "
+            "repository -- regenerate with scripts/fetch_all_data.py"
+        )
     return pd.read_parquet(_AAPL_1D).tail(3000).reset_index(drop=True)
 
 

@@ -32,6 +32,7 @@ from project_titan_x.engines.e35_performance_analytics.engine import (
     summarize,
     win_rate,
 )
+from tests._artifacts import requires_postgres
 
 
 class _FakeEngineResult:
@@ -458,6 +459,7 @@ def test_kelly_sizing_exceeded_fires_with_a_real_quant_engine():
         _delete_trades_by_strategy(strategy)
 
 
+@requires_postgres
 def test_log_trade_auto_computes_mistake_tags(performance_engine):
     """Regression coverage for a real bug caught during live verification
     (not by any prior unit test): aggregate_mistake_costs originally read

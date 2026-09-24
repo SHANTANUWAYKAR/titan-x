@@ -16,6 +16,7 @@ from project_titan_x.engines.e05_economic_calendar.engine import (
     _match_calibrated_event_key,
     _month_iter,
 )
+from tests._artifacts import requires_data
 
 
 @pytest.fixture
@@ -125,6 +126,7 @@ def test_resolve_multiplier_defaults_to_one_when_event_uncalibrated(engine):
     assert "Not yet calibrated" in notes
 
 
+@requires_data("models/e05_economic_calendar/volatility_calibration.json")
 def test_upcoming_events_with_symbol_uses_that_assets_own_multiplier(engine):
     """Real (not injected) calibration file -- GOLD and EURUSD must resolve
     to their OWN distinct, real calibrated multipliers, confirming
@@ -139,6 +141,7 @@ def test_upcoming_events_with_symbol_uses_that_assets_own_multiplier(engine):
     assert "EURUSD" in eurusd_events[0].notes
 
 
+@requires_data("models/e05_economic_calendar/volatility_calibration.json")
 def test_upcoming_events_uncalibrated_symbol_falls_back_to_average(engine):
     """NIFTY50/BANKNIFTY have no per-asset NFP calibration (NFP releases
     after Indian markets close, so there's no intraday reaction window to
@@ -150,6 +153,7 @@ def test_upcoming_events_uncalibrated_symbol_falls_back_to_average(engine):
     assert "cross-asset average" in events[0].notes
 
 
+@requires_data("models/e05_economic_calendar/volatility_calibration.json")
 def test_analyze_passes_symbol_through_to_multiplier_resolution(engine):
     ref = datetime(2026, 7, 1, tzinfo=timezone.utc)
     result = engine.analyze(reference=ref, lookahead_days=10, symbol="GOLD")
@@ -183,12 +187,14 @@ def test_register_recurring_event_extension_point(engine):
 # (none of them has a deterministic future-date rule, unlike NFP).
 
 
+@requires_data("models/e05_economic_calendar/volatility_calibration.json")
 def test_extended_calibration_events_are_loaded(engine):
     assert "US Fed Interest Rate Decision" in engine._volatility_calibration
     assert "India Interest Rate Decision" in engine._volatility_calibration
     assert "US Non-Farm Payrolls" in engine._volatility_calibration  # original NFP untouched
 
 
+@requires_data("models/e05_economic_calendar/volatility_calibration.json")
 def test_extended_calibration_resolves_a_real_per_asset_multiplier(engine):
     multiplier, notes = engine._resolve_multiplier("US Fed Interest Rate Decision", "GOLD")
     assert multiplier != 1.0

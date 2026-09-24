@@ -7,6 +7,7 @@ import pytest
 from project_titan_x.engines.e08_regime import MarketRegime, MarketRegimeEngine
 from project_titan_x.engines.e07_technical import TechnicalAnalysisEngine, TrendDirection
 from project_titan_x.engines.e07_technical.engine import TechnicalSnapshot
+from tests._artifacts import requires_data
 
 
 @pytest.fixture
@@ -100,6 +101,7 @@ def test_classify_knowledge_context_none_without_engine(regime_engine, trending_
 # discards it (the exact bug this wiring fixes: GOLD's real calibration
 # found n_components=3, but the engine was hardcoded to always use 2).
 
+@requires_data("models/e08_regime/GOLD_1d_hmm_meta.json")
 def test_load_hmm_calibration_returns_real_winner_for_gold(regime_engine):
     calibration = regime_engine._load_hmm_calibration("GOLD", "1d")
     assert calibration is not None
@@ -111,6 +113,7 @@ def test_load_hmm_calibration_returns_none_for_uncalibrated_symbol(regime_engine
     assert regime_engine._load_hmm_calibration("NOT_A_REAL_SYMBOL", "1d") is None
 
 
+@requires_data("models/e08_regime/GOLD_1d_hmm_meta.json")
 def test_fit_hmm_volatility_regime_uses_calibrated_n_components(regime_engine, trending_df, monkeypatch):
     """Real-collaborator-adjacent test: confirms _fit_hmm_volatility_regime
     actually passes GOLD's real calibrated n_components=3 into GaussianHMM,
@@ -161,6 +164,7 @@ def test_fit_hmm_volatility_regime_without_symbol_uses_default(regime_engine, tr
     assert captured_kwargs["covariance_type"] == "diag"
 
 
+@requires_data("models/e08_regime/GOLD_1d_hmm_meta.json")
 def test_classify_passes_technical_symbol_and_timeframe_through_to_hmm(regime_engine, trending_df, monkeypatch):
     """End-to-end: classify() must forward technical.symbol/timeframe into
     the HMM fit, not just _fit_hmm_volatility_regime called directly."""

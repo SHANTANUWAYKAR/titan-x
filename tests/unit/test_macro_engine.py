@@ -3,6 +3,7 @@
 import pytest
 
 from project_titan_x.engines.e04_macro import MacroIntelligenceEngine
+from tests._artifacts import requires_data
 
 
 @pytest.fixture
@@ -29,6 +30,7 @@ def test_macro_analyze(macro_engine):
 
 # ---- Real M2 money supply liquidity indicator (local FRED data) ----
 
+@requires_data("macro/m2real.csv")
 def test_load_m2_liquidity_indicator_reads_real_local_file(macro_engine):
     """Real-collaborator test (Rule 4): reads the actual committed
     data/macro/m2real.csv, not a stub -- confirms the real FRED CSV

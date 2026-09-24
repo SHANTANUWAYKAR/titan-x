@@ -116,6 +116,14 @@ def test_real_data_produces_nonzero_springs_and_upthrusts(fname):
     # different reason, so cwd conventions here are already easy to get
     # wrong -- this test shouldn't depend on getting it right).
     data_dir = Path(__file__).resolve().parents[2] / "data" / "processed"
+    # Checked per-parameter rather than as a module-level skipif: data/ ships
+    # empty in the public repository, and one asset may be fetched without the
+    # other, so each case reports its own status honestly.
+    if not (data_dir / fname).is_file():
+        pytest.skip(
+            f"needs data/processed/{fname}, not shipped in this repository "
+            "-- regenerate with scripts/fetch_all_data.py"
+        )
     df = pd.read_parquet(data_dir / fname).reset_index(drop=True)
     if "timestamp" not in df.columns:
         df = df.rename(columns={df.columns[0]: "timestamp"})
