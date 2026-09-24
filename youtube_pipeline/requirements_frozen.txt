@@ -31,7 +31,7 @@ fsspec==2026.7.0
 google-api-core==2.33.0
 google-api-python-client==2.198.0
 google-auth==2.56.2
-google-auth-httplib2==0.4.0
+google-auth-httplib2==0.4.2
 googleapis-common-protos==1.75.0
 greenlet==3.5.4
 grpcio==1.83.0
