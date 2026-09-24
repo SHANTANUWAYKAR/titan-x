@@ -14,7 +14,7 @@ TIS/
 │
 └── titan-x-public/       PUBLIC   — the mirror people contribute to
                           938 files · 12 MB · clean history
-                          → github.com/<you>/titan-x
+                          → github.com/SHANTANUWAYKAR/titan-x
 ```
 
 They are deliberately separate. The private copy carries data that is
@@ -51,7 +51,7 @@ This is the flow you asked for — someone improves the project, and it becomes
 part of your main.
 
 ```
- 1. contributor forks github.com/<you>/titan-x
+ 1. contributor forks github.com/SHANTANUWAYKAR/titan-x
  2. they branch, change, and open a pull request against main
  3. CI runs: tests · secret scan · file-size guard
  4. you review (see the bar below)

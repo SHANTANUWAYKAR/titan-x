@@ -12,7 +12,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11", "3.12"]
+        # 3.12 ONLY, and this is a real constraint rather than a preference.
+        # pandas-ta 0.4.71b0 requires >=3.12, and numpy 1.26.x (pinned <2, see
+        # requirements.txt) publishes no prebuilt wheel for 3.13+ -- building it
+        # from source needs GCC >= 8.4. A 3.11 entry here can never pass.
+        python-version: ["3.12"]
 
     steps:
       - uses: actions/checkout@v4
@@ -22,11 +26,26 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
 
+      # requirements.txt CANNOT be installed in one pass on a fresh environment,
+      # and this is documented at the top of that file. pandas-ta 0.4.71b0
+      # declares `numpy>=2.2.6` metadata while this project requires numpy<2; on
+      # a brand-new venv pip treats that metadata as authoritative and fails with
+      # ResolutionImpossible. pandas-ta runs correctly against numpy<2 in
+      # practice, so it is installed last with --no-deps.
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          grep -v '^pandas-ta==' requirements.txt > /tmp/requirements-no-pandas-ta.txt
+          pip install -r /tmp/requirements-no-pandas-ta.txt
+          pip install pandas-ta==0.4.71b0 --no-deps
+          pip install -e . --no-deps
           pip install pytest ruff
+
+      # Informational: `pip check` reports pandas-ta/numpy and pandas-ta/numba
+      # metadata mismatches by design (see the Install note). Surfaced so a real,
+      # new conflict is still visible, but never allowed to fail the build.
+      - name: Dependency check (informational)
+        run: pip check || true
 
       - name: Lint
         run: ruff check . --output-format=github

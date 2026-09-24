@@ -30,16 +30,31 @@ unusually willing to say no.
 
 ## Quick start
 
-```bash
-git clone https://github.com/YOUR_USERNAME/titan-x.git
-cd titan-x
-python -m venv .venv && .venv/Scripts/activate      # Windows
-pip install -r requirements.txt
-cp .env.example .env                                 # add keys if you have them
+**Python 3.12 specifically.** Not 3.11, not 3.13 — `pandas-ta` requires
+`>=3.12`, and the pinned `numpy<2` ships no wheel for 3.13+.
 
-python scripts/fetch_all_data.py                     # populate data/
-pytest tests/ -q                                     # ~1,700 tests
+```bash
+git clone https://github.com/SHANTANUWAYKAR/titan-x.git
+cd titan-x
+python3.12 -m venv .venv
+source .venv/bin/activate                  # Windows: .venv\Scripts\activate
+
+# Two passes, and the order matters -- see the note below.
+grep -v '^pandas-ta==' requirements.txt > /tmp/reqs.txt
+pip install -r /tmp/reqs.txt -e .
+pip install pandas-ta==0.4.71b0 --no-deps
+
+cp .env.example .env                       # optional; add keys if you have them
+pytest tests/ -q -m "not network"          # ~1,700 tests
+python scripts/fetch_all_data.py           # populate data/ (slow)
 ```
+
+> **Why two passes?** `pip install -r requirements.txt` in one pass fails with
+> `ResolutionImpossible`. `pandas-ta` 0.4.71b0 declares `numpy>=2.2.6` metadata,
+> while this project requires `numpy<2` — several dependencies break under
+> numpy 2. pandas-ta works fine against numpy<2 in practice, so it goes in last
+> with `--no-deps`. `pip check` will afterwards report a pandas-ta/numpy
+> mismatch; that is expected and documented at the top of `requirements.txt`.
 
 `data/` ships empty — see [`data/README.md`](data/README.md).
 

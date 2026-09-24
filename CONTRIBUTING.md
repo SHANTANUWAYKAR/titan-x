@@ -49,7 +49,7 @@ codebase, each of which shipped and had to be found later.
 ```bash
 git checkout -b feature/short-description
 # ... change ...
-pytest tests/ -q                       # all of them
+pytest tests/ -q -m "not network"       # what CI runs
 git commit -m "..."                    # say what you measured
 git push origin feature/short-description
 ```
